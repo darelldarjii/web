@@ -1,0 +1,3448 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Seragam & Jadwal Perusahaan | PT. Genesis Berkat Usaha
+    </title>
+
+    <!-- =========================================================
+         FONT
+    ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #17233d;
+    background: #f7f9fc;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1160px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #e7ebf2;
+}
+
+.nav {
+    min-height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e4e8ef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.brand h2 {
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+.brand span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #7d8798;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #59657a;
+    transition: .25s;
+}
+
+nav a:hover {
+    color: #2166e5;
+}
+
+
+/* =========================================================
+   BUTTON NAV
+========================================================= */
+
+.nav-button {
+    background: #2166e5;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(33,102,229,.18);
+    transition: .25s;
+}
+
+.nav-button:hover {
+    background: #1857c5;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: unset !important;
+    height: auto !important;
+    padding: 55px 0 60px !important;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 88% 35%,
+            rgba(70,145,240,.45),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #061a3a 0%,
+            #0a2d65 55%,
+            #1455a2 100%
+        );
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: -190px;
+    top: -260px;
+    border: 55px solid rgba(255,255,255,.035);
+    border-radius: 50%;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -80px;
+    bottom: -220px;
+    border: 40px solid rgba(255,255,255,.035);
+    border-radius: 50%;
+}
+
+.hero-content {
+    min-height: unset !important;
+    height: auto !important;
+    padding: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: 1.1fr .9fr;
+
+    align-items: center !important;
+    gap: 45px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-text {
+    padding: 0 !important;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-text h1 {
+    margin-bottom: 18px !important;
+    line-height: 1.05 !important;
+    color: #fff;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 800;
+    letter-spacing: -2.5px;
+}
+
+.hero-text h1 span {
+    color: #69adff;
+}
+
+.hero-text p {
+    margin-bottom: 24px !important;
+    max-width: 700px;
+    color: #d4e3f7;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-buttons {
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary,
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 17px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .25s;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #0b3975;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.btn-outline {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.3);
+    background: rgba(255,255,255,.06);
+}
+
+.btn-outline:hover {
+    background: rgba(255,255,255,.13);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO CARD
+========================================================= */
+
+.hero-card {
+    margin: 0 !important;
+    margin-left: auto !important;
+
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    max-width: 420px;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.18),
+            rgba(255,255,255,.07)
+        );
+
+    border: 1px solid rgba(255,255,255,.23);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.2);
+
+    backdrop-filter: blur(14px);
+
+    color: #fff;
+}
+
+.hero-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.hero-card-top span {
+    color: #e1edff;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .6px;
+}
+
+.hero-card-top i {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(255,255,255,.12);
+
+    color: #82c1ff;
+    font-size: 17px;
+}
+
+.hero-card-title {
+    padding: 17px 0 14px;
+}
+
+.hero-card-title small,
+.hero-card-bottom small {
+    display: block;
+    color: #b8d1ef;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.hero-card-title h3 {
+    margin: 5px 0;
+    color: #fff;
+    font-size: 23px;
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.work-time {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #dcecff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.work-time i {
+    color: #76baff;
+}
+
+.hero-card-divider {
+    height: 1px;
+    background: rgba(255,255,255,.15);
+}
+
+.hero-card-bottom {
+    padding-top: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.hero-card-bottom strong {
+    display: block;
+    margin-top: 3px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+.calendar-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(255,255,255,.12);
+
+    color: #82c1ff;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+section {
+    padding: 85px 0;
+}
+
+.section-heading.center {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #2166e5;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 10px 0;
+}
+
+.section-heading h2 span {
+    color: #2166e5;
+}
+
+.section-heading p {
+    color: #758197;
+}
+
+
+/* =========================================================
+   SERAGAM
+========================================================= */
+
+.uniform-section {
+    background: white;
+}
+
+.uniform-layout {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   MENU KIRI
+========================================================= */
+
+.day-selector {
+    background: #f4f7fb;
+
+    border: 1px solid #e5eaf2;
+
+    border-radius: 18px;
+
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.day-button {
+    border: 0;
+
+    background: transparent;
+
+    text-align: left;
+
+    padding: 16px 17px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: #657086;
+
+    font-weight: 700;
+
+    transition: .25s;
+
+    white-space: normal;
+}
+
+.day-button:hover {
+    background: #e8f0fd;
+    color: #2166e5;
+}
+
+.day-button.active {
+    background: #2166e5;
+    color: white;
+
+    box-shadow:
+        0 8px 18px rgba(33,102,229,.2);
+}
+
+.day-button strong {
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+.day-button i {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   DETAIL
+========================================================= */
+
+.uniform-detail {
+    background: #f7f9fc;
+
+    border: 1px solid #e5eaf2;
+
+    border-radius: 22px;
+
+    min-height: 500px;
+
+    padding: 30px;
+}
+
+.uniform-info {
+    display: none;
+    animation: fade .3s ease;
+}
+
+.uniform-info.active {
+    display: block;
+}
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   UNIFORM CONTENT
+========================================================= */
+
+.uniform-info-text {
+    max-width: 800px;
+}
+
+.uniform-large-icon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 29px;
+
+    margin-bottom: 20px;
+}
+
+.blue {
+    background: #e8f1ff;
+    color: #2166e5;
+}
+
+.purple {
+    background: #f0eaff;
+    color: #7048c8;
+}
+
+.brown {
+    background: #f4eadf;
+    color: #95612f;
+}
+
+.green {
+    background: #e4f7ed;
+    color: #15945c;
+}
+
+.uniform-info-text h3 {
+    font-size: 17px;
+    margin-top: 20px;
+    color: #2166e5;
+}
+
+.uniform-info-text h2 {
+    font-size: 27px;
+    margin: 3px 0 8px;
+}
+
+.uniform-info-text p {
+    color: #69758a;
+    margin-bottom: 20px;
+}
+
+.detail-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    background: #eaf7ef;
+    color: #168650;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DOKUMEN BIASA
+========================================================= */
+
+.document-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #2166e5;
+
+    font-weight: 800;
+}
+
+.document-title i {
+    font-size: 20px;
+}
+
+.uniform-image {
+    width: 100%;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 10px;
+
+    border: 1px solid #e2e7ef;
+
+    box-shadow:
+        0 10px 30px rgba(25,45,80,.07);
+}
+
+.uniform-image img {
+    width: 100%;
+
+    max-height: 900px;
+
+    object-fit: contain;
+
+    display: block;
+
+    border-radius: 10px;
+
+    background: #f5f5f5;
+}
+
+
+/* =========================================================
+   PERATURAN PERMIT
+========================================================= */
+
+#cluster {
+    width: 100%;
+}
+
+#cluster .cluster-document {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#cluster .cluster-page {
+    display: none;
+    width: 100%;
+}
+
+#cluster .cluster-page.active {
+    display: block;
+    animation: clusterFade .3s ease;
+}
+
+#cluster .cluster-image-wrapper {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 8px;
+
+    background: #fff;
+
+    border: 1px solid #dce5f0;
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 15px 45px rgba(20,40,80,.12);
+
+    overflow: hidden;
+}
+
+#cluster .cluster-image-wrapper img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 880px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 7px;
+
+    cursor: zoom-in;
+
+    transition: transform .3s ease;
+}
+
+#cluster .cluster-navigation {
+    width: 100%;
+    max-width: 880px;
+
+    margin: 18px auto 0;
+
+    padding: 11px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    background: #fff;
+
+    border: 1px solid #dfe7f1;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(20,40,80,.06);
+}
+
+#cluster .cluster-nav-btn {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123f78,
+            #2166e5
+        );
+
+    color: #fff;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    transition: .25s;
+}
+
+#cluster .cluster-nav-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #1763a6,
+            #2166e5
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(33,102,229,.2);
+}
+
+#cluster .cluster-nav-btn:disabled {
+    background: #d7dee8;
+    color: #8b97a8;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+#cluster .cluster-page-number {
+    color: #718094;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+#cluster .cluster-page-number strong {
+    color: #123f78;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+@keyframes clusterFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   PERMIT PROSES
+========================================================= */
+
+.permit-process-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    color: #2166e5;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.permit-process-title i {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #e8f1ff;
+
+    color: #2166e5;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+.permit-process-image-wrapper {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(20,40,80,.12);
+
+    overflow: hidden;
+}
+
+.permit-process-image {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    margin-top: 10px;
+
+    border-radius: 10px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   PENGAWAS LAPANGAN
+========================================================= */
+
+.pengawas-title {
+    margin-bottom: 22px;
+    font-size: 18px;
+}
+
+.pengawas-title i {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #e8f1ff;
+
+    color: #2166e5;
+
+    font-size: 20px;
+}
+
+.pengawas-image-wrapper {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe6ef;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 35px rgba(20,40,80,.10);
+
+    overflow: hidden;
+}
+
+.pengawas-image-wrapper img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   SURVEY DESIGN AND PLANNING
+========================================================= */
+
+#sabtu {
+    width: 100%;
+}
+
+#sabtu .document-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: #2166e5;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+#sabtu .document-title i {
+    width: 44px;
+    height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #e8f1ff;
+
+    color: #2166e5;
+
+    font-size: 20px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   KOTAK FLOWCHART
+========================================================= */
+
+.sabtu-flowchart-wrapper {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(20,40,80,.12);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GAMBAR SURVEY DESIGN
+========================================================= */
+
+.sabtu-flowchart {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    cursor: zoom-in;
+
+    transition: transform .3s ease;
+}
+
+.sabtu-flowchart:hover {
+    transform: scale(1.01);
+}
+
+
+/* =========================================================
+   SCHEDULE
+========================================================= */
+
+.schedule-section {
+    background: #f7f9fc;
+}
+
+.schedule-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+}
+
+.schedule-card {
+    background: white;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(25,45,80,.05);
+}
+
+.schedule-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 15px;
+
+    background: #eaf2ff;
+
+    color: #2166e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.schedule-card span {
+    font-size: 13px;
+
+    color: #7b8598;
+
+    font-weight: 600;
+}
+
+.schedule-card h3 {
+    font-size: 24px;
+    margin: 3px 0;
+}
+
+.schedule-card p {
+    font-size: 12px;
+    color: #a0a8b7;
+}
+
+
+/* =========================================================
+   ABSENSI
+========================================================= */
+
+.attendance-section {
+    background: white;
+}
+
+.attendance-box {
+    background:
+        linear-gradient(
+            135deg,
+            #0e3473,
+            #2166e5
+        );
+
+    border-radius: 25px;
+
+    padding: 48px;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: 110px 1fr;
+
+    gap: 30px;
+
+    box-shadow:
+        0 22px 50px rgba(23,77,163,.2);
+}
+
+.attendance-icon {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,.13);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+}
+
+.attendance-content .section-label {
+    color: #bcd8ff;
+}
+
+.attendance-content h2 {
+    font-size: 37px;
+    margin: 8px 0;
+}
+
+.attendance-content h2 span {
+    color: #bcd8ff;
+}
+
+.attendance-content > p {
+    color: #dbe8ff;
+    max-width: 850px;
+}
+
+.attendance-points {
+    margin-top: 24px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 12px;
+}
+
+.attendance-points div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+}
+
+.attendance-points i {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #2166e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NOTES
+========================================================= */
+
+.notes-section {
+    background: #f7f9fc;
+}
+
+.notes-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+.notes-icon {
+    width: 54px;
+    height: 54px;
+
+    border-radius: 15px;
+
+    background: #eaf2ff;
+
+    color: #2166e5;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+.notes-header span {
+    font-size: 10px;
+
+    color: #2166e5;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.notes-header h2 {
+    font-size: 30px;
+}
+
+.notes-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 18px;
+}
+
+.note {
+    background: white;
+
+    border: 1px solid #e3e8f0;
+
+    border-radius: 17px;
+
+    padding: 23px;
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.note > span {
+    font-size: 13px;
+
+    color: #2166e5;
+
+    font-weight: 800;
+}
+
+.note p {
+    font-size: 13px;
+    color: #667187;
+}
+
+.note.warning {
+    border-color: #f0d5c8;
+    background: #fffaf7;
+}
+
+.note.warning > span {
+    color: #d36a38;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: #0c1c37;
+    color: #dbe4f2;
+}
+
+.footer-content {
+    padding: 48px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    background: #17345f;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #8dbaff;
+}
+
+.footer-brand h3 {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: #8291a9;
+}
+
+.footer-info {
+    display: flex;
+    gap: 28px;
+    max-width: 650px;
+}
+
+.footer-info div {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 12px;
+
+    color: #aebbd0;
+}
+
+.footer-info i {
+    color: #75aaff;
+    margin-top: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 17px 0;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    color: #71819a;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .hero {
+        min-height: 0 !important;
+
+        height: 590px !important;
+
+        max-height: 590px !important;
+
+        padding: 45px 0 !important;
+    }
+
+    .hero-content {
+        height: 100% !important;
+        min-height: 0 !important;
+    }
+
+    .hero-text h1 {
+        font-size:
+            clamp(
+                48px,
+                5vw,
+                72px
+            ) !important;
+    }
+
+    .hero-text p {
+        font-size: 17px !important;
+        line-height: 1.7 !important;
+    }
+
+    .hero-card {
+        transform: scale(.92);
+        transform-origin: center;
+    }
+
+    #cluster .cluster-document {
+        max-width: 950px;
+    }
+
+    #cluster .cluster-image-wrapper {
+        max-width: 950px;
+    }
+
+    #cluster .cluster-image-wrapper img {
+        width: 100%;
+        max-width: 930px;
+    }
+
+    #cluster .cluster-navigation {
+        max-width: 930px;
+    }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) and (min-width: 901px) {
+
+    .hero {
+        height: 540px !important;
+        max-height: 540px !important;
+        padding: 40px 0 !important;
+    }
+
+    .hero-text h1 {
+        font-size: 55px !important;
+    }
+
+    .hero-card {
+        transform: scale(.86);
+    }
+
+    #cluster .cluster-document {
+        max-width: 800px;
+    }
+
+    #cluster .cluster-image-wrapper {
+        max-width: 800px;
+    }
+
+    #cluster .cluster-image-wrapper img {
+        max-width: 785px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        height: auto !important;
+        max-height: none !important;
+        min-height: 0 !important;
+        padding: 50px 0 !important;
+    }
+
+    .hero-content {
+        height: auto !important;
+        min-height: 0 !important;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .hero-card {
+        transform: none !important;
+
+        margin-top: 30px !important;
+
+        margin-left: 0 !important;
+    }
+
+    .uniform-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .day-selector {
+        display: grid;
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .schedule-grid,
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-box {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content,
+    .footer-info {
+        flex-direction: column;
+    }
+
+    #cluster .cluster-document {
+        max-width: 100%;
+    }
+
+    #cluster .cluster-image-wrapper {
+        max-width: 100%;
+    }
+
+    #cluster .cluster-image-wrapper img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #cluster .cluster-navigation {
+        max-width: 100%;
+    }
+
+    .sabtu-flowchart-wrapper {
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+}
+
+
+/* =========================================================
+   HP
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(92%, 500px);
+    }
+
+    .nav {
+        min-height: 70px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 40px 0 45px !important;
+    }
+
+    .hero-content {
+        padding: 0 !important;
+        gap: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 42px !important;
+        line-height: 1.08 !important;
+    }
+
+    .hero-text p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    .hero-card {
+        margin-top: 25px !important;
+        padding: 17px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .day-selector {
+        grid-template-columns: 1fr;
+    }
+
+    .uniform-detail {
+        padding: 12px;
+    }
+
+    .attendance-box {
+        padding: 28px;
+    }
+
+    .attendance-content h2 {
+        font-size: 29px;
+    }
+
+    .attendance-points {
+        grid-template-columns: 1fr;
+    }
+
+    #cluster .cluster-document {
+        max-width: 100%;
+    }
+
+    #cluster .cluster-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 4px;
+        border-radius: 10px;
+    }
+
+    #cluster .cluster-image-wrapper img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    #cluster .cluster-navigation {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px;
+        gap: 5px;
+    }
+
+    #cluster .cluster-nav-btn {
+        padding: 8px 9px;
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    #cluster .cluster-page-number {
+        font-size: 9px;
+    }
+
+    #cluster .cluster-page-number strong {
+        font-size: 11px;
+    }
+
+    .footer-content {
+        padding: 40px 0;
+    }
+
+
+    /* =====================================================
+       SURVEY DESIGN AND PLANNING DI HP
+    ===================================================== */
+
+    .sabtu-flowchart-wrapper {
+        padding: 5px;
+
+        border-radius: 10px;
+
+        overflow-x: auto;
+    }
+
+    .sabtu-flowchart {
+        width: 100%;
+
+        min-width: 650px;
+
+        border-radius: 7px;
+    }
+
+    #sabtu .document-title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    #sabtu .document-title i {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   FULLSCREEN DOKUMEN
+========================================================= */
+
+.document-fullscreen {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+
+    height: 100vh !important;
+
+    z-index: 99999 !important;
+
+    background: #eaf0f7 !important;
+
+    padding: 20px !important;
+
+    overflow: auto !important;
+}
+
+.document-fullscreen .cluster-image-wrapper {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+.document-fullscreen .cluster-image-wrapper img {
+    max-width: 1180px !important;
+    width: 100% !important;
+}
+
+.document-fullscreen .cluster-navigation {
+    max-width: 1180px !important;
+}
+
+
+/* =========================================================
+   DOCUMENT ZOOM
+========================================================= */
+
+.cluster-image-wrapper.zoomed {
+    overflow: auto !important;
+    cursor: grab;
+}
+
+.cluster-image-wrapper.zoomed img {
+    width: auto !important;
+
+    max-width: none !important;
+
+    min-width: 100%;
+}
+
+
+/* =========================================================
+   CLOSE FULLSCREEN
+========================================================= */
+
+.cluster-close-fullscreen {
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 100000;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #123f78;
+
+    color: white;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.2);
+}
+
+.document-fullscreen + .cluster-close-fullscreen {
+    display: flex;
+}
+
+
+
+/* =========================================================
+   FWA (MYREPUBLIK) FLOWCHART
+========================================================= */
+.fwa-flow-card{width:100%;overflow:hidden;border:1px solid #dce5f0;border-radius:14px;background:#fff;box-shadow:0 15px 45px rgba(20,40,80,.10)}
+.fwa-flow-header{display:grid;grid-template-columns:105px 2px minmax(0,1fr);align-items:center;gap:18px;padding:20px;background:linear-gradient(135deg,#fff,#f0f6ff)}
+.fwa-logo{display:flex;flex-direction:column;align-items:center;color:#173d86;line-height:1}
+.fwa-logo strong{font-size:38px;font-weight:900;font-style:italic;letter-spacing:-4px}
+.fwa-logo small{font-size:6px;font-weight:800;margin-top:6px;letter-spacing:.2px}
+.fwa-header-divider{height:55px;background:#173d86}
+.fwa-flow-header h2{text-align:center;color:#123b83;font-size:clamp(17px,2.4vw,30px);font-weight:900;line-height:1.15}
+.fwa-flow-header h2 span{display:block}
+.fwa-flow-body{padding:4px 16px 20px;background:linear-gradient(180deg,#fff,#f9fbff)}
+.fwa-flow-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-bottom:24px}
+.fwa-flow-row:last-child{margin-bottom:0}
+.fwa-flow-row.reverse .fwa-step{order:4}
+.fwa-flow-row.reverse .fwa-step:nth-child(2){order:3}
+.fwa-flow-row.reverse .fwa-step:nth-child(3){order:2}
+.fwa-flow-row.reverse .fwa-step:nth-child(4){order:1}
+.fwa-step{position:relative;min-width:0;min-height:76px;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 8px;border:1px solid #b7d4fb;border-radius:12px;background:linear-gradient(135deg,#f8fbff,#eaf3ff);color:#17488f}
+.fwa-step>i{font-size:27px;flex-shrink:0}
+.fwa-step p{min-width:0;text-align:center;font-size:9px;line-height:1.4;color:#244979;overflow-wrap:anywhere}
+.fwa-step p strong{font-weight:800}
+.fwa-num{position:absolute;left:-7px;top:-10px;width:29px;height:29px;display:grid;place-items:center;border-radius:50%;background:#123f88;color:#fff;border:2px solid #fff;font-size:14px;z-index:2}
+.fwa-arrow,.fwa-down{position:absolute;color:#17488f;font-size:21px;font-weight:900;z-index:3}
+.fwa-arrow{right:-17px;top:50%;transform:translateY(-50%)}
+.fwa-down{bottom:-24px;left:50%;transform:translateX(-50%)}
+@media(max-width:900px){.fwa-flow-header{grid-template-columns:75px 2px 1fr;gap:10px;padding:14px}.fwa-logo strong{font-size:30px}.fwa-flow-body{padding:8px}.fwa-flow-row{gap:15px}.fwa-step{flex-direction:column;gap:5px;min-height:95px;padding:12px 5px}.fwa-step>i{font-size:23px}.fwa-step p{font-size:9px}.fwa-arrow{right:-13px;font-size:16px}}
+@media(max-width:600px){.fwa-flow-header{grid-template-columns:58px 1px 1fr;gap:8px;padding:12px 8px}.fwa-logo strong{font-size:24px}.fwa-logo small{font-size:4px}.fwa-header-divider{height:42px}.fwa-flow-header h2{font-size:14px}.fwa-flow-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 16px;margin-bottom:22px}.fwa-flow-row.reverse .fwa-step{order:initial}.fwa-step{min-height:90px}.fwa-arrow,.fwa-down{display:none}.fwa-step p{font-size:10px}}
+@media(max-width:380px){.fwa-flow-row{grid-template-columns:1fr}.fwa-step{flex-direction:row;min-height:70px}.fwa-step p{font-size:11px}}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="header">
+
+    <div class="container nav">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+
+                <img
+                    src="LOGO GBU.png"
+                    alt="Logo GBU"
+                >
+
+            </div>
+
+            <div>
+
+                <h2>
+                    GENESIS
+                </h2>
+
+                <span>
+                    BERKAT USAHA
+                </span>
+
+            </div>
+
+        </div>
+
+
+        
+
+
+        <a
+            href="#seragam-section"
+            class="nav-button"
+        >
+
+            Lihat Ketentuan
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <h1>
+
+                Informasi
+
+                <span>
+                    Internal Perusahaan
+                </span>
+
+            </h1>
+
+
+            <div class="hero-buttons">
+
+               
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-card-top">
+
+                <span>
+                    PT. GENESIS BERKAT USAHA
+                </span>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+
+            <div class="hero-card-title">
+
+                <small>
+                    JADWAL KERJA
+                </small>
+
+                <h3>
+                    Senin — Jumat
+                </h3>
+
+                <div class="work-time">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    09.00 — 17.00
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-card-divider"></div>
+
+
+            <div class="hero-card-bottom">
+
+                <div>
+
+                    <small>
+                        SABTU
+                    </small>
+
+                    <strong>
+                        09.00 — 15.00
+                    </strong>
+
+                </div>
+
+
+                <div class="calendar-icon">
+
+                    <i class="fa-solid fa-business-time"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERAGAM
+========================================================= -->
+
+<section
+    class="uniform-section"
+    id="seragam-section"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <span class="section-label">
+
+                KETENTUAN PERUSAHAAN
+
+            </span>
+
+
+            <h2>
+
+                PT GENESIS 
+
+                <span>
+                    BERKAT USAHA
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Pilih menu di sebelah kiri untuk melihat informasi
+                yang tersedia.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="uniform-layout">
+
+
+            <!-- =================================================
+                 MENU KIRI
+            ================================================= -->
+
+            <div class="day-selector">
+
+
+                <button
+                    type="button"
+                    class="day-button active"
+                    data-target="seragam"
+                >
+
+                    <strong>
+
+                        <i class="fa-solid fa-shirt"></i>
+
+                        SERAGAM
+
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="day-button"
+                    data-target="kerahasiaan"
+                >
+
+                    <strong>
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        KERAHASIAAN INFORMASI
+
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="day-button"
+                    data-target="cluster"
+                >
+
+                    <strong>
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        PERATURAN PERMIT
+
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="day-button"
+                    data-target="pengawas-lapangan"
+                >
+
+                    <strong>
+
+                        <i class="fa-solid fa-person-digging"></i>
+
+                        PENGAWAS LAPANGAN
+
+                    </strong>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="day-button"
+                    data-target="permit-proses"
+                >
+
+                    <strong>
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                        FWA (MYREPUBLIK)
+
+                    </strong>
+
+                </button>
+
+
+                <!-- =================================================
+                     SURVEY DESIGN AND PLANNING
+                ================================================= -->
+
+                <button
+                    type="button"
+                    class="day-button"
+                    data-target="sabtu"
+                >
+
+                    <strong>
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                        SURVEY DESIGN AND PLANNING
+
+                    </strong>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DETAIL
+            ================================================= -->
+
+            <div class="uniform-detail">
+
+
+               <!-- =================================================
+                     SERAGAM
+            ================================================= -->
+
+            <div class="uniform-info active" id="seragam">
+
+           
+
+            <div class="uniform-info-text">
+
+                <!-- SENIN -->
+                 <h3>
+                 👔 Senin
+                 </h3>
+
+                 <h2>
+                 Kemeja Biru
+                 </h2>
+
+                 <p>
+                  Menggunakan kemeja biru PT. Genesis Berkat Usaha
+                  sebagai seragam kerja pada hari Senin.
+                 </p>
+
+
+                <!-- SELASA -->
+                 <h3>
+                 👔 Selasa
+                 </h3>
+
+                 <h2>
+                 Kemeja / Baju Polo Berkerah
+                 </h2>
+
+                  <p>
+                  Menggunakan kemeja atau baju polo berkerah
+                  dengan tampilan yang rapi dan sopan.
+                  </p>
+
+
+                <!-- RABU -->
+                  <h3>
+                 👔 Rabu
+                  </h3>
+
+                  <h2>
+                  Kemeja / Baju Polo Berkerah
+                  </h2>
+
+                  <p>
+                  Menggunakan kemeja atau baju polo berkerah
+                  dengan tampilan yang rapi dan sopan.
+                  </p>
+
+
+                <!-- KAMIS -->
+                  <h3>
+                 👔 Kamis
+                 </h3>
+
+                 <h2>
+                 Baju Ungu
+                 </h2>
+
+                 <p>
+                 Menggunakan baju ungu PT. Genesis Berkat Usaha
+                 sebagai seragam kerja pada hari Kamis.
+                 </p>
+
+
+                <!-- JUMAT -->
+                 <h3>
+                  👔 Jumat
+                 </h3>
+
+                 <h2>
+                 Batik
+                 </h2>
+
+                 <p>
+                 Menggunakan pakaian batik yang rapi dan
+                 sopan untuk bekerja.
+                 </p>
+
+
+                <!-- SABTU -->
+                 <h3>
+                 👔 Sabtu
+                 </h3>
+
+                 <h2>
+                 Casual Sopan / Bebas Rapi
+                 </h2>
+
+                 <p>
+                 Menggunakan pakaian bebas dengan tetap
+                 memperhatikan kerapian dan kesopanan.
+                 </p>
+
+</div>
+
+
+</div>
+
+
+                <!-- =================================================
+                     KERAHASIAAN
+                ================================================= -->
+
+                <div
+                    class="uniform-info"
+                    id="kerahasiaan"
+                >
+
+                    <div class="document-title">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <span>
+                            Kerahasiaan & Integritas Informasi
+                        </span>
+
+                    </div>
+
+
+                    <div class="uniform-image">
+
+                        <img
+                            src="003.INTERNAL MEMO KERAHASIAAN DAN INTEGRITAS INFORMASI RAW_page-0001.jpg"
+                            alt="Kerahasiaan dan Integritas Informasi"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PERATURAN PERMIT
+                ================================================= -->
+
+                <div
+                    class="uniform-info"
+                    id="cluster"
+                >
+
+                    <div class="document-title">
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        <span>
+                            Peraturan Permit
+                        </span>
+
+                    </div>
+
+
+                    <div class="cluster-document">
+
+
+                        <!-- HALAMAN 1 -->
+
+                        <div class="cluster-page active">
+
+                            <div class="cluster-image-wrapper">
+
+                                <img
+                                    src="ilovepdf_pages-to-jpg (1)/INTERNAL MEMO PERMIT - APRIL 2026 (1) (1)_page-0001.jpg"
+                                    alt="Peraturan Permit Halaman 1"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HALAMAN 2 -->
+
+                        <div class="cluster-page">
+
+                            <div class="cluster-image-wrapper">
+
+                                <img
+                                    src="ilovepdf_pages-to-jpg (1)/INTERNAL MEMO PERMIT - APRIL 2026 (1) (1)_page-0002.jpg"
+                                    alt="Peraturan Permit Halaman 2"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HALAMAN 3 -->
+
+                        <div class="cluster-page">
+
+                            <div class="cluster-image-wrapper">
+
+                                <img
+                                    src="ilovepdf_pages-to-jpg (1)/INTERNAL MEMO PERMIT - APRIL 2026 (1) (1)_page-0003.jpg"
+                                    alt="Peraturan Permit Halaman 3"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HALAMAN 4 -->
+
+                        <div class="cluster-page">
+
+                            <div class="cluster-image-wrapper">
+
+                                <img
+                                    src="ilovepdf_pages-to-jpg (1)/INTERNAL MEMO PERMIT - APRIL 2026 (1) (1)_page-0004.jpg"
+                                    alt="Peraturan Permit Halaman 4"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PAGINATION -->
+
+                        <div class="cluster-navigation">
+
+                            <button
+                                type="button"
+                                class="cluster-nav-btn"
+                                id="clusterPrev"
+                                disabled
+                            >
+
+                                <i class="fas fa-chevron-left"></i>
+
+                                Sebelumnya
+
+                            </button>
+
+
+                            <div class="cluster-page-number">
+
+                                Halaman
+
+                                <strong id="clusterCurrentPage">
+                                    1
+                                </strong>
+
+                                dari
+
+                                <strong>
+                                    4
+                                </strong>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="cluster-nav-btn"
+                                id="clusterNext"
+                            >
+
+                                Berikutnya
+
+                                <i class="fas fa-chevron-right"></i>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="cluster-nav-btn"
+                                id="clusterZoom"
+                            >
+
+                                <i class="fas fa-search-plus"></i>
+
+                                Zoom
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="cluster-nav-btn"
+                                id="clusterFullscreen"
+                            >
+
+                                <i class="fas fa-expand"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FWA (MYREPUBLIK)
+                ================================================= -->
+
+                <div
+                    class="uniform-info"
+                    id="permit-proses"
+                >
+
+                    <div class="document-title permit-process-title">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>FWA (MYREPUBLIK)</span>
+                    </div>
+
+                    <div class="fwa-flow-card">
+                        <header class="fwa-flow-header">
+                            <div class="fwa-logo">
+                                <strong>GBU</strong>
+                                <small>GENESIS BERKAT USAHA</small>
+                            </div>
+                            <div class="fwa-header-divider"></div>
+                            <h2>ALUR KERJA PROJECT <span>FWA (MYREPUBLIK)</span></h2>
+                        </header>
+
+                        <div class="fwa-flow-body">
+                            <div class="fwa-flow-row forward">
+                                <article class="fwa-step"><b class="fwa-num">1</b><i class="fa-solid fa-file-lines"></i><p>Turun<br><strong>NTP</strong></p><span class="fwa-arrow">→</span></article>
+                                <article class="fwa-step"><b class="fwa-num">2</b><i class="fa-solid fa-clipboard-list"></i><p><strong>Survey aktual</strong><br>(lokasi, jalur, site/tower)</p><span class="fwa-arrow">→</span></article>
+                                <article class="fwa-step"><b class="fwa-num">3</b><i class="fa-solid fa-file-signature"></i><p><strong>Pembuatan</strong><br>APD</p><span class="fwa-arrow">→</span></article>
+                                <article class="fwa-step"><b class="fwa-num">4</b><i class="fa-solid fa-database"></i><p><strong>DRM</strong></p><span class="fwa-down">↓</span></article>
+                            </div>
+
+                            <div class="fwa-flow-row reverse">
+                                <article class="fwa-step"><b class="fwa-num">5</b><i class="fa-solid fa-file-invoice"></i><p><strong>Request</strong><br>material/CDR</p><span class="fwa-arrow">←</span></article>
+                                <article class="fwa-step"><b class="fwa-num">6</b><i class="fa-solid fa-database"></i><p><strong>Sikom</strong><br>(jika ada donasi)</p><span class="fwa-arrow">←</span></article>
+                                <article class="fwa-step"><b class="fwa-num">7</b><i class="fa-solid fa-users"></i><p><strong>Koordinasi</strong><br>Petikan dengan Wasepan NRO</p><span class="fwa-arrow">←</span></article>
+                                <article class="fwa-step"><b class="fwa-num">8</b><i class="fa-solid fa-layer-group"></i><p><strong>Implementasi</strong><br>Pulling Cable</p><span class="fwa-down">↓</span></article>
+                            </div>
+
+                            <div class="fwa-flow-row forward">
+                                <article class="fwa-step"><b class="fwa-num">9</b><i class="fa-solid fa-tower-broadcast"></i><p><strong>Tanam tiang</strong><br>(jika ada)</p><span class="fwa-arrow">→</span></article>
+                                <article class="fwa-step"><b class="fwa-num">10</b><i class="fa-solid fa-screwdriver-wrench"></i><p><strong>Instalasi JB</strong><br>dan FAT</p><span class="fwa-arrow">→</span></article>
+                                <article class="fwa-step"><b class="fwa-num">11</b><i class="fa-solid fa-plug"></i><p><strong>Patching</strong><br>di OLT/CSR</p><span class="fwa-arrow">→</span></article>
+                                <article class="fwa-step"><b class="fwa-num">12</b><i class="fa-solid fa-database"></i><p><strong>Collect data</strong><br>OPM dan OTDR</p><span class="fwa-down">↓</span></article>
+                            </div>
+
+                            <div class="fwa-flow-row reverse">
+                                <article class="fwa-step"><b class="fwa-num">13</b><i class="fa-solid fa-tag"></i><p><strong>Tagging dan Opname</strong><br>aktual oleh Wasepan</p><span class="fwa-arrow">←</span></article>
+                                <article class="fwa-step"><b class="fwa-num">14</b><i class="fa-solid fa-user-gear"></i><p><strong>Admin dan</strong><br>SND Proses</p><span class="fwa-arrow">←</span></article>
+                                <article class="fwa-step"><b class="fwa-num">15</b><i class="fa-solid fa-file-circle-check"></i><p><strong>ATP</strong></p><span class="fwa-arrow">←</span></article>
+                                <article class="fwa-step"><b class="fwa-num">16</b><i class="fa-solid fa-power-off"></i><p><strong>Closing</strong></p></article>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PENGAWAS LAPANGAN
+                ================================================= -->
+
+                <div
+                    class="uniform-info"
+                    id="pengawas-lapangan"
+                >
+
+                    <div class="document-title pengawas-title">
+
+                        <i class="fa-solid fa-person-digging"></i>
+
+                        <span>
+                            Alur Kerja Pengawas Lapangan
+                        </span>
+
+                    </div>
+
+
+                    <div class="pengawas-image-wrapper">
+
+                        <img
+                            src="WhatsApp Image 2026-09-16 at 11.27.04 (1).jpeg"
+                            alt="Alur Kerja Pengawas Lapangan"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SURVEY DESIGN AND PLANNING
+                ================================================= -->
+
+                <div
+                    class="uniform-info"
+                    id="sabtu"
+                >
+
+                    <div class="document-title">
+
+                        <i class="fa-solid fa-diagram-project"></i>
+
+                        <span>
+                            Survey Design and Planning
+                        </span>
+
+                    </div>
+
+
+                    <div class="sabtu-flowchart-wrapper">
+
+                        <img
+                            src="WhatsApp Image 2026-09-16 at 13.15.29.jpeg"
+                            alt="Survey Design and Planning"
+                            class="sabtu-flowchart"
+                        >
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     JADWAL
+========================================================= -->
+
+<section
+    class="schedule-section"
+    id="jadwal"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <span class="section-label">
+
+                <i class="fa-regular fa-clock"></i>
+
+                WAKTU KERJA
+
+            </span>
+
+
+            <h2>
+
+                Jadwal Kerja
+
+                <span>
+                    Perusahaan
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Jadwal kerja PT. Genesis Berkat Usaha
+                yang berlaku bagi karyawan.
+
+            </p>
+
+        </div>
+
+
+        <div class="schedule-grid">
+
+
+            <div class="schedule-card">
+
+                <div class="schedule-icon">
+
+                    <i class="fa-solid fa-calendar-week"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Senin — Jumat
+                    </span>
+
+                    <h3>
+                        09.00 — 17.00
+                    </h3>
+
+                    <p>
+                        Waktu setempat
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="schedule-card">
+
+                <div class="schedule-icon">
+
+                    <i class="fa-solid fa-calendar-day"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Sabtu
+                    </span>
+
+                    <h3>
+                        09.00 — 15.00
+                    </h3>
+
+                    <p>
+                        Waktu setempat
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+    <div class="container footer-content">
+
+
+        <div class="footer-brand">
+
+
+            <div class="brand-icon">
+
+                <i class="fa-solid fa-building"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    PT. GENESIS BERKAT USAHA
+                </h3>
+
+                <p>
+                    Peraturan  &amp; Internal
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-info">
+
+
+           <div class="alamat">
+
+           <i class="fa-solid fa-location-dot"></i>
+
+           <span>
+           Jl. Bougenvile Raya Blok B2,
+           Sendang Mulyo,
+           Tembalang Kota Semarang,
+           Jawa Tengah, Indonesia
+          </span>
+
+        </div>
+
+
+            <div>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <span>
+                    genesis.gbu@gmail.com
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <p>
+
+                © 2026 PT. Genesis Berkat Usaha.
+                Internal Company Information.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================================
+           TAB MENU
+        ===================================================== */
+
+        const buttons =
+            document.querySelectorAll(
+                ".day-button"
+            );
+
+
+        const contents =
+            document.querySelectorAll(
+                ".uniform-info"
+            );
+
+
+        buttons.forEach(
+            function (button) {
+
+                button.addEventListener(
+                    "click",
+                    function () {
+
+                        const targetId =
+                            this.getAttribute(
+                                "data-target"
+                            );
+
+
+                        buttons.forEach(
+                            function (btn) {
+
+                                btn.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        contents.forEach(
+                            function (content) {
+
+                                content.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+
+                        this.classList.add(
+                            "active"
+                        );
+
+
+                        const target =
+                            document.getElementById(
+                                targetId
+                            );
+
+
+                        if (target) {
+
+                            target.classList.add(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           PERATURAN PERMIT
+        ===================================================== */
+
+        const clusterPages =
+            document.querySelectorAll(
+                "#cluster .cluster-page"
+            );
+
+
+        const clusterCurrentPage =
+            document.getElementById(
+                "clusterCurrentPage"
+            );
+
+
+        const clusterPrev =
+            document.getElementById(
+                "clusterPrev"
+            );
+
+
+        const clusterNext =
+            document.getElementById(
+                "clusterNext"
+            );
+
+
+        const clusterZoom =
+            document.getElementById(
+                "clusterZoom"
+            );
+
+
+        const clusterFullscreen =
+            document.getElementById(
+                "clusterFullscreen"
+            );
+
+
+        let currentClusterPage = 1;
+
+
+
+        /* =====================================================
+           UPDATE PAGE
+        ===================================================== */
+
+        function updateClusterPage() {
+
+            const totalPages =
+                clusterPages.length;
+
+
+            clusterPages.forEach(
+                function (page, index) {
+
+                    page.classList.toggle(
+                        "active",
+                        index ===
+                        currentClusterPage - 1
+                    );
+
+                }
+            );
+
+
+            if (clusterCurrentPage) {
+
+                clusterCurrentPage.textContent =
+                    currentClusterPage;
+
+            }
+
+
+            if (clusterPrev) {
+
+                clusterPrev.disabled =
+                    currentClusterPage === 1;
+
+            }
+
+
+            if (clusterNext) {
+
+                clusterNext.disabled =
+                    currentClusterPage === totalPages;
+
+            }
+
+
+            document
+                .querySelectorAll(
+                    "#cluster .cluster-image-wrapper"
+                )
+                .forEach(
+                    function (wrapper) {
+
+                        wrapper.classList.remove(
+                            "zoomed"
+                        );
+
+                    }
+                );
+
+        }
+
+
+
+        /* =====================================================
+           SEBELUMNYA
+        ===================================================== */
+
+        if (clusterPrev) {
+
+            clusterPrev.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        currentClusterPage > 1
+                    ) {
+
+                        currentClusterPage--;
+
+                        updateClusterPage();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           BERIKUTNYA
+        ===================================================== */
+
+        if (clusterNext) {
+
+            clusterNext.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        currentClusterPage <
+                        clusterPages.length
+                    ) {
+
+                        currentClusterPage++;
+
+                        updateClusterPage();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           ZOOM
+        ===================================================== */
+
+        if (clusterZoom) {
+
+            clusterZoom.addEventListener(
+                "click",
+                function () {
+
+                    const activePage =
+                        document.querySelector(
+                            "#cluster .cluster-page.active"
+                        );
+
+
+                    if (!activePage) {
+                        return;
+                    }
+
+
+                    const wrapper =
+                        activePage.querySelector(
+                            ".cluster-image-wrapper"
+                        );
+
+
+                    if (!wrapper) {
+                        return;
+                    }
+
+
+                    wrapper.classList.toggle(
+                        "zoomed"
+                    );
+
+
+                    if (
+                        wrapper.classList.contains(
+                            "zoomed"
+                        )
+                    ) {
+
+                        clusterZoom.innerHTML =
+                            '<i class="fas fa-search-minus"></i> Zoom Out';
+
+                    } else {
+
+                        clusterZoom.innerHTML =
+                            '<i class="fas fa-search-plus"></i> Zoom';
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FULLSCREEN
+        ===================================================== */
+
+        if (clusterFullscreen) {
+
+            clusterFullscreen.addEventListener(
+                "click",
+                function () {
+
+                    const cluster =
+                        document.getElementById(
+                            "cluster"
+                        );
+
+
+                    cluster.classList.toggle(
+                        "document-fullscreen"
+                    );
+
+
+                    const icon =
+                        clusterFullscreen.querySelector(
+                            "i"
+                        );
+
+
+                    if (
+                        cluster.classList.contains(
+                            "document-fullscreen"
+                        )
+                    ) {
+
+                        icon.className =
+                            "fas fa-compress";
+
+                    } else {
+
+                        icon.className =
+                            "fas fa-expand";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           KLIK GAMBAR PERMIT = ZOOM
+        ===================================================== */
+
+        const documentImages =
+            document.querySelectorAll(
+                "#cluster .cluster-image-wrapper img"
+            );
+
+
+        documentImages.forEach(
+            function (image) {
+
+                image.addEventListener(
+                    "click",
+                    function () {
+
+                        const wrapper =
+                            this.closest(
+                                ".cluster-image-wrapper"
+                            );
+
+
+                        if (!wrapper) {
+                            return;
+                        }
+
+
+                        wrapper.classList.toggle(
+                            "zoomed"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           KEYBOARD
+        ===================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                const cluster =
+                    document.getElementById(
+                        "cluster"
+                    );
+
+
+                if (
+                    event.key ===
+                    "ArrowRight"
+                ) {
+
+                    if (
+                        currentClusterPage <
+                        clusterPages.length
+                    ) {
+
+                        currentClusterPage++;
+
+                        updateClusterPage();
+
+                    }
+
+                }
+
+
+                if (
+                    event.key ===
+                    "ArrowLeft"
+                ) {
+
+                    if (
+                        currentClusterPage > 1
+                    ) {
+
+                        currentClusterPage--;
+
+                        updateClusterPage();
+
+                    }
+
+                }
+
+
+                if (
+                    event.key ===
+                    "Escape"
+                ) {
+
+                    cluster.classList.remove(
+                        "document-fullscreen"
+                    );
+
+
+                    if (clusterFullscreen) {
+
+                        clusterFullscreen
+                            .querySelector("i")
+                            .className =
+                            "fas fa-expand";
+
+                    }
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           INITIAL
+        ===================================================== */
+
+        updateClusterPage();
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

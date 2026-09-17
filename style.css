@@ -1,0 +1,843 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Manrope", Arial, sans-serif;
+    background: #f3f7fc;
+    color: #52647d;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.internal-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 45px;
+
+    padding: 35px 40px 60px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 410px;
+    min-width: 410px;
+
+    padding: 18px;
+
+    background: #f8fbff;
+
+    border: 1px solid #d8e3f0;
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(35, 76, 130, 0.08);
+}
+
+
+/* =========================================================
+   MENU LIST
+========================================================= */
+
+.menu-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   MENU ITEM
+========================================================= */
+
+.menu-item {
+    width: 100%;
+    min-height: 82px;
+
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    color: #536985;
+
+    text-decoration: none;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    letter-spacing: 0.1px;
+
+    border-radius: 18px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   MENU HOVER
+========================================================= */
+
+.menu-item:hover {
+    color: #1f63d8;
+
+    background: #eaf2ff;
+
+    transform: translateX(5px);
+
+    box-shadow:
+        0 8px 22px rgba(37, 105, 224, 0.08);
+}
+
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+.menu-icon {
+    width: 34px;
+    min-width: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+========================================================= */
+
+.menu-item.active {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #2879f0 0%,
+        #175bd0 100%
+    );
+
+    box-shadow:
+        0 15px 32px rgba(37, 105, 224, 0.28);
+}
+
+
+.menu-item.active:hover {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #2879f0 0%,
+        #175bd0 100%
+    );
+
+    transform: none;
+}
+
+
+/* =========================================================
+   DOCUMENT AREA
+========================================================= */
+
+.document-area {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   DOCUMENT CARD
+========================================================= */
+
+.document-card {
+    width: 100%;
+
+    max-width: 1150px;
+
+    min-height: 1100px;
+
+    padding: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background: #ffffff;
+
+    border: 1px solid #d7e2ef;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(36, 69, 112, 0.11);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DOCUMENT IMAGE CONTAINER
+========================================================= */
+
+.document-image-container {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   DOCUMENT IMAGE
+========================================================= */
+
+.document-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================================
+   DOCUMENT HOVER
+========================================================= */
+
+.document-card:hover {
+    box-shadow:
+        0 22px 60px rgba(36, 69, 112, 0.15);
+}
+
+
+/* =========================================================
+   EXTRA LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1800px) {
+
+    .internal-page {
+        gap: 55px;
+
+        padding:
+            40px 55px 70px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+        width: 440px;
+        min-width: 440px;
+
+        padding: 20px;
+
+        border-radius: 30px;
+    }
+
+
+    .menu-list {
+        gap: 12px;
+    }
+
+
+    .menu-item {
+        min-height: 90px;
+
+        padding: 0 28px;
+
+        font-size: 23px;
+
+        gap: 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .menu-icon {
+        width: 38px;
+        min-width: 38px;
+
+        font-size: 28px;
+    }
+
+
+    /* DOCUMENT */
+
+    .document-card {
+        max-width: 1300px;
+
+        min-height: 1200px;
+
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .document-image {
+        max-width: 1250px;
+    }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) and (max-width: 1799px) {
+
+    .internal-page {
+        gap: 50px;
+
+        padding:
+            35px 45px 60px;
+    }
+
+
+    .sidebar {
+        width: 430px;
+        min-width: 430px;
+
+        padding: 20px;
+    }
+
+
+    .menu-list {
+        gap: 11px;
+    }
+
+
+    .menu-item {
+        min-height: 86px;
+
+        font-size: 22px;
+
+        gap: 19px;
+
+        border-radius: 19px;
+    }
+
+
+    .menu-icon {
+        width: 36px;
+        min-width: 36px;
+
+        font-size: 26px;
+    }
+
+
+    .document-card {
+        max-width: 1200px;
+
+        min-height: 1150px;
+
+        padding: 18px;
+    }
+
+
+    .document-image {
+        max-width: 1160px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP BESAR
+========================================================= */
+
+@media (max-width: 1499px) and (min-width: 1201px) {
+
+    .internal-page {
+        gap: 38px;
+
+        padding:
+            30px 32px 50px;
+    }
+
+
+    .sidebar {
+        width: 390px;
+        min-width: 390px;
+
+        padding: 17px;
+    }
+
+
+    .menu-list {
+        gap: 9px;
+    }
+
+
+    .menu-item {
+        min-height: 78px;
+
+        padding: 0 20px;
+
+        font-size: 19px;
+
+        gap: 16px;
+    }
+
+
+    .menu-icon {
+        width: 32px;
+        min-width: 32px;
+
+        font-size: 23px;
+    }
+
+
+    .document-card {
+        max-width: 1050px;
+
+        min-height: 1050px;
+
+        padding: 15px;
+    }
+
+
+    .document-image {
+        max-width: 1020px;
+    }
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) and (min-width: 1001px) {
+
+    .internal-page {
+        gap: 30px;
+
+        padding:
+            25px 25px 45px;
+    }
+
+
+    .sidebar {
+        width: 350px;
+        min-width: 350px;
+
+        padding: 15px;
+
+        border-radius: 23px;
+    }
+
+
+    .menu-list {
+        gap: 8px;
+    }
+
+
+    .menu-item {
+        min-height: 72px;
+
+        padding: 0 17px;
+
+        font-size: 18px;
+
+        gap: 14px;
+
+        border-radius: 16px;
+    }
+
+
+    .menu-icon {
+        width: 30px;
+        min-width: 30px;
+
+        font-size: 22px;
+    }
+
+
+    .document-card {
+        max-width: 900px;
+
+        min-height: 950px;
+
+        padding: 12px;
+    }
+
+
+    .document-image {
+        max-width: 875px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .internal-page {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 28px;
+
+        padding: 22px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+
+        padding: 15px;
+
+        border-radius: 23px;
+    }
+
+
+    .menu-list {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .menu-item {
+        min-height: 70px;
+
+        padding: 0 16px;
+
+        font-size: 17px;
+
+        gap: 13px;
+
+        border-radius: 16px;
+    }
+
+
+    .menu-icon {
+        width: 29px;
+        min-width: 29px;
+
+        font-size: 21px;
+    }
+
+
+    /* DOCUMENT */
+
+    .document-area {
+        width: 100%;
+
+        padding: 0;
+    }
+
+
+    .document-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-height: auto;
+
+        padding: 12px;
+
+        border-radius: 15px;
+    }
+
+
+    .document-image {
+        width: 100%;
+
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .internal-page {
+        padding: 12px;
+
+        gap: 20px;
+    }
+
+
+    /* SIDEBAR */
+
+    .sidebar {
+        width: 100%;
+
+        padding: 10px;
+
+        border-radius: 19px;
+    }
+
+
+    .menu-list {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+
+    .menu-item {
+        min-height: 64px;
+
+        padding: 0 16px;
+
+        font-size: 16px;
+
+        gap: 14px;
+
+        border-radius: 14px;
+    }
+
+
+    .menu-icon {
+        width: 27px;
+        min-width: 27px;
+
+        font-size: 20px;
+    }
+
+
+    /* DOCUMENT */
+
+    .document-area {
+        width: 100%;
+    }
+
+
+    .document-card {
+        width: 100%;
+
+        padding: 7px;
+
+        border-radius: 11px;
+    }
+
+
+    .document-image {
+        width: 100%;
+
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .internal-page {
+        padding: 8px;
+
+        gap: 15px;
+    }
+
+
+    .sidebar {
+        padding: 8px;
+
+        border-radius: 16px;
+    }
+
+
+    .menu-item {
+        min-height: 59px;
+
+        padding: 0 13px;
+
+        font-size: 15px;
+
+        gap: 12px;
+    }
+
+
+    .menu-icon {
+        width: 25px;
+        min-width: 25px;
+
+        font-size: 19px;
+    }
+
+
+    .document-card {
+        padding: 5px;
+
+        border-radius: 9px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 330px) {
+
+    .menu-item {
+        min-height: 55px;
+
+        font-size: 14px;
+
+        gap: 10px;
+    }
+
+
+    .menu-icon {
+        width: 23px;
+        min-width: 23px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   ALAMAT FOOTER - POSISI TENGAH
+========================================================= */
+
+.alamat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.alamat i {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.alamat span {
+    display: block;
+    text-align: center;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER - LOGO, ALAMAT TENGAH, DAN EMAIL
+   Tambahan untuk merapikan posisi alamat di footer
+========================================================= */
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Bagian alamat */
+.alamat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: center;
+}
+
+/* Ikon lokasi */
+.alamat i {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Tulisan alamat */
+.alamat span {
+    display: block;
+    max-width: 380px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Bagian email */
+.footer-email {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .alamat {
+        justify-content: center;
+    }
+
+    .footer-email {
+        justify-content: center;
+    }
+}

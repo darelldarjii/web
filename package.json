@@ -1,0 +1,11 @@
+{
+  "name": "website-seragam-jadwal-genesis",
+  "version": "1.0.0",
+  "description": "Website Seragam dan Jadwal PT. Genesis Berkat Usaha",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5"
+  }
+}
