@@ -243,7 +243,7 @@
 
         .hero-card-top span {
             color: #e1edff;
-            font-size: 11px;
+            font-size: 15px;
             font-weight: 800;
         }
 
@@ -267,24 +267,35 @@
         .hero-card-bottom small {
             display: block;
             color: #b8d1ef;
-            font-size: 10px;
+            font-size: 14px;
             font-weight: 800;
             letter-spacing: 1.3px;
         }
 
-        .hero-card-title h3 {
+        /* SABTU dibuat besar seperti judul Senin — Jumat */
+        .hero-card-bottom small {
+            font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: 0;
+        }
+
+        .hero-card-title h3,
+        .hero-card-bottom strong {
             margin: 5px 0;
             color: #fff;
-            font-size: 23px;
+            font-size: 24px;
+            line-height: 1.2;
+            font-weight: 800;
         }
 
         .work-time {
             display: flex;
             align-items: center;
-            gap: 7px;
+            gap: 8px;
             color: #dcecff;
-            font-size: 12px;
-            font-weight: 700;
+            font-size: 24px;
+            font-weight: 800;
+            line-height: 1.2;
         }
 
         .hero-card-divider {
@@ -298,9 +309,6 @@
 
         .hero-card-bottom strong {
             display: block;
-            margin-top: 3px;
-            color: #fff;
-            font-size: 17px;
         }
 
         /* SECTION */
@@ -498,6 +506,19 @@
             border-radius: 10px;
         }
 
+        /* PERMIT FTTH */
+        .permit-image-wrapper {
+            padding: 10px;
+            background: #fff;
+        }
+
+        .permit-image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
         /* FWA FLOWCHART */
         .fwa-flow-card {
             width: 100%;
@@ -651,6 +672,171 @@
             order: 1;
         }
 
+
+        /* FOTO ADMINISTRASI - SLIDER 6 SLIDE */
+        .admin-slider {
+            position: relative;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #dce5f0;
+            border-radius: 18px;
+            padding: 14px;
+            box-shadow: 0 12px 35px rgba(20, 40, 80, .10);
+            overflow: hidden;
+        }
+
+        .admin-slider-viewport {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #f4f7fb;
+        }
+
+        .admin-slide {
+            display: none;
+            width: 100%;
+            min-height: 420px;
+            align-items: center;
+            justify-content: center;
+            background: #f4f7fb;
+        }
+
+        .admin-slide.active {
+            display: flex;
+            animation: adminFade .35s ease;
+        }
+
+        @keyframes adminFade {
+            from { opacity: .25; transform: scale(.99); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .admin-slide img {
+            display: block;
+            width: 100%;
+            max-height: 680px;
+            height: auto;
+            object-fit: contain;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        .admin-missing {
+            min-height: 420px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #657086;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .admin-missing i {
+            font-size: 42px;
+            color: #2166e5;
+        }
+
+        .admin-missing strong {
+            color: #173d86;
+            font-size: 17px;
+        }
+
+        .admin-missing span {
+            font-size: 13px;
+        }
+
+        .admin-slide-label {
+            position: absolute;
+            left: 24px;
+            top: 24px;
+            z-index: 4;
+            padding: 8px 13px;
+            border-radius: 999px;
+            background: rgba(18, 63, 136, .92);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 800;
+            box-shadow: 0 7px 18px rgba(18, 63, 136, .18);
+        }
+
+        .admin-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(18, 63, 136, .92);
+            color: #fff;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            font-size: 17px;
+            box-shadow: 0 8px 20px rgba(18, 63, 136, .22);
+            transition: .25s;
+        }
+
+        .admin-arrow:hover {
+            background: #2166e5;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .admin-prev { left: 24px; }
+        .admin-next { right: 24px; }
+
+        .admin-slider-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 16px 5px 3px;
+        }
+
+        .admin-counter {
+            color: #173d86;
+            font-size: 13px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .admin-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+        .admin-dot {
+            width: 9px;
+            height: 9px;
+            border: 0;
+            border-radius: 50%;
+            background: #cbd5e5;
+            cursor: pointer;
+            padding: 0;
+            transition: .25s;
+        }
+
+        .admin-dot.active {
+            width: 25px;
+            border-radius: 999px;
+            background: #2166e5;
+        }
+
+        .admin-caption {
+            color: #69758a;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: right;
+        }
+
         /* FOOTER */
         .footer {
             background: #0c1c37;
@@ -781,6 +967,27 @@
                 font-size: 14px;
             }
 
+            .hero-card-top span {
+                font-size: 14px;
+            }
+
+            .hero-card-title small {
+                font-size: 13px;
+            }
+
+            .hero-card-bottom small {
+                font-size: 22px;
+            }
+
+            .hero-card-title h3,
+            .hero-card-bottom strong {
+                font-size: 22px;
+            }
+
+            .work-time {
+                font-size: 22px;
+            }
+
             section {
                 padding: 55px 0;
             }
@@ -869,6 +1076,47 @@
             .fwa-arrow,
             .fwa-down {
                 display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .admin-slider {
+                padding: 7px;
+                border-radius: 14px;
+            }
+
+            .admin-slide {
+                min-height: 300px;
+            }
+
+            .admin-slide img {
+                max-height: 560px;
+            }
+
+            .admin-arrow {
+                width: 38px;
+                height: 38px;
+                font-size: 14px;
+            }
+
+            .admin-prev { left: 12px; }
+            .admin-next { right: 12px; }
+
+            .admin-slide-label {
+                left: 14px;
+                top: 14px;
+                font-size: 10px;
+                padding: 6px 10px;
+            }
+
+            .admin-slider-bottom {
+                flex-direction: column;
+                gap: 10px;
+                padding-top: 13px;
+            }
+
+            .admin-caption {
+                text-align: center;
             }
         }
 
@@ -1010,7 +1258,27 @@
                         </strong>
                     </button>
 
-                    <!-- 4. SURVEY DESIGN AND PLANNING -->
+                    <!-- 4. FOTO ADMINISTRASI -->
+                    <button type="button"
+                            class="day-button"
+                            data-target="foto-administrasi">
+                        <strong>
+                            <i class="fa-solid fa-camera"></i>
+                            FOTO ADMINISTRASI
+                        </strong>
+                    </button>
+
+                    <!-- 5. PERMIT (FTTH) -->
+                    <button type="button"
+                            class="day-button"
+                            data-target="permit-ftth">
+                        <strong>
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            PERMIT (FTTH)
+                        </strong>
+                    </button>
+
+                    <!-- 6. SURVEY DESIGN AND PLANNING -->
                     <button type="button"
                             class="day-button"
                             data-target="sabtu">
@@ -1020,7 +1288,7 @@
                         </strong>
                     </button>
 
-                    <!-- 5. FWA -->
+                    <!-- 7. FWA -->
                     <button type="button"
                             class="day-button"
                             data-target="permit-proses">
@@ -1333,6 +1601,123 @@
                         </div>
                     </div>
 
+                    <!-- FOTO ADMINISTRASI -->
+                    <div class="uniform-info" id="foto-administrasi">
+
+                        <div class="document-title">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Foto Administrasi</span>
+                        </div>
+
+                        <div class="admin-slider" id="adminSlider">
+                            <div class="admin-slider-viewport">
+
+                                <div class="admin-slide active">
+                                    <span class="admin-slide-label">SLIDE 1</span>
+                                    <img src="1.jpeg" alt="Foto Administrasi Slide 1">
+                                </div>
+
+                                <div class="admin-slide">
+                                    <span class="admin-slide-label">SLIDE 2</span>
+                                    <img src="2.jpeg" alt="Foto Administrasi Slide 2"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="admin-missing" style="display:none;">
+                                        <i class="fa-regular fa-image"></i>
+                                        <strong>Foto Administrasi Slide 2</strong>
+                                        <span>Tambahkan file <b>2.jpeg</b> pada folder website.</span>
+                                    </div>
+                                </div>
+
+                                <div class="admin-slide">
+                                    <span class="admin-slide-label">SLIDE 3</span>
+                                    <img src="3.jpeg" alt="Foto Administrasi Slide 3"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="admin-missing" style="display:none;">
+                                        <i class="fa-regular fa-image"></i>
+                                        <strong>Foto Administrasi Slide 3</strong>
+                                        <span>Tambahkan file <b>3.jpeg</b> pada folder website.</span>
+                                    </div>
+                                </div>
+
+                                <div class="admin-slide">
+                                    <span class="admin-slide-label">SLIDE 4</span>
+                                    <img src="4.jpeg" alt="Foto Administrasi Slide 4"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="admin-missing" style="display:none;">
+                                        <i class="fa-regular fa-image"></i>
+                                        <strong>Foto Administrasi Slide 4</strong>
+                                        <span>Tambahkan file <b>4.jpeg</b> pada folder website.</span>
+                                    </div>
+                                </div>
+
+                                <div class="admin-slide">
+                                    <span class="admin-slide-label">SLIDE 5</span>
+                                    <img src="5.jpeg" alt="Foto Administrasi Slide 5"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="admin-missing" style="display:none;">
+                                        <i class="fa-regular fa-image"></i>
+                                        <strong>Foto Administrasi Slide 5</strong>
+                                        <span>Tambahkan file <b>5.jpeg</b> pada folder website.</span>
+                                    </div>
+                                </div>
+
+                                <div class="admin-slide">
+                                    <span class="admin-slide-label">SLIDE 6</span>
+                                    <img src="6.jpeg" alt="Foto Administrasi Slide 6"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="admin-missing" style="display:none;">
+                                        <i class="fa-regular fa-image"></i>
+                                        <strong>Foto Administrasi Slide 6</strong>
+                                        <span>Tambahkan file <b>6.jpeg</b> pada folder website.</span>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="admin-arrow admin-prev" id="adminPrev" aria-label="Foto sebelumnya">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+
+                                <button type="button" class="admin-arrow admin-next" id="adminNext" aria-label="Foto berikutnya">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
+
+                            </div>
+
+                            <div class="admin-slider-bottom">
+                                <div class="admin-counter" id="adminCounter">1 / 6</div>
+
+                                <div class="admin-dots" aria-label="Navigasi foto administrasi">
+                                    <button type="button" class="admin-dot active" data-slide="0" aria-label="Slide 1"></button>
+                                    <button type="button" class="admin-dot" data-slide="1" aria-label="Slide 2"></button>
+                                    <button type="button" class="admin-dot" data-slide="2" aria-label="Slide 3"></button>
+                                    <button type="button" class="admin-dot" data-slide="3" aria-label="Slide 4"></button>
+                                    <button type="button" class="admin-dot" data-slide="4" aria-label="Slide 5"></button>
+                                    <button type="button" class="admin-dot" data-slide="5" aria-label="Slide 6"></button>
+                                </div>
+
+                                <div class="admin-caption">Foto Administrasi</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- PERMIT FTTH -->
+                    <div class="uniform-info" id="permit-ftth">
+
+                        <div class="document-title">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            <span>Permit Proses (FTTH MORAREPUBLIK)</span>
+                        </div>
+
+                        <div class="odoo-image-wrapper permit-image-wrapper">
+                            <img
+                                src="FTTH.jpeg"
+                                alt="Permit Proses FTTH MORAREPUBLIK"
+                                class="odoo-image permit-image"
+                            >
+                        </div>
+
+                    </div>
+
                     <!-- SURVEY DESIGN AND PLANNING -->
                     <div class="uniform-info" id="sabtu">
 
@@ -1438,6 +1823,95 @@
                 });
 
             });
+
+            /* =====================================================
+               SLIDER FOTO ADMINISTRASI - 6 SLIDE
+            ===================================================== */
+            const adminSlides = document.querySelectorAll(".admin-slide");
+            const adminDots = document.querySelectorAll(".admin-dot");
+            const adminCounter = document.getElementById("adminCounter");
+            const adminPrev = document.getElementById("adminPrev");
+            const adminNext = document.getElementById("adminNext");
+            let adminCurrent = 0;
+
+            function showAdminSlide(index) {
+                if (!adminSlides.length) return;
+
+                // Slider tidak berputar (tidak kembali ke slide 1 setelah slide 6).
+                adminCurrent = Math.max(0, Math.min(index, adminSlides.length - 1));
+
+                adminSlides.forEach(function (slide, i) {
+                    slide.classList.toggle("active", i === adminCurrent);
+                });
+
+                adminDots.forEach(function (dot, i) {
+                    dot.classList.toggle("active", i === adminCurrent);
+                });
+
+                if (adminCounter) {
+                    adminCounter.textContent = (adminCurrent + 1) + " / " + adminSlides.length;
+                }
+
+                // Tombol dibuat nonaktif saat sudah berada di ujung slider.
+                if (adminPrev) {
+                    adminPrev.disabled = adminCurrent === 0;
+                }
+                if (adminNext) {
+                    adminNext.disabled = adminCurrent === adminSlides.length - 1;
+                }
+            }
+
+            if (adminPrev) {
+                adminPrev.addEventListener("click", function () {
+                    showAdminSlide(adminCurrent - 1);
+                });
+            }
+
+            if (adminNext) {
+                adminNext.addEventListener("click", function () {
+                    showAdminSlide(adminCurrent + 1);
+                });
+            }
+
+            adminDots.forEach(function (dot) {
+                dot.addEventListener("click", function () {
+                    showAdminSlide(Number(this.getAttribute("data-slide")));
+                });
+            });
+
+            // Bisa menggunakan tombol keyboard saat slider sedang terlihat.
+            document.addEventListener("keydown", function (event) {
+                const adminSection = document.getElementById("foto-administrasi");
+                if (!adminSection || !adminSection.classList.contains("active")) return;
+
+                if (event.key === "ArrowLeft") showAdminSlide(adminCurrent - 1);
+                if (event.key === "ArrowRight") showAdminSlide(adminCurrent + 1);
+            });
+
+            // Swipe kiri/kanan untuk HP.
+            const adminViewport = document.querySelector(".admin-slider-viewport");
+            let adminTouchStartX = 0;
+
+            if (adminViewport) {
+                adminViewport.addEventListener("touchstart", function (event) {
+                    adminTouchStartX = event.changedTouches[0].screenX;
+                }, { passive: true });
+
+                adminViewport.addEventListener("touchend", function (event) {
+                    const touchEndX = event.changedTouches[0].screenX;
+                    const distance = touchEndX - adminTouchStartX;
+
+                    if (Math.abs(distance) < 50) return;
+
+                    if (distance < 0) {
+                        showAdminSlide(adminCurrent + 1);
+                    } else {
+                        showAdminSlide(adminCurrent - 1);
+                    }
+                }, { passive: true });
+            }
+
+            showAdminSlide(0);
 
         });
     </script>
