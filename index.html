@@ -283,12 +283,6 @@
             color: #82c1ff;
         }
 
-
-        /* =====================================================
-           JADWAL KERJA
-           SENIN - JUMAT DAN SABTU SAMA
-        ===================================================== */
-
         .hero-card-title {
             padding: 17px 0;
         }
@@ -302,7 +296,6 @@
             letter-spacing: 1.3px;
         }
 
-        /* Judul hari sama */
         .hero-card-title h3,
         .hero-card-bottom h3 {
             margin: 5px 0;
@@ -312,7 +305,6 @@
             font-weight: 800;
         }
 
-        /* Jam sama */
         .work-time,
         .hero-card-bottom .work-time {
             display: flex;
@@ -330,15 +322,9 @@
             background: rgba(255, 255, 255, .15);
         }
 
-        /* SABTU dibuat sama dengan SENIN-JUMAT */
         .hero-card-bottom {
             display: block;
             padding-top: 17px;
-        }
-
-        /* Tidak menggunakan ikon koper lagi */
-        .hero-card-bottom .calendar-icon {
-            display: none;
         }
 
 
@@ -537,7 +523,7 @@
 
 
         /* =====================================================
-           GAMBAR PANDUAN ODOO
+           GAMBAR UMUM
         ===================================================== */
 
         .odoo-image-wrapper,
@@ -585,7 +571,7 @@
 
 
         /* =====================================================
-           FWA FLOWCHART
+           FWA
         ===================================================== */
 
         .fwa-flow-card {
@@ -593,177 +579,22 @@
             overflow: hidden;
 
             border: 1px solid #dce5f0;
-            border-radius: 14px;
+            border-radius: 18px;
+
             background: #fff;
 
             box-shadow:
                 0 15px 45px rgba(20, 40, 80, .10);
+
+            padding: 12px;
         }
 
-        .fwa-flow-header {
-            display: grid;
-            grid-template-columns: 100px 2px minmax(0, 1fr);
-            align-items: center;
-            gap: 18px;
-            padding: 20px;
-
-            background: linear-gradient(
-                135deg,
-                #fff,
-                #f0f6ff
-            );
-        }
-
-        .fwa-logo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            color: #173d86;
-            line-height: 1;
-        }
-
-        .fwa-logo strong {
-            font-size: 38px;
-            font-weight: 900;
-            font-style: italic;
-        }
-
-        .fwa-logo small {
-            font-size: 6px;
-            font-weight: 800;
-            margin-top: 6px;
-        }
-
-        .fwa-header-divider {
-            height: 55px;
-            background: #173d86;
-        }
-
-        .fwa-flow-header h2 {
-            text-align: center;
-            color: #123b83;
-            font-size: clamp(17px, 2.4vw, 28px);
-            font-weight: 900;
-            line-height: 1.2;
-        }
-
-        .fwa-flow-header h2 span {
+        .fwa-flow-image {
             display: block;
-        }
-
-        .fwa-flow-body {
-            padding: 15px;
-            background: linear-gradient(
-                180deg,
-                #fff,
-                #f9fbff
-            );
-        }
-
-        .fwa-flow-row {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 18px;
-            margin-bottom: 25px;
-        }
-
-        .fwa-flow-row:last-child {
-            margin-bottom: 0;
-        }
-
-        .fwa-step {
-            position: relative;
-            min-width: 0;
-            min-height: 100px;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-
-            padding: 15px 8px;
-
-            border: 1px solid #b7d4fb;
-            border-radius: 12px;
-
-            background: linear-gradient(
-                135deg,
-                #f8fbff,
-                #eaf3ff
-            );
-
-            color: #17488f;
-        }
-
-        .fwa-step > i {
-            font-size: 26px;
-        }
-
-        .fwa-step p {
-            text-align: center;
-            font-size: 11px;
-            line-height: 1.5;
-            color: #244979;
-            overflow-wrap: anywhere;
-        }
-
-        .fwa-num {
-            position: absolute;
-            left: -7px;
-            top: -10px;
-
-            width: 29px;
-            height: 29px;
-
-            display: grid;
-            place-items: center;
-
-            border-radius: 50%;
-            background: #123f88;
-            color: #fff;
-            border: 2px solid #fff;
-
-            font-size: 14px;
-            z-index: 2;
-        }
-
-        .fwa-arrow,
-        .fwa-down {
-            position: absolute;
-            color: #17488f;
-            font-size: 21px;
-            font-weight: 900;
-            z-index: 3;
-        }
-
-        .fwa-arrow {
-            right: -16px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .fwa-down {
-            bottom: -24px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .fwa-flow-row.reverse .fwa-step {
-            order: 4;
-        }
-
-        .fwa-flow-row.reverse .fwa-step:nth-child(2) {
-            order: 3;
-        }
-
-        .fwa-flow-row.reverse .fwa-step:nth-child(3) {
-            order: 2;
-        }
-
-        .fwa-flow-row.reverse .fwa-step:nth-child(4) {
-            order: 1;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
         }
 
 
@@ -862,25 +693,6 @@
             font-size: 13px;
         }
 
-        .admin-slide-label {
-            position: absolute;
-            left: 24px;
-            top: 24px;
-            z-index: 4;
-
-            padding: 8px 13px;
-            border-radius: 999px;
-
-            background: rgba(18, 63, 136, .92);
-            color: #fff;
-
-            font-size: 12px;
-            font-weight: 800;
-
-            box-shadow:
-                0 7px 18px rgba(18, 63, 136, .18);
-        }
-
         .admin-arrow {
             position: absolute;
             top: 50%;
@@ -912,6 +724,11 @@
         .admin-arrow:hover {
             background: #2166e5;
             transform: translateY(-50%) scale(1.05);
+        }
+
+        .admin-arrow:disabled {
+            opacity: .4;
+            cursor: not-allowed;
         }
 
         .admin-prev {
@@ -974,9 +791,175 @@
         }
 
 
+        /* =====================================================
+           NAMA-NAMA MATERIAL FTTH
+           4 SLIDE
+        ===================================================== */
+
+        .material-slider {
+            position: relative;
+            width: 100%;
+
+            background: #fff;
+            border: 1px solid #dce5f0;
+            border-radius: 18px;
+            padding: 14px;
+
+            box-shadow:
+                0 12px 35px rgba(20, 40, 80, .10);
+
+            overflow: hidden;
+        }
+
+        .material-slider-viewport {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            border-radius: 12px;
+            background: #f4f7fb;
+        }
+
+        .material-slide {
+            display: none;
+            width: 100%;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #f4f7fb;
+        }
+
+        .material-slide.active {
+            display: flex;
+            animation: materialFade .35s ease;
+        }
+
+        @keyframes materialFade {
+            from {
+                opacity: .25;
+                transform: scale(.99);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .material-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 1000px;
+
+            object-fit: contain;
+            margin: auto;
+
+            border-radius: 10px;
+        }
+
+        .material-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            z-index: 5;
+
+            width: 44px;
+            height: 44px;
+
+            border: 0;
+            border-radius: 50%;
+
+            background: rgba(18, 63, 136, .92);
+            color: #fff;
+
+            cursor: pointer;
+
+            display: grid;
+            place-items: center;
+
+            font-size: 17px;
+
+            box-shadow:
+                0 8px 20px rgba(18, 63, 136, .22);
+
+            transition: .25s;
+        }
+
+        .material-arrow:hover {
+            background: #2166e5;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .material-arrow:disabled {
+            opacity: .4;
+            cursor: not-allowed;
+        }
+
+        .material-prev {
+            left: 24px;
+        }
+
+        .material-next {
+            right: 24px;
+        }
+
+        .material-slider-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+            padding: 16px 5px 3px;
+        }
+
+        .material-counter {
+            color: #173d86;
+            font-size: 13px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .material-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .material-dot {
+            width: 9px;
+            height: 9px;
+
+            border: 0;
+            border-radius: 50%;
+
+            background: #cbd5e5;
+
+            cursor: pointer;
+            padding: 0;
+
+            transition: .25s;
+        }
+
+        .material-dot.active {
+            width: 25px;
+            border-radius: 999px;
+            background: #2166e5;
+        }
+
+        .material-caption {
+            color: #69758a;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: right;
+        }
+
 
         /* =====================================================
-           SOP DOKUMEN PROJECT - 2 SLIDE
+           DOKUMEN PROJECT
         ===================================================== */
 
         .sop-slider {
@@ -1021,20 +1004,6 @@
             border-radius: 10px;
         }
 
-        .sop-slide-label {
-            position: absolute;
-            left: 24px;
-            top: 24px;
-            z-index: 4;
-            padding: 8px 13px;
-            border-radius: 999px;
-            background: rgba(18, 63, 136, .92);
-            color: #fff;
-            font-size: 12px;
-            font-weight: 800;
-            box-shadow: 0 7px 18px rgba(18, 63, 136, .18);
-        }
-
         .sop-arrow {
             position: absolute;
             top: 50%;
@@ -1059,8 +1028,18 @@
             transform: translateY(-50%) scale(1.05);
         }
 
-        .sop-prev { left: 24px; }
-        .sop-next { right: 24px; }
+        .sop-arrow:disabled {
+            opacity: .4;
+            cursor: not-allowed;
+        }
+
+        .sop-prev {
+            left: 24px;
+        }
+
+        .sop-next {
+            right: 24px;
+        }
 
         .sop-slider-bottom {
             display: flex;
@@ -1107,6 +1086,7 @@
             font-weight: 600;
             text-align: right;
         }
+
 
         /* =====================================================
            FOOTER
@@ -1214,14 +1194,6 @@
             .footer-info {
                 flex-direction: column;
             }
-
-            .fwa-flow-row {
-                gap: 15px;
-            }
-
-            .fwa-step {
-                min-height: 110px;
-            }
         }
 
 
@@ -1260,7 +1232,6 @@
                 font-size: 14px;
             }
 
-            /* JADWAL KERJA tetap sama */
             .hero-card-title small,
             .hero-card-bottom small {
                 font-size: 13px;
@@ -1316,63 +1287,56 @@
                 border-radius: 12px;
             }
 
-            .fwa-flow-header {
-                grid-template-columns: 58px 1px 1fr;
-                gap: 8px;
-                padding: 12px 8px;
+
+            /* FWA HP */
+
+            .fwa-flow-card {
+                padding: 5px;
+                border-radius: 12px;
             }
 
-            .fwa-logo strong {
-                font-size: 24px;
+            .fwa-flow-image {
+                border-radius: 8px;
             }
 
-            .fwa-logo small {
-                font-size: 4px;
+
+            /* MATERIAL FTTH HP */
+
+            .material-slider {
+                padding: 7px;
+                border-radius: 14px;
             }
 
-            .fwa-header-divider {
-                height: 42px;
+            .material-slide img {
+                max-height: 650px;
             }
 
-            .fwa-flow-header h2 {
-                font-size: 13px;
+            .material-arrow {
+                width: 38px;
+                height: 38px;
+                font-size: 14px;
             }
 
-            .fwa-flow-body {
-                padding: 10px;
+            .material-prev {
+                left: 12px;
             }
 
-            .fwa-flow-row {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 20px 14px;
-                margin-bottom: 22px;
+            .material-next {
+                right: 12px;
             }
 
-            .fwa-flow-row.reverse .fwa-step {
-                order: initial;
+            .material-slider-bottom {
+                flex-direction: column;
+                gap: 10px;
+                padding-top: 13px;
             }
 
-            .fwa-step {
-                min-height: 105px;
-                padding: 12px 5px;
+            .material-caption {
+                text-align: center;
             }
 
-            .fwa-step p {
-                font-size: 10px;
-            }
 
-            .fwa-arrow,
-            .fwa-down {
-                display: none;
-            }
-        }
-
-
-        /* =====================================================
-           ADMIN SLIDER HP
-        ===================================================== */
-
-        @media (max-width: 600px) {
+            /* SOP HP */
 
             .sop-slider {
                 padding: 7px;
@@ -1389,14 +1353,12 @@
                 font-size: 14px;
             }
 
-            .sop-prev { left: 12px; }
-            .sop-next { right: 12px; }
+            .sop-prev {
+                left: 12px;
+            }
 
-            .sop-slide-label {
-                left: 14px;
-                top: 14px;
-                font-size: 10px;
-                padding: 6px 10px;
+            .sop-next {
+                right: 12px;
             }
 
             .sop-slider-bottom {
@@ -1408,6 +1370,9 @@
             .sop-caption {
                 text-align: center;
             }
+
+
+            /* ADMIN HP */
 
             .admin-slider {
                 padding: 7px;
@@ -1436,13 +1401,6 @@
                 right: 12px;
             }
 
-            .admin-slide-label {
-                left: 14px;
-                top: 14px;
-                font-size: 10px;
-                padding: 6px 10px;
-            }
-
             .admin-slider-bottom {
                 flex-direction: column;
                 gap: 10px;
@@ -1461,18 +1419,14 @@
 
         @media (max-width: 380px) {
 
-            .fwa-flow-row {
-                grid-template-columns: 1fr;
+            .fwa-flow-card {
+                padding: 4px;
             }
 
-            .fwa-step {
-                flex-direction: row;
-                min-height: 75px;
+            .material-slider {
+                padding: 4px;
             }
 
-            .fwa-step p {
-                font-size: 11px;
-            }
         }
 
     </style>
@@ -1532,12 +1486,7 @@
             </div>
 
 
-            <!-- HERO CARD JADWAL -->
-
             <div class="hero-card">
-
-
-                <!-- NAMA PERUSAHAAN -->
 
                 <div class="hero-card-top">
 
@@ -1549,8 +1498,6 @@
 
                 </div>
 
-
-                <!-- SENIN - JUMAT -->
 
                 <div class="hero-card-title">
 
@@ -1573,12 +1520,8 @@
                 </div>
 
 
-                <!-- GARIS -->
-
                 <div class="hero-card-divider"></div>
 
-
-                <!-- SABTU -->
 
                 <div class="hero-card-bottom">
 
@@ -1600,7 +1543,6 @@
 
                 </div>
 
-
             </div>
 
         </div>
@@ -1616,7 +1558,6 @@
     <section class="uniform-section" id="seragam-section">
 
         <div class="container">
-
 
             <div class="section-heading center">
 
@@ -1648,87 +1589,132 @@
                         type="button"
                         class="day-button active"
                         data-target="seragam">
+
                         <strong>
                             <i class="fa-solid fa-shirt"></i>
                             SERAGAM
                         </strong>
+
                     </button>
 
+
                     <!-- 2. BUKU PANDUAN ODOO -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="panduan-odoo">
+
                         <strong>
                             <i class="fa-solid fa-book-open"></i>
                             BUKU PANDUAN ODOO
                         </strong>
+
                     </button>
 
+
                     <!-- 3. PENGAWAS LAPANGAN -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="pengawas-lapangan">
+
                         <strong>
                             <i class="fa-solid fa-helmet-safety"></i>
                             PENGAWAS LAPANGAN
                         </strong>
+
                     </button>
 
+
                     <!-- 4. FOTO ADMINISTRASI -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="foto-administrasi">
+
                         <strong>
                             <i class="fa-solid fa-camera"></i>
                             FOTO ADMINISTRASI
                         </strong>
+
                     </button>
 
-                    <!-- 5. DOKUMEN PROJECT -->
+
+                    <!-- 5. NAMA-NAMA MATERIAL FTTH -->
+
+                    <button
+                        type="button"
+                        class="day-button"
+                        data-target="material-ftth">
+
+                        <strong>
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            NAMA-NAMA MATERIAL FTTH
+                        </strong>
+
+                    </button>
+
+
+                    <!-- 6. DOKUMEN PROJECT -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="sop-dokumen-project">
+
                         <strong>
                             <i class="fa-solid fa-file-lines"></i>
                             DOKUMEN PROJECT
                         </strong>
+
                     </button>
 
-                    <!-- 6. PERMIT FTTH -->
+
+                    <!-- 7. PERMIT FTTH -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="permit-ftth">
+
                         <strong>
                             <i class="fa-solid fa-file-circle-check"></i>
                             PERMIT (FTTH)
                         </strong>
+
                     </button>
 
-                    <!-- 7. SURVEY -->
+
+                    <!-- 8. SURVEY -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="sabtu">
+
                         <strong>
                             <i class="fa-solid fa-route"></i>
                             SURVEY DESIGN AND PLANNING
                         </strong>
+
                     </button>
 
-                    <!-- 8. FWA -->
+
+                    <!-- 9. FWA -->
+
                     <button
                         type="button"
                         class="day-button"
                         data-target="permit-proses">
+
                         <strong>
                             <i class="fa-solid fa-diagram-project"></i>
                             FWA (MYREPUBLIK)
                         </strong>
+
                     </button>
 
                 </div>
@@ -1743,13 +1729,12 @@
 
 
                     <!-- =====================================================
-                         SERAGAM
+                         1. SERAGAM
                     ===================================================== -->
 
                     <div
                         class="uniform-info active"
                         id="seragam">
-
 
                         <div class="document-title">
 
@@ -1764,9 +1749,7 @@
 
                         <div class="uniform-day">
 
-                            <h3>
-                                👔 Senin
-                            </h3>
+                            <h3>👔 Senin</h3>
 
                             <h2>
                                 Kemeja Biru
@@ -1782,9 +1765,7 @@
 
                         <div class="uniform-day">
 
-                            <h3>
-                                👔 Selasa
-                            </h3>
+                            <h3>👔 Selasa</h3>
 
                             <h2>
                                 Kemeja / Baju Polo Berkerah
@@ -1800,9 +1781,7 @@
 
                         <div class="uniform-day">
 
-                            <h3>
-                                👔 Rabu
-                            </h3>
+                            <h3>👔 Rabu</h3>
 
                             <h2>
                                 Kemeja / Baju Polo Berkerah
@@ -1818,9 +1797,7 @@
 
                         <div class="uniform-day">
 
-                            <h3>
-                                👔 Kamis
-                            </h3>
+                            <h3>👔 Kamis</h3>
 
                             <h2>
                                 Baju Ungu
@@ -1836,9 +1813,7 @@
 
                         <div class="uniform-day">
 
-                            <h3>
-                                👔 Jumat
-                            </h3>
+                            <h3>👔 Jumat</h3>
 
                             <h2>
                                 Batik
@@ -1854,9 +1829,7 @@
 
                         <div class="uniform-day">
 
-                            <h3>
-                                👔 Sabtu
-                            </h3>
+                            <h3>👔 Sabtu</h3>
 
                             <h2>
                                 Casual Sopan / Bebas Rapi
@@ -1874,38 +1847,7 @@
 
 
                     <!-- =====================================================
-                         PENGAWAS LAPANGAN
-                    ===================================================== -->
-
-                    <div
-                        class="uniform-info"
-                        id="pengawas-lapangan">
-
-                        <div class="document-title">
-
-                            <i class="fa-solid fa-helmet-safety"></i>
-
-                            <span>
-                                Pengawas Lapangan
-                            </span>
-
-                        </div>
-
-                        <div class="pengawas-image-wrapper">
-
-                            <img
-                                src="WhatsApp Image 2026-09-16 at 11.27.04 (1).jpeg"
-                                alt="Pengawas Lapangan"
-                                class="pengawas-image">
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- =====================================================
-                         BUKU PANDUAN ODOO
+                         2. BUKU PANDUAN ODOO
                     ===================================================== -->
 
                     <div
@@ -1936,501 +1878,29 @@
 
 
                     <!-- =====================================================
-                         SOP DOKUMEN PROJECT
+                         3. PENGAWAS LAPANGAN
                     ===================================================== -->
 
                     <div
                         class="uniform-info"
-                        id="sop-dokumen-project">
+                        id="pengawas-lapangan">
 
                         <div class="document-title">
 
-                            <i class="fa-solid fa-file-lines"></i>
+                            <i class="fa-solid fa-helmet-safety"></i>
 
                             <span>
-                                SOP Dokumen Project
+                                Pengawas Lapangan
                             </span>
 
                         </div>
 
-                        <div class="sop-slider" id="sopSlider">
-
-                            <div class="sop-slider-viewport">
-
-                                <div class="sop-slide active">
-                                     <img
-                                        src="1 (3).jpeg"
-                                        alt="SOP Dokumen Project Slide 1">
-                                </div>
-
-                                <div class="sop-slide">
-                                    <img
-                                        src="2 (2).jpeg"
-                                        alt="SOP Dokumen Project Slide 2">
-                                </div>
-
-                                <button
-                                    type="button"
-                                    class="sop-arrow sop-prev"
-                                    id="sopPrev"
-                                    aria-label="SOP sebelumnya">
-
-                                    <i class="fa-solid fa-chevron-left"></i>
-
-                                </button>
-
-                                <button
-                                    type="button"
-                                    class="sop-arrow sop-next"
-                                    id="sopNext"
-                                    aria-label="SOP berikutnya">
-
-                                    <i class="fa-solid fa-chevron-right"></i>
-
-                                </button>
-
-                            </div>
-
-                            <div class="sop-slider-bottom">
-
-                                <div
-                                    class="sop-counter"
-                                    id="sopCounter">
-                                    1 / 2
-                                </div>
-
-                                <div
-                                    class="sop-dots"
-                                    aria-label="Navigasi SOP Dokumen Project">
-
-                                    <button
-                                        type="button"
-                                        class="sop-dot active"
-                                        data-slide="0"
-                                        aria-label="Slide 1">
-                                    </button>
-
-                                    <button
-                                        type="button"
-                                        class="sop-dot"
-                                        data-slide="1"
-                                        aria-label="Slide 2">
-                                    </button>
-
-                                </div>
-
-                                <div class="sop-caption">
-                                    SOP Dokumen Project
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================================
-                         FWA MYREPUBLIK
-                    ===================================================== -->
-
-                    <div
-                        class="uniform-info"
-                        id="permit-proses">
-
-                        <div class="document-title">
-
-                            <i class="fa-solid fa-diagram-project"></i>
-
-                            <span>
-                                FWA (MYREPUBLIK)
-                            </span>
-
-                        </div>
-
-
-                        <div class="fwa-flow-card">
-
-
-                            <header class="fwa-flow-header">
-
-                                <div class="fwa-logo">
-
-                                    <strong>
-                                        GBU
-                                    </strong>
-
-                                    <small>
-                                        GENESIS BERKAT USAHA
-                                    </small>
-
-                                </div>
-
-
-                                <div class="fwa-header-divider"></div>
-
-
-                                <h2>
-
-                                    ALUR KERJA PROJECT
-
-                                    <span>
-                                        FWA (MYREPUBLIK)
-                                    </span>
-
-                                </h2>
-
-                            </header>
-
-
-
-                            <div class="fwa-flow-body">
-
-
-                                <!-- BARIS 1 -->
-
-                                <div class="fwa-flow-row forward">
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            1
-                                        </b>
-
-                                        <i class="fa-solid fa-file-lines"></i>
-
-                                        <p>
-                                            Turun<br>
-                                            <strong>NTP</strong>
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            →
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            2
-                                        </b>
-
-                                        <i class="fa-solid fa-clipboard-list"></i>
-
-                                        <p>
-                                            <strong>Survey aktual</strong><br>
-                                            (lokasi, jalur, site/tower)
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            →
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            3
-                                        </b>
-
-                                        <i class="fa-solid fa-file-signature"></i>
-
-                                        <p>
-                                            <strong>Pembuatan</strong><br>
-                                            APD
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            →
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            4
-                                        </b>
-
-                                        <i class="fa-solid fa-database"></i>
-
-                                        <p>
-                                            <strong>DRM</strong>
-                                        </p>
-
-                                        <span class="fwa-down">
-                                            ↓
-                                        </span>
-
-                                    </article>
-
-                                </div>
-
-
-
-                                <!-- BARIS 2 -->
-
-                                <div class="fwa-flow-row reverse">
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            5
-                                        </b>
-
-                                        <i class="fa-solid fa-file-invoice"></i>
-
-                                        <p>
-                                            <strong>Request</strong><br>
-                                            material/CDR
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            ←
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            6
-                                        </b>
-
-                                        <i class="fa-solid fa-database"></i>
-
-                                        <p>
-                                            <strong>Sikom</strong><br>
-                                            (jika ada donasi)
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            ←
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            7
-                                        </b>
-
-                                        <i class="fa-solid fa-users"></i>
-
-                                        <p>
-                                            <strong>Koordinasi</strong><br>
-                                            Petikan dengan Wasepan NRO
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            ←
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            8
-                                        </b>
-
-                                        <i class="fa-solid fa-layer-group"></i>
-
-                                        <p>
-                                            <strong>Implementasi</strong><br>
-                                            Pulling Cable
-                                        </p>
-
-                                        <span class="fwa-down">
-                                            ↓
-                                        </span>
-
-                                    </article>
-
-                                </div>
-
-
-
-                                <!-- BARIS 3 -->
-
-                                <div class="fwa-flow-row forward">
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            9
-                                        </b>
-
-                                        <i class="fa-solid fa-tower-broadcast"></i>
-
-                                        <p>
-                                            <strong>Tanam tiang</strong><br>
-                                            (jika ada)
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            →
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            10
-                                        </b>
-
-                                        <i class="fa-solid fa-screwdriver-wrench"></i>
-
-                                        <p>
-                                            <strong>Instalasi JB</strong><br>
-                                            dan FAT
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            →
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            11
-                                        </b>
-
-                                        <i class="fa-solid fa-plug"></i>
-
-                                        <p>
-                                            <strong>Patching</strong><br>
-                                            di OLT/CSR
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            →
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            12
-                                        </b>
-
-                                        <i class="fa-solid fa-database"></i>
-
-                                        <p>
-                                            <strong>Collect data</strong><br>
-                                            OPM dan OTDR
-                                        </p>
-
-                                        <span class="fwa-down">
-                                            ↓
-                                        </span>
-
-                                    </article>
-
-                                </div>
-
-
-
-                                <!-- BARIS 4 -->
-
-                                <div class="fwa-flow-row reverse">
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            13
-                                        </b>
-
-                                        <i class="fa-solid fa-tag"></i>
-
-                                        <p>
-                                            <strong>Tagging dan Opname</strong><br>
-                                            aktual oleh Wasepan
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            ←
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            14
-                                        </b>
-
-                                        <i class="fa-solid fa-user-gear"></i>
-
-                                        <p>
-                                            <strong>Admin dan</strong><br>
-                                            SND Proses
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            ←
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            15
-                                        </b>
-
-                                        <i class="fa-solid fa-file-circle-check"></i>
-
-                                        <p>
-                                            <strong>ATP</strong>
-                                        </p>
-
-                                        <span class="fwa-arrow">
-                                            ←
-                                        </span>
-
-                                    </article>
-
-
-                                    <article class="fwa-step">
-
-                                        <b class="fwa-num">
-                                            16
-                                        </b>
-
-                                        <i class="fa-solid fa-power-off"></i>
-
-                                        <p>
-                                            <strong>Closing</strong>
-                                        </p>
-
-                                    </article>
-
-                                </div>
-
-                            </div>
+                        <div class="pengawas-image-wrapper">
+
+                            <img
+                                src="WhatsApp Image 2026-09-16 at 11.27.04 (1).jpeg"
+                                alt="Pengawas Lapangan"
+                                class="pengawas-image">
 
                         </div>
 
@@ -2439,13 +1909,12 @@
 
 
                     <!-- =====================================================
-                         FOTO ADMINISTRASI
+                         4. FOTO ADMINISTRASI
                     ===================================================== -->
 
                     <div
                         class="uniform-info"
                         id="foto-administrasi">
-
 
                         <div class="document-title">
 
@@ -2462,11 +1931,11 @@
                             class="admin-slider"
                             id="adminSlider">
 
-
                             <div class="admin-slider-viewport">
 
 
                                 <div class="admin-slide active">
+
                                     <img
                                         src="1.jpeg"
                                         alt="Foto Administrasi Slide 1">
@@ -2475,6 +1944,7 @@
 
 
                                 <div class="admin-slide">
+
                                     <img
                                         src="2.jpeg"
                                         alt="Foto Administrasi Slide 2"
@@ -2502,6 +1972,7 @@
 
 
                                 <div class="admin-slide">
+
                                     <img
                                         src="3.jpeg"
                                         alt="Foto Administrasi Slide 3"
@@ -2529,6 +2000,7 @@
 
 
                                 <div class="admin-slide">
+
                                     <img
                                         src="4.jpeg"
                                         alt="Foto Administrasi Slide 4"
@@ -2556,6 +2028,7 @@
 
 
                                 <div class="admin-slide">
+
                                     <img
                                         src="5.jpeg"
                                         alt="Foto Administrasi Slide 5"
@@ -2583,6 +2056,7 @@
 
 
                                 <div class="admin-slide">
+
                                     <img
                                         src="6.jpeg"
                                         alt="Foto Administrasi Slide 6"
@@ -2635,20 +2109,16 @@
 
                             <div class="admin-slider-bottom">
 
-
                                 <div
                                     class="admin-counter"
                                     id="adminCounter">
-
                                     1 / 6
-
                                 </div>
 
 
                                 <div
                                     class="admin-dots"
                                     aria-label="Navigasi foto administrasi">
-
 
                                     <button
                                         type="button"
@@ -2657,14 +2127,12 @@
                                         aria-label="Slide 1">
                                     </button>
 
-
                                     <button
                                         type="button"
                                         class="admin-dot"
                                         data-slide="1"
                                         aria-label="Slide 2">
                                     </button>
-
 
                                     <button
                                         type="button"
@@ -2673,7 +2141,6 @@
                                         aria-label="Slide 3">
                                     </button>
 
-
                                     <button
                                         type="button"
                                         class="admin-dot"
@@ -2681,14 +2148,12 @@
                                         aria-label="Slide 4">
                                     </button>
 
-
                                     <button
                                         type="button"
                                         class="admin-dot"
                                         data-slide="4"
                                         aria-label="Slide 5">
                                     </button>
-
 
                                     <button
                                         type="button"
@@ -2713,20 +2178,342 @@
 
 
                     <!-- =====================================================
-                         PERMIT FTTH
+                         5. NAMA-NAMA MATERIAL FTTH
+                         4 SLIDE
+                    ===================================================== -->
+
+                    <div
+                        class="uniform-info"
+                        id="material-ftth">
+
+                        <div class="document-title">
+
+                            <i class="fa-solid fa-boxes-stacked"></i>
+
+                            <span>
+                                Nama-Nama Material FTTH
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="material-slider"
+                            id="materialSlider">
+
+                            <div class="material-slider-viewport">
+
+
+                                <!-- SLIDE 1 -->
+
+                                <div class="material-slide active">
+
+                                    <img
+                                        src="7.jpeg"
+                                        alt="Nama-Nama Material FTTH Slide 1">
+
+                                </div>
+
+
+                                <!-- SLIDE 2 -->
+
+                                <div class="material-slide">
+
+                                    <img
+                                        src="8.jpeg"
+                                        alt="Nama-Nama Material FTTH Slide 2"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                                    <div
+                                        class="admin-missing"
+                                        style="display:none;">
+
+                                        <i class="fa-regular fa-image"></i>
+
+                                        <strong>
+                                            Material FTTH Slide 2
+                                        </strong>
+
+                                        <span>
+                                            Tambahkan file
+                                            <b>MATERIAL FTTH 2.jpeg</b>
+                                            pada folder website.
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- SLIDE 3 -->
+
+                                <div class="material-slide">
+
+                                    <img
+                                        src="9.jpeg"
+                                        alt="Nama-Nama Material FTTH Slide 3"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                                    <div
+                                        class="admin-missing"
+                                        style="display:none;">
+
+                                        <i class="fa-regular fa-image"></i>
+
+                                        <strong>
+                                            Material FTTH Slide 3
+                                        </strong>
+
+                                        <span>
+                                            Tambahkan file
+                                            <b>MATERIAL FTTH 3.jpeg</b>
+                                            pada folder website.
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- SLIDE 4 -->
+
+                                <div class="material-slide">
+
+                                    <img
+                                        src="10.jpeg"
+                                        alt="Nama-Nama Material FTTH Slide 4"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                                    <div
+                                        class="admin-missing"
+                                        style="display:none;">
+
+                                        <i class="fa-regular fa-image"></i>
+
+                                        <strong>
+                                            Material FTTH Slide 4
+                                        </strong>
+
+                                        <span>
+                                            Tambahkan file
+                                            <b>MATERIAL FTTH 4.jpeg</b>
+                                            pada folder website.
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TOMBOL KIRI -->
+
+                                <button
+                                    type="button"
+                                    class="material-arrow material-prev"
+                                    id="materialPrev"
+                                    aria-label="Material sebelumnya">
+
+                                    <i class="fa-solid fa-chevron-left"></i>
+
+                                </button>
+
+
+                                <!-- TOMBOL KANAN -->
+
+                                <button
+                                    type="button"
+                                    class="material-arrow material-next"
+                                    id="materialNext"
+                                    aria-label="Material berikutnya">
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="material-slider-bottom">
+
+
+                                <div
+                                    class="material-counter"
+                                    id="materialCounter">
+                                    1 / 4
+                                </div>
+
+
+                                <div
+                                    class="material-dots"
+                                    aria-label="Navigasi material FTTH">
+
+                                    <button
+                                        type="button"
+                                        class="material-dot active"
+                                        data-slide="0"
+                                        aria-label="Slide 1">
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="material-dot"
+                                        data-slide="1"
+                                        aria-label="Slide 2">
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="material-dot"
+                                        data-slide="2"
+                                        aria-label="Slide 3">
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="material-dot"
+                                        data-slide="3"
+                                        aria-label="Slide 4">
+                                    </button>
+
+                                </div>
+
+
+                                <div class="material-caption">
+                                    Nama-Nama Material FTTH
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =====================================================
+                         6. DOKUMEN PROJECT
+                    ===================================================== -->
+
+                    <div
+                        class="uniform-info"
+                        id="sop-dokumen-project">
+
+                        <div class="document-title">
+
+                            <i class="fa-solid fa-file-lines"></i>
+
+                            <span>
+                                SOP Dokumen Project
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="sop-slider"
+                            id="sopSlider">
+
+                            <div class="sop-slider-viewport">
+
+                                <div class="sop-slide active">
+
+                                    <img
+                                        src="1 (3).jpeg"
+                                        alt="SOP Dokumen Project Slide 1">
+
+                                </div>
+
+
+                                <div class="sop-slide">
+
+                                    <img
+                                        src="2 (2).jpeg"
+                                        alt="SOP Dokumen Project Slide 2">
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="sop-arrow sop-prev"
+                                    id="sopPrev"
+                                    aria-label="SOP sebelumnya">
+
+                                    <i class="fa-solid fa-chevron-left"></i>
+
+                                </button>
+
+
+                                <button
+                                    type="button"
+                                    class="sop-arrow sop-next"
+                                    id="sopNext"
+                                    aria-label="SOP berikutnya">
+
+                                    <i class="fa-solid fa-chevron-right"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="sop-slider-bottom">
+
+                                <div
+                                    class="sop-counter"
+                                    id="sopCounter">
+                                    1 / 2
+                                </div>
+
+
+                                <div
+                                    class="sop-dots"
+                                    aria-label="Navigasi SOP Dokumen Project">
+
+                                    <button
+                                        type="button"
+                                        class="sop-dot active"
+                                        data-slide="0"
+                                        aria-label="Slide 1">
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="sop-dot"
+                                        data-slide="1"
+                                        aria-label="Slide 2">
+                                    </button>
+
+                                </div>
+
+
+                                <div class="sop-caption">
+                                    SOP Dokumen Project
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =====================================================
+                         7. PERMIT FTTH
                     ===================================================== -->
 
                     <div
                         class="uniform-info"
                         id="permit-ftth">
 
-
                         <div class="document-title">
 
                             <i class="fa-solid fa-file-circle-check"></i>
 
                             <span>
-                                Permit Proses (FTTH MORAREPUBLIK)
+                                Permit (FTTH)
                             </span>
 
                         </div>
@@ -2737,7 +2524,7 @@
 
                             <img
                                 src="FTTH.jpeg"
-                                alt="Permit Proses FTTH MORAREPUBLIK"
+                                alt="Permit FTTH"
                                 class="odoo-image permit-image">
 
                         </div>
@@ -2747,13 +2534,12 @@
 
 
                     <!-- =====================================================
-                         SURVEY DESIGN AND PLANNING
+                         8. SURVEY
                     ===================================================== -->
 
                     <div
                         class="uniform-info"
                         id="sabtu">
-
 
                         <div class="document-title">
 
@@ -2778,6 +2564,38 @@
                     </div>
 
 
+
+                    <!-- =====================================================
+                         9. FWA
+                    ===================================================== -->
+
+                    <div
+                        class="uniform-info"
+                        id="permit-proses">
+
+                        <div class="document-title">
+
+                            <i class="fa-solid fa-diagram-project"></i>
+
+                            <span>
+                                FWA (MYREPUBLIK)
+                            </span>
+
+                        </div>
+
+
+                        <div class="fwa-flow-card">
+
+                            <img
+                                src="FWA.jpeg"
+                                alt="Alur Kerja Project FWA MYREPUBLIK"
+                                class="fwa-flow-image">
+
+                        </div>
+
+                    </div>
+
+
                 </div>
 
             </div>
@@ -2793,7 +2611,6 @@
     ===================================================== -->
 
     <footer class="footer">
-
 
         <div class="container footer-content">
 
@@ -2831,11 +2648,9 @@
                     <i class="fa-solid fa-location-dot"></i>
 
                     <span>
-
                         Jl. Bougenvile Raya Blok B2,
                         Sendang Mulyo, Tembalang,
                         Kota Semarang, Jawa Tengah, Indonesia
-
                     </span>
 
                 </div>
@@ -2863,10 +2678,8 @@
             <div class="container">
 
                 <p>
-
                     © 2026 PT. Genesis Berkat Usaha.
                     Internal Company Information.
-
                 </p>
 
             </div>
@@ -2899,47 +2712,31 @@
 
             buttons.forEach(function (button) {
 
-
                 button.addEventListener("click", function () {
-
 
                     const targetId =
                         this.getAttribute("data-target");
 
 
-                    /* Hapus active dari semua tombol */
-
                     buttons.forEach(function (btn) {
-
                         btn.classList.remove("active");
-
                     });
 
-
-                    /* Sembunyikan semua konten */
 
                     contents.forEach(function (content) {
-
                         content.classList.remove("active");
-
                     });
 
-
-                    /* Aktifkan tombol yang dipilih */
 
                     this.classList.add("active");
 
-
-                    /* Tampilkan konten */
 
                     const target =
                         document.getElementById(targetId);
 
 
                     if (target) {
-
                         target.classList.add("active");
-
                     }
 
                 });
@@ -2973,13 +2770,10 @@
 
             function showAdminSlide(index) {
 
-
                 if (!adminSlides.length) {
                     return;
                 }
 
-
-                /* Slider tidak berputar */
 
                 adminCurrent =
                     Math.max(
@@ -3021,30 +2815,19 @@
                 }
 
 
-                /* Tombol sebelumnya */
-
                 if (adminPrev) {
-
                     adminPrev.disabled =
                         adminCurrent === 0;
-
                 }
 
 
-                /* Tombol berikutnya */
-
                 if (adminNext) {
-
                     adminNext.disabled =
-                        adminCurrent ===
-                        adminSlides.length - 1;
-
+                        adminCurrent === adminSlides.length - 1;
                 }
 
             }
 
-
-            /* Tombol sebelumnya */
 
             if (adminPrev) {
 
@@ -3062,8 +2845,6 @@
             }
 
 
-            /* Tombol berikutnya */
-
             if (adminNext) {
 
                 adminNext.addEventListener(
@@ -3080,8 +2861,6 @@
             }
 
 
-            /* Tombol titik */
-
             adminDots.forEach(function (dot) {
 
                 dot.addEventListener(
@@ -3090,9 +2869,148 @@
 
                         showAdminSlide(
                             Number(
-                                this.getAttribute(
-                                    "data-slide"
-                                )
+                                this.getAttribute("data-slide")
+                            )
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+            /* =====================================================
+               SLIDER NAMA-NAMA MATERIAL FTTH
+               4 SLIDE
+            ===================================================== */
+
+            const materialSlides =
+                document.querySelectorAll(".material-slide");
+
+            const materialDots =
+                document.querySelectorAll(".material-dot");
+
+            const materialCounter =
+                document.getElementById("materialCounter");
+
+            const materialPrev =
+                document.getElementById("materialPrev");
+
+            const materialNext =
+                document.getElementById("materialNext");
+
+
+            let materialCurrent = 0;
+
+
+            function showMaterialSlide(index) {
+
+                if (!materialSlides.length) {
+                    return;
+                }
+
+
+                materialCurrent =
+                    Math.max(
+                        0,
+                        Math.min(
+                            index,
+                            materialSlides.length - 1
+                        )
+                    );
+
+
+                materialSlides.forEach(function (slide, i) {
+
+                    slide.classList.toggle(
+                        "active",
+                        i === materialCurrent
+                    );
+
+                });
+
+
+                materialDots.forEach(function (dot, i) {
+
+                    dot.classList.toggle(
+                        "active",
+                        i === materialCurrent
+                    );
+
+                });
+
+
+                if (materialCounter) {
+
+                    materialCounter.textContent =
+                        (materialCurrent + 1)
+                        + " / "
+                        + materialSlides.length;
+
+                }
+
+
+                if (materialPrev) {
+
+                    materialPrev.disabled =
+                        materialCurrent === 0;
+
+                }
+
+
+                if (materialNext) {
+
+                    materialNext.disabled =
+                        materialCurrent ===
+                        materialSlides.length - 1;
+
+                }
+
+            }
+
+
+            if (materialPrev) {
+
+                materialPrev.addEventListener(
+                    "click",
+                    function () {
+
+                        showMaterialSlide(
+                            materialCurrent - 1
+                        );
+
+                    }
+                );
+
+            }
+
+
+            if (materialNext) {
+
+                materialNext.addEventListener(
+                    "click",
+                    function () {
+
+                        showMaterialSlide(
+                            materialCurrent + 1
+                        );
+
+                    }
+                );
+
+            }
+
+
+            materialDots.forEach(function (dot) {
+
+                dot.addEventListener(
+                    "click",
+                    function () {
+
+                        showMaterialSlide(
+                            Number(
+                                this.getAttribute("data-slide")
                             )
                         );
 
@@ -3103,7 +3021,80 @@
 
 
             /* =====================================================
-               SLIDER SOP DOKUMEN PROJECT - 2 SLIDE
+               SWIPE MATERIAL FTTH DI HP
+            ===================================================== */
+
+            const materialViewport =
+                document.querySelector(
+                    ".material-slider-viewport"
+                );
+
+
+            let materialTouchStartX = 0;
+
+
+            if (materialViewport) {
+
+                materialViewport.addEventListener(
+                    "touchstart",
+                    function (event) {
+
+                        materialTouchStartX =
+                            event.changedTouches[0].screenX;
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+
+                materialViewport.addEventListener(
+                    "touchend",
+                    function (event) {
+
+                        const touchEndX =
+                            event.changedTouches[0].screenX;
+
+                        const distance =
+                            touchEndX -
+                            materialTouchStartX;
+
+
+                        if (Math.abs(distance) < 50) {
+                            return;
+                        }
+
+
+                        if (distance < 0) {
+
+                            showMaterialSlide(
+                                materialCurrent + 1
+                            );
+
+                        } else {
+
+                            showMaterialSlide(
+                                materialCurrent - 1
+                            );
+
+                        }
+
+                    },
+                    {
+                        passive: true
+                    }
+                );
+
+            }
+
+
+            showMaterialSlide(0);
+
+
+
+            /* =====================================================
+               SLIDER SOP DOKUMEN PROJECT
             ===================================================== */
 
             const sopSlides =
@@ -3121,13 +3112,16 @@
             const sopNext =
                 document.getElementById("sopNext");
 
+
             let sopCurrent = 0;
+
 
             function showSopSlide(index) {
 
                 if (!sopSlides.length) {
                     return;
                 }
+
 
                 sopCurrent =
                     Math.max(
@@ -3138,6 +3132,7 @@
                         )
                     );
 
+
                 sopSlides.forEach(function (slide, i) {
 
                     slide.classList.toggle(
@@ -3146,6 +3141,7 @@
                     );
 
                 });
+
 
                 sopDots.forEach(function (dot, i) {
 
@@ -3156,6 +3152,7 @@
 
                 });
 
+
                 if (sopCounter) {
 
                     sopCounter.textContent =
@@ -3165,16 +3162,22 @@
 
                 }
 
+
                 if (sopPrev) {
-                    sopPrev.disabled = sopCurrent === 0;
+                    sopPrev.disabled =
+                        sopCurrent === 0;
                 }
 
+
                 if (sopNext) {
+
                     sopNext.disabled =
                         sopCurrent === sopSlides.length - 1;
+
                 }
 
             }
+
 
             if (sopPrev) {
 
@@ -3191,6 +3194,7 @@
 
             }
 
+
             if (sopNext) {
 
                 sopNext.addEventListener(
@@ -3206,6 +3210,7 @@
 
             }
 
+
             sopDots.forEach(function (dot) {
 
                 dot.addEventListener(
@@ -3214,9 +3219,7 @@
 
                         showSopSlide(
                             Number(
-                                this.getAttribute(
-                                    "data-slide"
-                                )
+                                this.getAttribute("data-slide")
                             )
                         );
 
@@ -3225,12 +3228,15 @@
 
             });
 
+
             const sopViewport =
                 document.querySelector(
                     ".sop-slider-viewport"
                 );
 
+
             let sopTouchStartX = 0;
+
 
             if (sopViewport) {
 
@@ -3247,6 +3253,7 @@
                     }
                 );
 
+
                 sopViewport.addEventListener(
                     "touchend",
                     function (event) {
@@ -3258,9 +3265,11 @@
                             touchEndX -
                             sopTouchStartX;
 
+
                         if (Math.abs(distance) < 50) {
                             return;
                         }
+
 
                         if (distance < 0) {
 
@@ -3284,7 +3293,9 @@
 
             }
 
+
             showSopSlide(0);
+
 
 
             /* =====================================================
@@ -3303,38 +3314,68 @@
 
 
                     if (
-                        !adminSection ||
-                        !adminSection.classList.contains("active")
+                        adminSection &&
+                        adminSection.classList.contains("active")
                     ) {
-                        return;
+
+                        if (event.key === "ArrowLeft") {
+
+                            showAdminSlide(
+                                adminCurrent - 1
+                            );
+
+                        }
+
+
+                        if (event.key === "ArrowRight") {
+
+                            showAdminSlide(
+                                adminCurrent + 1
+                            );
+
+                        }
+
                     }
+
+
+                    /* MATERIAL FTTH */
+
+                    const materialSection =
+                        document.getElementById(
+                            "material-ftth"
+                        );
 
 
                     if (
-                        event.key === "ArrowLeft"
+                        materialSection &&
+                        materialSection.classList.contains("active")
                     ) {
 
-                        showAdminSlide(
-                            adminCurrent - 1
-                        );
+                        if (event.key === "ArrowLeft") {
+
+                            showMaterialSlide(
+                                materialCurrent - 1
+                            );
+
+                        }
+
+
+                        if (event.key === "ArrowRight") {
+
+                            showMaterialSlide(
+                                materialCurrent + 1
+                            );
+
+                        }
 
                     }
 
-
-                    if (
-                        event.key === "ArrowRight"
-                    ) {
-
-                        showAdminSlide(
-                            adminCurrent + 1
-                        );
-
-                    }
 
                     const sopSection =
                         document.getElementById(
                             "sop-dokumen-project"
                         );
+
 
                     if (
                         sopSection &&
@@ -3342,11 +3383,20 @@
                     ) {
 
                         if (event.key === "ArrowLeft") {
-                            showSopSlide(sopCurrent - 1);
+
+                            showSopSlide(
+                                sopCurrent - 1
+                            );
+
                         }
 
+
                         if (event.key === "ArrowRight") {
-                            showSopSlide(sopCurrent + 1);
+
+                            showSopSlide(
+                                sopCurrent + 1
+                            );
+
                         }
 
                     }
@@ -3357,7 +3407,7 @@
 
 
             /* =====================================================
-               SWIPE HP
+               SWIPE FOTO ADMINISTRASI DI HP
             ===================================================== */
 
             const adminViewport =
@@ -3370,7 +3420,6 @@
 
 
             if (adminViewport) {
-
 
                 adminViewport.addEventListener(
                     "touchstart",
@@ -3390,19 +3439,15 @@
                     "touchend",
                     function (event) {
 
-
                         const touchEndX =
                             event.changedTouches[0].screenX;
-
 
                         const distance =
                             touchEndX -
                             adminTouchStartX;
 
 
-                        if (
-                            Math.abs(distance) < 50
-                        ) {
+                        if (Math.abs(distance) < 50) {
                             return;
                         }
 
@@ -3430,9 +3475,13 @@
             }
 
 
-            /* Mulai dari slide pertama */
+            /* =====================================================
+               MULAI DARI SLIDE PERTAMA
+            ===================================================== */
 
             showAdminSlide(0);
+            showMaterialSlide(0);
+            showSopSlide(0);
 
         });
 
