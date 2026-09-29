@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FAVICON LOGO GBU -->
     <link rel="icon" type="image/jpeg" href="./GBU.jpeg">
     <link rel="shortcut icon" type="image/jpeg" href="./GBU.jpeg">
 
@@ -21,10 +20,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
-
-        /* =====================================================
-           RESET
-        ===================================================== */
 
         * {
             margin: 0;
@@ -199,41 +194,6 @@
             color: #69adff;
         }
 
-        .hero-text p {
-            margin-bottom: 24px;
-            max-width: 700px;
-            color: #d4e3f7;
-            font-size: 16px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 18px;
-            border-radius: 9px;
-            background: white;
-            color: #0b3975;
-            font-size: 13px;
-            font-weight: 800;
-            transition: .25s;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
-        }
-
-
-        /* =====================================================
-           HERO CARD
-        ===================================================== */
-
         .hero-card {
             width: 100%;
             max-width: 420px;
@@ -305,12 +265,10 @@
             font-weight: 800;
         }
 
-        .work-time,
-        .hero-card-bottom .work-time {
+        .work-time {
             display: flex;
             align-items: center;
             gap: 8px;
-
             color: #dcecff;
             font-size: 24px;
             font-weight: 800;
@@ -361,13 +319,9 @@
             color: #2166e5;
         }
 
-        .section-heading p {
-            color: #758197;
-        }
-
 
         /* =====================================================
-           SERAGAM
+           MENU + DETAIL
         ===================================================== */
 
         .uniform-section {
@@ -381,6 +335,11 @@
             align-items: start;
         }
 
+
+        /* =====================================================
+           MENU KIRI
+        ===================================================== */
+
         .day-selector {
             background: #f4f7fb;
             border: 1px solid #e5eaf2;
@@ -390,6 +349,18 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+
+            transition: .35s ease;
+        }
+
+        /*
+        =========================================================
+        MENU SAAT DILIPAT
+        =========================================================
+        */
+
+        .day-selector.menu-collapsed .day-button:not(.active) {
+            display: none;
         }
 
         .day-button {
@@ -398,12 +369,14 @@
             background: transparent;
             text-align: left;
             padding: 16px;
+
             border-radius: 12px;
             cursor: pointer;
 
             color: #657086;
             font-weight: 700;
-            transition: .25s;
+
+            transition: .25s ease;
         }
 
         .day-button:hover {
@@ -414,7 +387,9 @@
         .day-button.active {
             background: #2166e5;
             color: white;
-            box-shadow: 0 8px 18px rgba(33, 102, 229, .2);
+
+            box-shadow:
+                0 8px 18px rgba(33, 102, 229, .2);
         }
 
         .day-button strong {
@@ -428,6 +403,49 @@
             width: 22px;
             text-align: center;
             flex-shrink: 0;
+        }
+
+
+        /* =====================================================
+           TOMBOL MENU LAINNYA
+        ===================================================== */
+
+        .menu-toggle {
+            width: 100%;
+            border: 1px solid #dce5f0;
+            background: white;
+            color: #2166e5;
+
+            padding: 11px 14px;
+            border-radius: 10px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            transition: .25s;
+        }
+
+        .menu-collapsed .menu-toggle {
+            display: flex;
+        }
+
+        .menu-toggle:hover {
+            background: #eaf2ff;
+        }
+
+        .menu-toggle i {
+            transition: .25s;
+        }
+
+        .menu-collapsed .menu-toggle i {
+            transform: rotate(180deg);
         }
 
 
@@ -478,6 +496,7 @@
         .document-title i {
             width: 44px;
             height: 44px;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -491,7 +510,7 @@
 
 
         /* =====================================================
-           SERAGAM HARIAN
+           SERAGAM
         ===================================================== */
 
         .uniform-day {
@@ -554,7 +573,7 @@
 
 
         /* =====================================================
-           PERMIT FTTH
+           PERMIT
         ===================================================== */
 
         .permit-image-wrapper {
@@ -599,10 +618,12 @@
 
 
         /* =====================================================
-           FOTO ADMINISTRASI
+           ADMIN SLIDER
         ===================================================== */
 
-        .admin-slider {
+        .admin-slider,
+        .material-slider,
+        .sop-slider {
             position: relative;
             width: 100%;
 
@@ -617,7 +638,9 @@
             overflow: hidden;
         }
 
-        .admin-slider-viewport {
+        .admin-slider-viewport,
+        .material-slider-viewport,
+        .sop-slider-viewport {
             position: relative;
             width: 100%;
             overflow: hidden;
@@ -626,10 +649,11 @@
             background: #f4f7fb;
         }
 
-        .admin-slide {
+        .admin-slide,
+        .material-slide,
+        .sop-slide {
             display: none;
             width: 100%;
-            min-height: 420px;
 
             align-items: center;
             justify-content: center;
@@ -637,12 +661,18 @@
             background: #f4f7fb;
         }
 
-        .admin-slide.active {
-            display: flex;
-            animation: adminFade .35s ease;
+        .admin-slide {
+            min-height: 420px;
         }
 
-        @keyframes adminFade {
+        .admin-slide.active,
+        .material-slide.active,
+        .sop-slide.active {
+            display: flex;
+            animation: sliderFade .35s ease;
+        }
+
+        @keyframes sliderFade {
             from {
                 opacity: .25;
                 transform: scale(.99);
@@ -654,15 +684,33 @@
             }
         }
 
-        .admin-slide img {
+        .admin-slide img,
+        .material-slide img,
+        .sop-slide img {
             display: block;
             width: 100%;
-            max-height: 680px;
             height: auto;
             object-fit: contain;
             margin: auto;
             border-radius: 10px;
         }
+
+        .admin-slide img {
+            max-height: 680px;
+        }
+
+        .material-slide img {
+            max-height: 1000px;
+        }
+
+        .sop-slide img {
+            max-height: 900px;
+        }
+
+
+        /* =====================================================
+           MISSING IMAGE
+        ===================================================== */
 
         .admin-missing {
             min-height: 420px;
@@ -672,6 +720,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             gap: 10px;
 
             color: #657086;
@@ -693,362 +742,86 @@
             font-size: 13px;
         }
 
-        .admin-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 5;
-
-            width: 44px;
-            height: 44px;
-
-            border: 0;
-            border-radius: 50%;
-
-            background: rgba(18, 63, 136, .92);
-            color: #fff;
-
-            cursor: pointer;
-
-            display: grid;
-            place-items: center;
-
-            font-size: 17px;
-
-            box-shadow:
-                0 8px 20px rgba(18, 63, 136, .22);
-
-            transition: .25s;
-        }
-
-        .admin-arrow:hover {
-            background: #2166e5;
-            transform: translateY(-50%) scale(1.05);
-        }
-
-        .admin-arrow:disabled {
-            opacity: .4;
-            cursor: not-allowed;
-        }
-
-        .admin-prev {
-            left: 24px;
-        }
-
-        .admin-next {
-            right: 24px;
-        }
-
-        .admin-slider-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            padding: 16px 5px 3px;
-        }
-
-        .admin-counter {
-            color: #173d86;
-            font-size: 13px;
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-        .admin-dots {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-            flex-wrap: wrap;
-        }
-
-        .admin-dot {
-            width: 9px;
-            height: 9px;
-
-            border: 0;
-            border-radius: 50%;
-
-            background: #cbd5e5;
-
-            cursor: pointer;
-            padding: 0;
-
-            transition: .25s;
-        }
-
-        .admin-dot.active {
-            width: 25px;
-            border-radius: 999px;
-            background: #2166e5;
-        }
-
-        .admin-caption {
-            color: #69758a;
-            font-size: 12px;
-            font-weight: 600;
-            text-align: right;
-        }
-
 
         /* =====================================================
-           NAMA-NAMA MATERIAL FTTH
-           4 SLIDE
+           SLIDER BUTTON
         ===================================================== */
 
-        .material-slider {
-            position: relative;
-            width: 100%;
-
-            background: #fff;
-            border: 1px solid #dce5f0;
-            border-radius: 18px;
-            padding: 14px;
-
-            box-shadow:
-                0 12px 35px rgba(20, 40, 80, .10);
-
-            overflow: hidden;
-        }
-
-        .material-slider-viewport {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-
-            border-radius: 12px;
-            background: #f4f7fb;
-        }
-
-        .material-slide {
-            display: none;
-            width: 100%;
-
-            align-items: center;
-            justify-content: center;
-
-            background: #f4f7fb;
-        }
-
-        .material-slide.active {
-            display: flex;
-            animation: materialFade .35s ease;
-        }
-
-        @keyframes materialFade {
-            from {
-                opacity: .25;
-                transform: scale(.99);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .material-slide img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 1000px;
-
-            object-fit: contain;
-            margin: auto;
-
-            border-radius: 10px;
-        }
-
-        .material-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-
-            z-index: 5;
-
-            width: 44px;
-            height: 44px;
-
-            border: 0;
-            border-radius: 50%;
-
-            background: rgba(18, 63, 136, .92);
-            color: #fff;
-
-            cursor: pointer;
-
-            display: grid;
-            place-items: center;
-
-            font-size: 17px;
-
-            box-shadow:
-                0 8px 20px rgba(18, 63, 136, .22);
-
-            transition: .25s;
-        }
-
-        .material-arrow:hover {
-            background: #2166e5;
-            transform: translateY(-50%) scale(1.05);
-        }
-
-        .material-arrow:disabled {
-            opacity: .4;
-            cursor: not-allowed;
-        }
-
-        .material-prev {
-            left: 24px;
-        }
-
-        .material-next {
-            right: 24px;
-        }
-
-        .material-slider-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 15px;
-            padding: 16px 5px 3px;
-        }
-
-        .material-counter {
-            color: #173d86;
-            font-size: 13px;
-            font-weight: 800;
-            white-space: nowrap;
-        }
-
-        .material-dots {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .material-dot {
-            width: 9px;
-            height: 9px;
-
-            border: 0;
-            border-radius: 50%;
-
-            background: #cbd5e5;
-
-            cursor: pointer;
-            padding: 0;
-
-            transition: .25s;
-        }
-
-        .material-dot.active {
-            width: 25px;
-            border-radius: 999px;
-            background: #2166e5;
-        }
-
-        .material-caption {
-            color: #69758a;
-            font-size: 12px;
-            font-weight: 600;
-            text-align: right;
-        }
-
-
-        /* =====================================================
-           DOKUMEN PROJECT
-        ===================================================== */
-
-        .sop-slider {
-            position: relative;
-            width: 100%;
-            background: #fff;
-            border: 1px solid #dce5f0;
-            border-radius: 18px;
-            padding: 14px;
-            box-shadow: 0 12px 35px rgba(20, 40, 80, .10);
-            overflow: hidden;
-        }
-
-        .sop-slider-viewport {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-            background: #f4f7fb;
-        }
-
-        .sop-slide {
-            display: none;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            background: #f4f7fb;
-        }
-
-        .sop-slide.active {
-            display: flex;
-            animation: adminFade .35s ease;
-        }
-
-        .sop-slide img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 900px;
-            object-fit: contain;
-            margin: auto;
-            border-radius: 10px;
-        }
-
+        .admin-arrow,
+        .material-arrow,
         .sop-arrow {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
+
             z-index: 5;
+
             width: 44px;
             height: 44px;
+
             border: 0;
             border-radius: 50%;
+
             background: rgba(18, 63, 136, .92);
             color: #fff;
+
             cursor: pointer;
+
             display: grid;
             place-items: center;
+
             font-size: 17px;
-            box-shadow: 0 8px 20px rgba(18, 63, 136, .22);
+
+            box-shadow:
+                0 8px 20px rgba(18, 63, 136, .22);
+
             transition: .25s;
         }
 
+        .admin-arrow:hover,
+        .material-arrow:hover,
         .sop-arrow:hover {
             background: #2166e5;
             transform: translateY(-50%) scale(1.05);
         }
 
+        .admin-arrow:disabled,
+        .material-arrow:disabled,
         .sop-arrow:disabled {
             opacity: .4;
             cursor: not-allowed;
         }
 
+        .admin-prev,
+        .material-prev,
         .sop-prev {
             left: 24px;
         }
 
+        .admin-next,
+        .material-next,
         .sop-next {
             right: 24px;
         }
 
+
+        /* =====================================================
+           SLIDER BOTTOM
+        ===================================================== */
+
+        .admin-slider-bottom,
+        .material-slider-bottom,
         .sop-slider-bottom {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 15px;
             padding: 16px 5px 3px;
         }
 
+        .admin-counter,
+        .material-counter,
         .sop-counter {
             color: #173d86;
             font-size: 13px;
@@ -1056,6 +829,8 @@
             white-space: nowrap;
         }
 
+        .admin-dots,
+        .material-dots,
         .sop-dots {
             display: flex;
             justify-content: center;
@@ -1063,23 +838,33 @@
             gap: 7px;
         }
 
+        .admin-dot,
+        .material-dot,
         .sop-dot {
             width: 9px;
             height: 9px;
+
             border: 0;
             border-radius: 50%;
+
             background: #cbd5e5;
+
             cursor: pointer;
             padding: 0;
+
             transition: .25s;
         }
 
+        .admin-dot.active,
+        .material-dot.active,
         .sop-dot.active {
             width: 25px;
             border-radius: 999px;
             background: #2166e5;
         }
 
+        .admin-caption,
+        .material-caption,
         .sop-caption {
             color: #69758a;
             font-size: 12px;
@@ -1186,8 +971,7 @@
             }
 
             .day-selector {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                display: flex;
             }
 
             .footer-content,
@@ -1224,10 +1008,6 @@
                 font-size: 42px;
             }
 
-            .hero-text p {
-                font-size: 14px;
-            }
-
             .hero-card-top span {
                 font-size: 14px;
             }
@@ -1242,8 +1022,7 @@
                 font-size: 22px;
             }
 
-            .work-time,
-            .hero-card-bottom .work-time {
+            .work-time {
                 font-size: 22px;
             }
 
@@ -1253,10 +1032,6 @@
 
             .section-heading h2 {
                 font-size: 29px;
-            }
-
-            .day-selector {
-                grid-template-columns: 1fr;
             }
 
             .day-button {
@@ -1287,96 +1062,55 @@
                 border-radius: 12px;
             }
 
-
-            /* FWA HP */
-
             .fwa-flow-card {
                 padding: 5px;
                 border-radius: 12px;
             }
 
-            .fwa-flow-image {
-                border-radius: 8px;
-            }
-
-
-            /* MATERIAL FTTH HP */
-
-            .material-slider {
+            .material-slider,
+            .sop-slider,
+            .admin-slider {
                 padding: 7px;
                 border-radius: 14px;
             }
 
-            .material-slide img {
-                max-height: 650px;
-            }
-
-            .material-arrow {
-                width: 38px;
-                height: 38px;
-                font-size: 14px;
-            }
-
-            .material-prev {
-                left: 12px;
-            }
-
-            .material-next {
-                right: 12px;
-            }
-
-            .material-slider-bottom {
-                flex-direction: column;
-                gap: 10px;
-                padding-top: 13px;
-            }
-
-            .material-caption {
-                text-align: center;
-            }
-
-
-            /* SOP HP */
-
-            .sop-slider {
-                padding: 7px;
-                border-radius: 14px;
-            }
-
+            .material-slide img,
             .sop-slide img {
                 max-height: 650px;
             }
 
-            .sop-arrow {
+            .material-arrow,
+            .sop-arrow,
+            .admin-arrow {
                 width: 38px;
                 height: 38px;
                 font-size: 14px;
             }
 
-            .sop-prev {
+            .material-prev,
+            .sop-prev,
+            .admin-prev {
                 left: 12px;
             }
 
-            .sop-next {
+            .material-next,
+            .sop-next,
+            .admin-next {
                 right: 12px;
             }
 
-            .sop-slider-bottom {
+            .material-slider-bottom,
+            .sop-slider-bottom,
+            .admin-slider-bottom {
                 flex-direction: column;
                 gap: 10px;
                 padding-top: 13px;
             }
 
-            .sop-caption {
+            .material-caption,
+            .sop-caption,
+            .admin-caption {
                 text-align: center;
-            }
-
-
-            /* ADMIN HP */
-
-            .admin-slider {
-                padding: 7px;
-                border-radius: 14px;
             }
 
             .admin-slide {
@@ -1386,43 +1120,12 @@
             .admin-slide img {
                 max-height: 560px;
             }
-
-            .admin-arrow {
-                width: 38px;
-                height: 38px;
-                font-size: 14px;
-            }
-
-            .admin-prev {
-                left: 12px;
-            }
-
-            .admin-next {
-                right: 12px;
-            }
-
-            .admin-slider-bottom {
-                flex-direction: column;
-                gap: 10px;
-                padding-top: 13px;
-            }
-
-            .admin-caption {
-                text-align: center;
-            }
         }
 
 
-        /* =====================================================
-           HP KECIL
-        ===================================================== */
-
         @media (max-width: 380px) {
 
-            .fwa-flow-card {
-                padding: 4px;
-            }
-
+            .fwa-flow-card,
             .material-slider {
                 padding: 4px;
             }
@@ -1467,7 +1170,6 @@
     </header>
 
 
-
     <!-- =====================================================
          HERO
     ===================================================== -->
@@ -1501,13 +1203,9 @@
 
                 <div class="hero-card-title">
 
-                    <small>
-                        JADWAL KERJA
-                    </small>
+                    <small>JADWAL KERJA</small>
 
-                    <h3>
-                        Senin — Jumat
-                    </h3>
+                    <h3>Senin — Jumat</h3>
 
                     <div class="work-time">
 
@@ -1525,13 +1223,9 @@
 
                 <div class="hero-card-bottom">
 
-                    <small>
-                        JADWAL KERJA
-                    </small>
+                    <small>JADWAL KERJA</small>
 
-                    <h3>
-                        Sabtu
-                    </h3>
+                    <h3>Sabtu</h3>
 
                     <div class="work-time">
 
@@ -1548,7 +1242,6 @@
         </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -1576,14 +1269,12 @@
             <div class="uniform-layout">
 
 
-                <!-- =====================================================
+                <!-- =================================================
                      MENU KIRI
-                ===================================================== -->
+                ================================================= -->
 
-                <div class="day-selector">
+                <div class="day-selector" id="daySelector">
 
-
-                    <!-- 1. SERAGAM -->
 
                     <button
                         type="button"
@@ -1598,8 +1289,6 @@
                     </button>
 
 
-                    <!-- 2. BUKU PANDUAN ODOO -->
-
                     <button
                         type="button"
                         class="day-button"
@@ -1612,8 +1301,6 @@
 
                     </button>
 
-
-                    <!-- 3. PENGAWAS LAPANGAN -->
 
                     <button
                         type="button"
@@ -1628,8 +1315,6 @@
                     </button>
 
 
-                    <!-- 4. FOTO ADMINISTRASI -->
-
                     <button
                         type="button"
                         class="day-button"
@@ -1642,8 +1327,6 @@
 
                     </button>
 
-
-                    <!-- 5. NAMA-NAMA MATERIAL FTTH -->
 
                     <button
                         type="button"
@@ -1658,8 +1341,6 @@
                     </button>
 
 
-                    <!-- 6. DOKUMEN PROJECT -->
-
                     <button
                         type="button"
                         class="day-button"
@@ -1672,8 +1353,6 @@
 
                     </button>
 
-
-                    <!-- 7. PERMIT FTTH -->
 
                     <button
                         type="button"
@@ -1688,8 +1367,6 @@
                     </button>
 
 
-                    <!-- 8. SURVEY -->
-
                     <button
                         type="button"
                         class="day-button"
@@ -1703,8 +1380,6 @@
                     </button>
 
 
-                    <!-- 9. FWA -->
-
                     <button
                         type="button"
                         class="day-button"
@@ -1717,20 +1392,31 @@
 
                     </button>
 
+
+                    <!-- TOMBOL UNTUK MEMBUKA MENU LAGI -->
+
+                    <button
+                        type="button"
+                        class="menu-toggle"
+                        id="menuToggle">
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                        <span>MENU LAINNYA</span>
+
+                    </button>
+
                 </div>
 
 
-
-                <!-- =====================================================
-                     DETAIL KONTEN
-                ===================================================== -->
+                <!-- =================================================
+                     DETAIL
+                ================================================= -->
 
                 <div class="uniform-detail">
 
 
-                    <!-- =====================================================
-                         1. SERAGAM
-                    ===================================================== -->
+                    <!-- SERAGAM -->
 
                     <div
                         class="uniform-info active"
@@ -1751,9 +1437,7 @@
 
                             <h3>👔 Senin</h3>
 
-                            <h2>
-                                Kemeja Biru
-                            </h2>
+                            <h2>Kemeja Biru</h2>
 
                             <p>
                                 Menggunakan kemeja biru PT. Genesis Berkat
@@ -1767,9 +1451,7 @@
 
                             <h3>👔 Selasa</h3>
 
-                            <h2>
-                                Kemeja / Baju Polo Berkerah
-                            </h2>
+                            <h2>Kemeja / Baju Polo Berkerah</h2>
 
                             <p>
                                 Menggunakan kemeja atau baju polo berkerah
@@ -1783,9 +1465,7 @@
 
                             <h3>👔 Rabu</h3>
 
-                            <h2>
-                                Kemeja / Baju Polo Berkerah
-                            </h2>
+                            <h2>Kemeja / Baju Polo Berkerah</h2>
 
                             <p>
                                 Menggunakan kemeja atau baju polo berkerah
@@ -1799,9 +1479,7 @@
 
                             <h3>👔 Kamis</h3>
 
-                            <h2>
-                                Baju Ungu
-                            </h2>
+                            <h2>Baju Ungu</h2>
 
                             <p>
                                 Menggunakan baju ungu PT. Genesis Berkat
@@ -1815,9 +1493,7 @@
 
                             <h3>👔 Jumat</h3>
 
-                            <h2>
-                                Batik
-                            </h2>
+                            <h2>Batik</h2>
 
                             <p>
                                 Menggunakan pakaian batik yang rapi dan
@@ -1831,9 +1507,7 @@
 
                             <h3>👔 Sabtu</h3>
 
-                            <h2>
-                                Casual Sopan / Bebas Rapi
-                            </h2>
+                            <h2>Casual Sopan / Bebas Rapi</h2>
 
                             <p>
                                 Menggunakan pakaian bebas dengan tetap
@@ -1845,10 +1519,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         2. BUKU PANDUAN ODOO
-                    ===================================================== -->
+                    <!-- BUKU ODOO -->
 
                     <div
                         class="uniform-info"
@@ -1876,10 +1547,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         3. PENGAWAS LAPANGAN
-                    ===================================================== -->
+                    <!-- PENGAWAS -->
 
                     <div
                         class="uniform-info"
@@ -1907,10 +1575,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         4. FOTO ADMINISTRASI
-                    ===================================================== -->
+                    <!-- FOTO ADMINISTRASI -->
 
                     <div
                         class="uniform-info"
@@ -1927,158 +1592,55 @@
                         </div>
 
 
-                        <div
-                            class="admin-slider"
-                            id="adminSlider">
+                        <div class="admin-slider">
 
                             <div class="admin-slider-viewport">
 
 
                                 <div class="admin-slide active">
 
-                                    <img
-                                        src="1.jpeg"
-                                        alt="Foto Administrasi Slide 1">
+                                    <img src="1.jpeg"
+                                        alt="Foto Administrasi 1">
 
                                 </div>
 
 
                                 <div class="admin-slide">
 
-                                    <img
-                                        src="2.jpeg"
-                                        alt="Foto Administrasi Slide 2"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Foto Administrasi Slide 2
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>2.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                    <img src="2.jpeg"
+                                        alt="Foto Administrasi 2">
 
                                 </div>
 
 
                                 <div class="admin-slide">
 
-                                    <img
-                                        src="3.jpeg"
-                                        alt="Foto Administrasi Slide 3"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Foto Administrasi Slide 3
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>3.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                    <img src="3.jpeg"
+                                        alt="Foto Administrasi 3">
 
                                 </div>
 
 
                                 <div class="admin-slide">
 
-                                    <img
-                                        src="4.jpeg"
-                                        alt="Foto Administrasi Slide 4"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Foto Administrasi Slide 4
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>4.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                    <img src="4.jpeg"
+                                        alt="Foto Administrasi 4">
 
                                 </div>
 
 
                                 <div class="admin-slide">
 
-                                    <img
-                                        src="5.jpeg"
-                                        alt="Foto Administrasi Slide 5"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Foto Administrasi Slide 5
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>5.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                    <img src="5.jpeg"
+                                        alt="Foto Administrasi 5">
 
                                 </div>
 
 
                                 <div class="admin-slide">
 
-                                    <img
-                                        src="6.jpeg"
-                                        alt="Foto Administrasi Slide 6"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Foto Administrasi Slide 6
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>6.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                    <img src="6.jpeg"
+                                        alt="Foto Administrasi 6">
 
                                 </div>
 
@@ -2086,8 +1648,7 @@
                                 <button
                                     type="button"
                                     class="admin-arrow admin-prev"
-                                    id="adminPrev"
-                                    aria-label="Foto sebelumnya">
+                                    id="adminPrev">
 
                                     <i class="fa-solid fa-chevron-left"></i>
 
@@ -2097,8 +1658,7 @@
                                 <button
                                     type="button"
                                     class="admin-arrow admin-next"
-                                    id="adminNext"
-                                    aria-label="Foto berikutnya">
+                                    id="adminNext">
 
                                     <i class="fa-solid fa-chevron-right"></i>
 
@@ -2116,51 +1676,25 @@
                                 </div>
 
 
-                                <div
-                                    class="admin-dots"
-                                    aria-label="Navigasi foto administrasi">
+                                <div class="admin-dots">
 
-                                    <button
-                                        type="button"
-                                        class="admin-dot active"
-                                        data-slide="0"
-                                        aria-label="Slide 1">
-                                    </button>
+                                    <button class="admin-dot active"
+                                        data-slide="0"></button>
 
-                                    <button
-                                        type="button"
-                                        class="admin-dot"
-                                        data-slide="1"
-                                        aria-label="Slide 2">
-                                    </button>
+                                    <button class="admin-dot"
+                                        data-slide="1"></button>
 
-                                    <button
-                                        type="button"
-                                        class="admin-dot"
-                                        data-slide="2"
-                                        aria-label="Slide 3">
-                                    </button>
+                                    <button class="admin-dot"
+                                        data-slide="2"></button>
 
-                                    <button
-                                        type="button"
-                                        class="admin-dot"
-                                        data-slide="3"
-                                        aria-label="Slide 4">
-                                    </button>
+                                    <button class="admin-dot"
+                                        data-slide="3"></button>
 
-                                    <button
-                                        type="button"
-                                        class="admin-dot"
-                                        data-slide="4"
-                                        aria-label="Slide 5">
-                                    </button>
+                                    <button class="admin-dot"
+                                        data-slide="4"></button>
 
-                                    <button
-                                        type="button"
-                                        class="admin-dot"
-                                        data-slide="5"
-                                        aria-label="Slide 6">
-                                    </button>
+                                    <button class="admin-dot"
+                                        data-slide="5"></button>
 
                                 </div>
 
@@ -2176,11 +1710,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         5. NAMA-NAMA MATERIAL FTTH
-                         4 SLIDE
-                    ===================================================== -->
+                    <!-- MATERIAL FTTH -->
 
                     <div
                         class="uniform-info"
@@ -2197,134 +1727,61 @@
                         </div>
 
 
-                        <div
-                            class="material-slider"
-                            id="materialSlider">
+                        <div class="material-slider">
 
                             <div class="material-slider-viewport">
 
-
-                                <!-- SLIDE 1 -->
 
                                 <div class="material-slide active">
 
                                     <img
                                         src="7.jpeg"
-                                        alt="Nama-Nama Material FTTH Slide 1">
+                                        alt="Material FTTH 1">
 
                                 </div>
 
-
-                                <!-- SLIDE 2 -->
 
                                 <div class="material-slide">
 
                                     <img
                                         src="8.jpeg"
-                                        alt="Nama-Nama Material FTTH Slide 2"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Material FTTH Slide 2
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>MATERIAL FTTH 2.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                        alt="Material FTTH 2">
 
                                 </div>
 
-
-                                <!-- SLIDE 3 -->
 
                                 <div class="material-slide">
 
                                     <img
                                         src="9.jpeg"
-                                        alt="Nama-Nama Material FTTH Slide 3"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Material FTTH Slide 3
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>MATERIAL FTTH 3.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                        alt="Material FTTH 3">
 
                                 </div>
 
-
-                                <!-- SLIDE 4 -->
 
                                 <div class="material-slide">
 
                                     <img
                                         src="10.jpeg"
-                                        alt="Nama-Nama Material FTTH Slide 4"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-
-                                    <div
-                                        class="admin-missing"
-                                        style="display:none;">
-
-                                        <i class="fa-regular fa-image"></i>
-
-                                        <strong>
-                                            Material FTTH Slide 4
-                                        </strong>
-
-                                        <span>
-                                            Tambahkan file
-                                            <b>MATERIAL FTTH 4.jpeg</b>
-                                            pada folder website.
-                                        </span>
-
-                                    </div>
+                                        alt="Material FTTH 4">
 
                                 </div>
 
 
-                                <!-- TOMBOL KIRI -->
-
                                 <button
                                     type="button"
                                     class="material-arrow material-prev"
-                                    id="materialPrev"
-                                    aria-label="Material sebelumnya">
+                                    id="materialPrev">
 
                                     <i class="fa-solid fa-chevron-left"></i>
 
                                 </button>
 
 
-                                <!-- TOMBOL KANAN -->
-
                                 <button
                                     type="button"
                                     class="material-arrow material-next"
-                                    id="materialNext"
-                                    aria-label="Material berikutnya">
+                                    id="materialNext">
 
                                     <i class="fa-solid fa-chevron-right"></i>
 
@@ -2335,7 +1792,6 @@
 
                             <div class="material-slider-bottom">
 
-
                                 <div
                                     class="material-counter"
                                     id="materialCounter">
@@ -2343,36 +1799,26 @@
                                 </div>
 
 
-                                <div
-                                    class="material-dots"
-                                    aria-label="Navigasi material FTTH">
+                                <div class="material-dots">
 
                                     <button
-                                        type="button"
                                         class="material-dot active"
-                                        data-slide="0"
-                                        aria-label="Slide 1">
+                                        data-slide="0">
                                     </button>
 
                                     <button
-                                        type="button"
                                         class="material-dot"
-                                        data-slide="1"
-                                        aria-label="Slide 2">
+                                        data-slide="1">
                                     </button>
 
                                     <button
-                                        type="button"
                                         class="material-dot"
-                                        data-slide="2"
-                                        aria-label="Slide 3">
+                                        data-slide="2">
                                     </button>
 
                                     <button
-                                        type="button"
                                         class="material-dot"
-                                        data-slide="3"
-                                        aria-label="Slide 4">
+                                        data-slide="3">
                                     </button>
 
                                 </div>
@@ -2382,7 +1828,6 @@
                                     Nama-Nama Material FTTH
                                 </div>
 
-
                             </div>
 
                         </div>
@@ -2390,10 +1835,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         6. DOKUMEN PROJECT
-                    ===================================================== -->
+                    <!-- DOKUMEN PROJECT -->
 
                     <div
                         class="uniform-info"
@@ -2410,17 +1852,16 @@
                         </div>
 
 
-                        <div
-                            class="sop-slider"
-                            id="sopSlider">
+                        <div class="sop-slider">
 
                             <div class="sop-slider-viewport">
+
 
                                 <div class="sop-slide active">
 
                                     <img
                                         src="1 (3).jpeg"
-                                        alt="SOP Dokumen Project Slide 1">
+                                        alt="SOP Dokumen Project 1">
 
                                 </div>
 
@@ -2429,7 +1870,7 @@
 
                                     <img
                                         src="2 (2).jpeg"
-                                        alt="SOP Dokumen Project Slide 2">
+                                        alt="SOP Dokumen Project 2">
 
                                 </div>
 
@@ -2437,8 +1878,7 @@
                                 <button
                                     type="button"
                                     class="sop-arrow sop-prev"
-                                    id="sopPrev"
-                                    aria-label="SOP sebelumnya">
+                                    id="sopPrev">
 
                                     <i class="fa-solid fa-chevron-left"></i>
 
@@ -2448,8 +1888,7 @@
                                 <button
                                     type="button"
                                     class="sop-arrow sop-next"
-                                    id="sopNext"
-                                    aria-label="SOP berikutnya">
+                                    id="sopNext">
 
                                     <i class="fa-solid fa-chevron-right"></i>
 
@@ -2467,22 +1906,16 @@
                                 </div>
 
 
-                                <div
-                                    class="sop-dots"
-                                    aria-label="Navigasi SOP Dokumen Project">
+                                <div class="sop-dots">
 
                                     <button
-                                        type="button"
                                         class="sop-dot active"
-                                        data-slide="0"
-                                        aria-label="Slide 1">
+                                        data-slide="0">
                                     </button>
 
                                     <button
-                                        type="button"
                                         class="sop-dot"
-                                        data-slide="1"
-                                        aria-label="Slide 2">
+                                        data-slide="1">
                                     </button>
 
                                 </div>
@@ -2499,10 +1932,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         7. PERMIT FTTH
-                    ===================================================== -->
+                    <!-- PERMIT -->
 
                     <div
                         class="uniform-info"
@@ -2519,23 +1949,19 @@
                         </div>
 
 
-                        <div
-                            class="odoo-image-wrapper permit-image-wrapper">
+                        <div class="odoo-image-wrapper permit-image-wrapper">
 
                             <img
                                 src="FTTH.jpeg"
                                 alt="Permit FTTH"
-                                class="odoo-image permit-image">
+                                class="permit-image">
 
                         </div>
 
                     </div>
 
 
-
-                    <!-- =====================================================
-                         8. SURVEY
-                    ===================================================== -->
+                    <!-- SURVEY -->
 
                     <div
                         class="uniform-info"
@@ -2556,7 +1982,7 @@
 
                             <img
                                 src="WhatsApp Image 2026-09-16 at 13.15.29.jpeg"
-                                alt="Alur Survey Design and Planning"
+                                alt="Survey Design and Planning"
                                 class="sabtu-flowchart">
 
                         </div>
@@ -2564,10 +1990,7 @@
                     </div>
 
 
-
-                    <!-- =====================================================
-                         9. FWA
-                    ===================================================== -->
+                    <!-- FWA -->
 
                     <div
                         class="uniform-info"
@@ -2595,7 +2018,6 @@
 
                     </div>
 
-
                 </div>
 
             </div>
@@ -2605,7 +2027,6 @@
     </section>
 
 
-
     <!-- =====================================================
          FOOTER
     ===================================================== -->
@@ -2613,7 +2034,6 @@
     <footer class="footer">
 
         <div class="container footer-content">
-
 
             <div class="footer-brand">
 
@@ -2639,9 +2059,7 @@
             </div>
 
 
-
             <div class="footer-info">
-
 
                 <div>
 
@@ -2666,11 +2084,9 @@
 
                 </div>
 
-
             </div>
 
         </div>
-
 
 
         <div class="footer-bottom">
@@ -2689,7 +2105,6 @@
     </footer>
 
 
-
     <!-- =====================================================
          JAVASCRIPT
     ===================================================== -->
@@ -2700,7 +2115,7 @@
 
 
             /* =====================================================
-               MENU KIRI
+               MENU KIRI - ACCORDION / NGUMPET
             ===================================================== */
 
             const buttons =
@@ -2708,6 +2123,12 @@
 
             const contents =
                 document.querySelectorAll(".uniform-info");
+
+            const daySelector =
+                document.getElementById("daySelector");
+
+            const menuToggle =
+                document.getElementById("menuToggle");
 
 
             buttons.forEach(function (button) {
@@ -2718,18 +2139,34 @@
                         this.getAttribute("data-target");
 
 
+                    /*
+                    Hapus active dari semua tombol
+                    */
+
                     buttons.forEach(function (btn) {
                         btn.classList.remove("active");
                     });
 
+
+                    /*
+                    Sembunyikan semua isi
+                    */
 
                     contents.forEach(function (content) {
                         content.classList.remove("active");
                     });
 
 
+                    /*
+                    Aktifkan tombol yang dipilih
+                    */
+
                     this.classList.add("active");
 
+
+                    /*
+                    Tampilkan isi yang dipilih
+                    */
 
                     const target =
                         document.getElementById(targetId);
@@ -2739,10 +2176,37 @@
                         target.classList.add("active");
                     }
 
+
+                    /*
+                    =============================================
+                    INI YANG MEMBUAT MENU LAIN NGUMPET
+                    =============================================
+                    */
+
+                    daySelector.classList.add("menu-collapsed");
+
                 });
 
             });
 
+
+            /*
+            =============================================
+            TOMBOL MENU LAINNYA
+            =============================================
+            */
+
+            if (menuToggle) {
+
+                menuToggle.addEventListener("click", function () {
+
+                    daySelector.classList.toggle(
+                        "menu-collapsed"
+                    );
+
+                });
+
+            }
 
 
             /* =====================================================
@@ -2764,15 +2228,12 @@
             const adminNext =
                 document.getElementById("adminNext");
 
-
             let adminCurrent = 0;
 
 
             function showAdminSlide(index) {
 
-                if (!adminSlides.length) {
-                    return;
-                }
+                if (!adminSlides.length) return;
 
 
                 adminCurrent =
@@ -2816,14 +2277,19 @@
 
 
                 if (adminPrev) {
+
                     adminPrev.disabled =
                         adminCurrent === 0;
+
                 }
 
 
                 if (adminNext) {
+
                     adminNext.disabled =
-                        adminCurrent === adminSlides.length - 1;
+                        adminCurrent ===
+                        adminSlides.length - 1;
+
                 }
 
             }
@@ -2879,10 +2345,8 @@
             });
 
 
-
             /* =====================================================
-               SLIDER NAMA-NAMA MATERIAL FTTH
-               4 SLIDE
+               MATERIAL FTTH
             ===================================================== */
 
             const materialSlides =
@@ -2900,15 +2364,12 @@
             const materialNext =
                 document.getElementById("materialNext");
 
-
             let materialCurrent = 0;
 
 
             function showMaterialSlide(index) {
 
-                if (!materialSlides.length) {
-                    return;
-                }
+                if (!materialSlides.length) return;
 
 
                 materialCurrent =
@@ -3021,14 +2482,13 @@
 
 
             /* =====================================================
-               SWIPE MATERIAL FTTH DI HP
+               SWIPE MATERIAL
             ===================================================== */
 
             const materialViewport =
                 document.querySelector(
                     ".material-slider-viewport"
                 );
-
 
             let materialTouchStartX = 0;
 
@@ -3043,9 +2503,7 @@
                             event.changedTouches[0].screenX;
 
                     },
-                    {
-                        passive: true
-                    }
+                    { passive: true }
                 );
 
 
@@ -3081,20 +2539,14 @@
                         }
 
                     },
-                    {
-                        passive: true
-                    }
+                    { passive: true }
                 );
 
             }
 
 
-            showMaterialSlide(0);
-
-
-
             /* =====================================================
-               SLIDER SOP DOKUMEN PROJECT
+               SOP
             ===================================================== */
 
             const sopSlides =
@@ -3112,15 +2564,12 @@
             const sopNext =
                 document.getElementById("sopNext");
 
-
             let sopCurrent = 0;
 
 
             function showSopSlide(index) {
 
-                if (!sopSlides.length) {
-                    return;
-                }
+                if (!sopSlides.length) return;
 
 
                 sopCurrent =
@@ -3164,15 +2613,18 @@
 
 
                 if (sopPrev) {
+
                     sopPrev.disabled =
                         sopCurrent === 0;
+
                 }
 
 
                 if (sopNext) {
 
                     sopNext.disabled =
-                        sopCurrent === sopSlides.length - 1;
+                        sopCurrent ===
+                        sopSlides.length - 1;
 
                 }
 
@@ -3229,11 +2681,14 @@
             });
 
 
+            /* =====================================================
+               SWIPE SOP
+            ===================================================== */
+
             const sopViewport =
                 document.querySelector(
                     ".sop-slider-viewport"
                 );
-
 
             let sopTouchStartX = 0;
 
@@ -3248,9 +2703,7 @@
                             event.changedTouches[0].screenX;
 
                     },
-                    {
-                        passive: true
-                    }
+                    { passive: true }
                 );
 
 
@@ -3286,135 +2739,20 @@
                         }
 
                     },
-                    {
-                        passive: true
-                    }
+                    { passive: true }
                 );
 
             }
 
 
-            showSopSlide(0);
-
-
-
             /* =====================================================
-               KEYBOARD
-            ===================================================== */
-
-            document.addEventListener(
-                "keydown",
-                function (event) {
-
-
-                    const adminSection =
-                        document.getElementById(
-                            "foto-administrasi"
-                        );
-
-
-                    if (
-                        adminSection &&
-                        adminSection.classList.contains("active")
-                    ) {
-
-                        if (event.key === "ArrowLeft") {
-
-                            showAdminSlide(
-                                adminCurrent - 1
-                            );
-
-                        }
-
-
-                        if (event.key === "ArrowRight") {
-
-                            showAdminSlide(
-                                adminCurrent + 1
-                            );
-
-                        }
-
-                    }
-
-
-                    /* MATERIAL FTTH */
-
-                    const materialSection =
-                        document.getElementById(
-                            "material-ftth"
-                        );
-
-
-                    if (
-                        materialSection &&
-                        materialSection.classList.contains("active")
-                    ) {
-
-                        if (event.key === "ArrowLeft") {
-
-                            showMaterialSlide(
-                                materialCurrent - 1
-                            );
-
-                        }
-
-
-                        if (event.key === "ArrowRight") {
-
-                            showMaterialSlide(
-                                materialCurrent + 1
-                            );
-
-                        }
-
-                    }
-
-
-                    const sopSection =
-                        document.getElementById(
-                            "sop-dokumen-project"
-                        );
-
-
-                    if (
-                        sopSection &&
-                        sopSection.classList.contains("active")
-                    ) {
-
-                        if (event.key === "ArrowLeft") {
-
-                            showSopSlide(
-                                sopCurrent - 1
-                            );
-
-                        }
-
-
-                        if (event.key === "ArrowRight") {
-
-                            showSopSlide(
-                                sopCurrent + 1
-                            );
-
-                        }
-
-                    }
-
-                }
-            );
-
-
-
-            /* =====================================================
-               SWIPE FOTO ADMINISTRASI DI HP
+               SWIPE ADMIN
             ===================================================== */
 
             const adminViewport =
                 document.querySelector(
                     ".admin-slider-viewport"
                 );
-
 
             let adminTouchStartX = 0;
 
@@ -3429,9 +2767,7 @@
                             event.changedTouches[0].screenX;
 
                     },
-                    {
-                        passive: true
-                    }
+                    { passive: true }
                 );
 
 
@@ -3467,21 +2803,118 @@
                         }
 
                     },
-                    {
-                        passive: true
-                    }
+                    { passive: true }
                 );
 
             }
 
 
             /* =====================================================
-               MULAI DARI SLIDE PERTAMA
+               KEYBOARD
+            ===================================================== */
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+
+                    const adminSection =
+                        document.getElementById(
+                            "foto-administrasi"
+                        );
+
+
+                    if (
+                        adminSection &&
+                        adminSection.classList.contains("active")
+                    ) {
+
+                        if (event.key === "ArrowLeft") {
+                            showAdminSlide(
+                                adminCurrent - 1
+                            );
+                        }
+
+                        if (event.key === "ArrowRight") {
+                            showAdminSlide(
+                                adminCurrent + 1
+                            );
+                        }
+
+                    }
+
+
+                    const materialSection =
+                        document.getElementById(
+                            "material-ftth"
+                        );
+
+
+                    if (
+                        materialSection &&
+                        materialSection.classList.contains("active")
+                    ) {
+
+                        if (event.key === "ArrowLeft") {
+                            showMaterialSlide(
+                                materialCurrent - 1
+                            );
+                        }
+
+                        if (event.key === "ArrowRight") {
+                            showMaterialSlide(
+                                materialCurrent + 1
+                            );
+                        }
+
+                    }
+
+
+                    const sopSection =
+                        document.getElementById(
+                            "sop-dokumen-project"
+                        );
+
+
+                    if (
+                        sopSection &&
+                        sopSection.classList.contains("active")
+                    ) {
+
+                        if (event.key === "ArrowLeft") {
+                            showSopSlide(
+                                sopCurrent - 1
+                            );
+                        }
+
+                        if (event.key === "ArrowRight") {
+                            showSopSlide(
+                                sopCurrent + 1
+                            );
+                        }
+
+                    }
+
+                }
+            );
+
+
+            /* =====================================================
+               MULAI
             ===================================================== */
 
             showAdminSlide(0);
             showMaterialSlide(0);
             showSopSlide(0);
+
+
+            /*
+            ========================================================
+            MENU AWAL LANGSUNG DILIPAT
+            ========================================================
+            */
+
+            daySelector.classList.add("menu-collapsed");
 
         });
 
