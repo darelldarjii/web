@@ -332,6 +332,7 @@
             display: grid;
             grid-template-columns: 290px minmax(0, 1fr);
             gap: 25px;
+
             align-items: start;
         }
 
@@ -387,7 +388,6 @@
         .day-button.active {
             background: #2166e5;
             color: white;
-
             box-shadow:
                 0 8px 18px rgba(33, 102, 229, .2);
         }
@@ -542,8 +542,31 @@
 
 
         /* =====================================================
-           GAMBAR UMUM
+           SERAGAM - DESAIN SESUAI GAMBAR
         ===================================================== */
+
+        .seragam-image-wrapper {
+            width: 100%;
+            background: #fff;
+            border: 1px solid #dce5f0;
+            border-radius: 18px;
+            padding: 8px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(20, 40, 80, .10);
+        }
+
+        .seragam-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           GAMBAR UMUM
+        =====================================================
 
         .odoo-image-wrapper,
         .pengawas-image-wrapper,
@@ -1055,6 +1078,15 @@
                 font-size: 16px;
             }
 
+            .seragam-image-wrapper {
+                padding: 4px;
+                border-radius: 12px;
+            }
+
+            .seragam-image {
+                border-radius: 8px;
+            }
+
             .odoo-image-wrapper,
             .pengawas-image-wrapper,
             .sabtu-flowchart-wrapper {
@@ -1427,92 +1459,21 @@
                             <i class="fa-solid fa-shirt"></i>
 
                             <span>
-                                Ketentuan Seragam Kerja
+                                Aturan Seragam Kerja
                             </span>
 
                         </div>
 
+                        <!--
+                            GAMBAR SERAGAM SESUAI DESAIN YANG DIKIRIM.
+                            Simpan gambar sebagai: seragam.jpeg
+                        -->
+                        <div class="seragam-image-wrapper">
 
-                        <div class="uniform-day">
-
-                            <h3>👔 Senin</h3>
-
-                            <h2>Kemeja Biru</h2>
-
-                            <p>
-                                Menggunakan kemeja biru PT. Genesis Berkat
-                                Usaha sebagai seragam kerja pada hari Senin.
-                            </p>
-
-                        </div>
-
-
-                        <div class="uniform-day">
-
-                            <h3>👔 Selasa</h3>
-
-                            <h2>Kemeja / Baju Polo Berkerah</h2>
-
-                            <p>
-                                Menggunakan kemeja atau baju polo berkerah
-                                dengan tampilan yang rapi dan sopan.
-                            </p>
-
-                        </div>
-
-
-                        <div class="uniform-day">
-
-                            <h3>👔 Rabu</h3>
-
-                            <h2>Kemeja / Baju Polo Berkerah</h2>
-
-                            <p>
-                                Menggunakan kemeja atau baju polo berkerah
-                                dengan tampilan yang rapi dan sopan.
-                            </p>
-
-                        </div>
-
-
-                        <div class="uniform-day">
-
-                            <h3>👔 Kamis</h3>
-
-                            <h2>Baju Ungu</h2>
-
-                            <p>
-                                Menggunakan baju ungu PT. Genesis Berkat
-                                Usaha sebagai seragam kerja pada hari Kamis.
-                            </p>
-
-                        </div>
-
-
-                        <div class="uniform-day">
-
-                            <h3>👔 Jumat</h3>
-
-                            <h2>Batik</h2>
-
-                            <p>
-                                Menggunakan pakaian batik yang rapi dan
-                                sopan untuk bekerja.
-                            </p>
-
-                        </div>
-
-
-                        <div class="uniform-day">
-
-                            <h3>👔 Sabtu</h3>
-
-                            <h2>Casual Sopan / Bebas Rapi</h2>
-
-                            <p>
-                                Menggunakan pakaian bebas dengan tetap
-                                memperhatikan kerapian dan kesopanan.
-                            </p>
+                            <img
+                                src="WhatsApp Image 2026-09-29 at 13.58.02.jpeg"
+                                alt="Aturan Seragam Kerja PT. Genesis Berkat Usaha"
+                                class="seragam-image">
 
                         </div>
 
