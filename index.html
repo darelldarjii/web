@@ -13,13 +13,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
+    <link
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
 
         * {
             margin: 0;
@@ -34,7 +40,7 @@
         body {
             font-family: "Inter", sans-serif;
             color: #17233d;
-            background: #f7f9fc;
+            background: #f3f6fa;
             line-height: 1.6;
         }
 
@@ -66,9 +72,10 @@
             position: sticky;
             top: 0;
             z-index: 999;
-            background: rgba(255, 255, 255, .96);
+            background: rgba(255,255,255,.92);
             backdrop-filter: blur(15px);
-            border-bottom: 1px solid #e7ebf2;
+            border-bottom: 1px solid #e4eaf2;
+            box-shadow: 0 8px 30px rgba(7,26,51,.06);
         }
 
         .nav {
@@ -111,14 +118,16 @@
         }
 
         .brand span {
+            display: block;
+            margin-top: 3px;
             font-size: 9px;
             letter-spacing: 2px;
-            color: #7d8798;
-            font-weight: 700;
+            color: #f58220;
+            font-weight: 800;
         }
 
         .nav-button {
-            background: #2166e5;
+            background: #1769aa;
             color: white;
             padding: 12px 18px;
             border-radius: 10px;
@@ -127,12 +136,12 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 8px 20px rgba(33, 102, 229, .18);
+            box-shadow: 0 8px 20px rgba(23,105,170,.18);
             transition: .25s;
         }
 
         .nav-button:hover {
-            background: #1857c5;
+            background: #0d4d88;
             transform: translateY(-2px);
         }
 
@@ -149,7 +158,7 @@
             background:
                 radial-gradient(
                     circle at 88% 35%,
-                    rgba(70, 145, 240, .45),
+                    rgba(70,145,240,.45),
                     transparent 34%
                 ),
                 linear-gradient(
@@ -158,17 +167,43 @@
                     #0a2d65 55%,
                     #1455a2 100%
                 );
+
+            border-radius: 0 0 34px 34px;
+            box-shadow: 0 22px 60px rgba(7,26,51,.22);
         }
 
         .hero::before {
             content: "";
             position: absolute;
-            width: 430px;
-            height: 430px;
-            right: -190px;
-            top: -260px;
-            border: 55px solid rgba(255, 255, 255, .035);
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                );
+
+            background-size: 34px 34px;
+            mask-image: linear-gradient(to bottom,#000,transparent);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            right: -120px;
+            top: -160px;
+            border: 70px solid rgba(245,130,32,.12);
             border-radius: 50%;
+            box-shadow: 0 0 100px rgba(45,140,255,.2);
+            pointer-events: none;
         }
 
         .hero-content {
@@ -182,11 +217,12 @@
 
         .hero-text h1 {
             margin-bottom: 18px;
-            line-height: 1.05;
+            line-height: 1.02;
             color: #fff;
-            font-size: clamp(42px, 5vw, 72px);
+            font-size: clamp(42px,5vw,72px);
             font-weight: 800;
             letter-spacing: -2.5px;
+            text-shadow: 0 10px 30px rgba(0,0,0,.22);
         }
 
         .hero-text h1 span {
@@ -201,18 +237,13 @@
             padding: 22px;
             border-radius: 18px;
 
-            background: linear-gradient(
-                135deg,
-                rgba(255, 255, 255, .18),
-                rgba(255, 255, 255, .07)
-            );
-
-            border: 1px solid rgba(255, 255, 255, .23);
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.18);
 
             box-shadow:
-                0 18px 45px rgba(0, 0, 0, .2);
+                0 25px 60px rgba(0,0,0,.2);
 
-            backdrop-filter: blur(14px);
+            backdrop-filter: blur(18px);
             color: #fff;
         }
 
@@ -223,7 +254,7 @@
             gap: 15px;
 
             padding-bottom: 13px;
-            border-bottom: 1px solid rgba(255, 255, 255, .15);
+            border-bottom: 1px solid rgba(255,255,255,.15);
         }
 
         .hero-card-top span {
@@ -239,7 +270,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 11px;
-            background: rgba(255, 255, 255, .12);
+            background: rgba(255,255,255,.12);
             color: #82c1ff;
         }
 
@@ -277,7 +308,7 @@
 
         .hero-card-divider {
             height: 1px;
-            background: rgba(255, 255, 255, .15);
+            background: rgba(255,255,255,.15);
         }
 
         .hero-card-bottom {
@@ -313,6 +344,8 @@
             font-size: 36px;
             line-height: 1.2;
             margin: 10px 0;
+            font-weight: 900;
+            letter-spacing: -.7px;
         }
 
         .section-heading h2 span {
@@ -325,14 +358,13 @@
         ===================================================== */
 
         .uniform-section {
-            background: white;
+            background: transparent;
         }
 
         .uniform-layout {
             display: grid;
-            grid-template-columns: 290px minmax(0, 1fr);
-            gap: 25px;
-
+            grid-template-columns: 290px minmax(0,1fr);
+            gap: 24px;
             align-items: start;
         }
 
@@ -342,58 +374,89 @@
         ===================================================== */
 
         .day-selector {
-            background: #f4f7fb;
-            border: 1px solid #e5eaf2;
-            border-radius: 18px;
+            background: rgba(255,255,255,.78);
+            border: 1px solid #e4eaf2;
+            border-radius: 22px;
             padding: 12px;
 
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 4px;
 
-            transition: .35s ease;
+            box-shadow:
+                0 14px 40px rgba(7,26,51,.07);
+
+            position: sticky;
+            top: 94px;
         }
 
-        /*
-        =========================================================
-        MENU SAAT DILIPAT
-        =========================================================
-        */
-
-        .day-selector.menu-collapsed .day-button:not(.active) {
+        .day-selector.menu-collapsed
+        .day-button:not(.active) {
             display: none;
         }
 
         .day-button {
+            position: relative;
             width: 100%;
-            border: 0;
+            border: 1px solid transparent;
             background: transparent;
             text-align: left;
-            padding: 16px;
 
-            border-radius: 12px;
+            padding: 15px 15px 15px 18px;
+
+            border-radius: 15px;
             cursor: pointer;
 
-            color: #657086;
-            font-weight: 700;
+            color: #44536b;
+            font-weight: 800;
 
             transition: .25s ease;
+            overflow: hidden;
+        }
+
+        .day-button::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            bottom: 9px;
+            width: 4px;
+            border-radius: 0 5px 5px 0;
+            background: transparent;
+            transition: .25s;
         }
 
         .day-button:hover {
-            background: #e8f0fd;
-            color: #2166e5;
+            background: #f2f7fd;
+            color: #1769aa;
+            transform: translateX(3px);
         }
 
         .day-button.active {
-            background: #2166e5;
-            color: white;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf4ff,
+                    #fff
+                );
+
+            color: #0754a6;
+            border-color: #cfe4fa;
+
             box-shadow:
-                0 8px 18px rgba(33, 102, 229, .2);
+                0 8px 22px rgba(23,105,170,.12);
+        }
+
+        .day-button.active::before {
+            background:
+                linear-gradient(
+                    #2d8cff,
+                    #f58220
+                );
         }
 
         .day-button strong {
-            font-size: 14px;
+            font-size: 13px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -407,7 +470,7 @@
 
 
         /* =====================================================
-           TOMBOL MENU LAINNYA
+           MENU TOGGLE
         ===================================================== */
 
         .menu-toggle {
@@ -455,42 +518,72 @@
 
         .uniform-detail {
             min-width: 0;
-            background: #f7f9fc;
-            border: 1px solid #e5eaf2;
-            border-radius: 22px;
-            padding: 25px;
+
+            background: rgba(255,255,255,.86);
+            border: 1px solid #e4eaf2;
+            border-radius: 24px;
+
+            padding: 28px;
+
+            box-shadow:
+                0 18px 50px rgba(7,26,51,.08);
+
+            min-height: 420px;
         }
 
         .uniform-info {
             display: none;
-            animation: fade .3s ease;
+            animation: fadeUp .35s ease;
         }
 
         .uniform-info.active {
             display: block;
         }
 
-        @keyframes fade {
+        @keyframes fadeUp {
+
             from {
                 opacity: 0;
-                transform: translateY(8px);
+                transform: translateY(12px);
             }
 
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
+
         }
+
+
+        /* =====================================================
+           DOCUMENT TITLE
+        ===================================================== */
 
         .document-title {
             display: flex;
             align-items: center;
             gap: 12px;
+
             margin-bottom: 22px;
 
-            color: #2166e5;
-            font-size: 20px;
-            font-weight: 800;
+            color: #071a33;
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        .document-title::before {
+            content: "";
+            width: 9px;
+            height: 34px;
+            border-radius: 8px;
+
+            background:
+                linear-gradient(
+                    #2d8cff,
+                    #f58220
+                );
+
+            display: inline-block;
         }
 
         .document-title i {
@@ -513,85 +606,50 @@
            SERAGAM
         ===================================================== */
 
-        .uniform-day {
-            background: white;
-            border: 1px solid #e3e8f0;
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 14px;
-        }
-
-        .uniform-day h3 {
-            color: #2166e5;
-            font-size: 15px;
-        }
-
-        .uniform-day h2 {
-            font-size: 23px;
-            margin: 4px 0 8px;
-        }
-
-        .uniform-day p {
-            color: #69758a;
-            font-size: 14px;
-        }
-
-        .uniform-day:last-child {
-            margin-bottom: 0;
-        }
-
-
-        /* =====================================================
-           SERAGAM - DESAIN SESUAI GAMBAR
-        ===================================================== */
-
-        .seragam-image-wrapper {
+        .seragam-image-wrapper,
+        .odoo-image-wrapper,
+        .pengawas-image-wrapper,
+        .end-to-end-image-wrapper,
+        .sabtu-flowchart-wrapper {
             width: 100%;
             background: #fff;
             border: 1px solid #dce5f0;
             border-radius: 18px;
-            padding: 8px;
+            padding: 10px;
             overflow: hidden;
-            box-shadow: 0 12px 35px rgba(20, 40, 80, .10);
+
+            box-shadow:
+                0 12px 35px rgba(20,40,80,.10);
         }
 
-        .seragam-image {
+        .seragam-image,
+        .odoo-image,
+        .pengawas-image,
+        .end-to-end-image,
+        .sabtu-flowchart {
             display: block;
             width: 100%;
             height: auto;
             border-radius: 12px;
             object-fit: contain;
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
         }
 
 
         /* =====================================================
-           GAMBAR UMUM
-        =====================================================
+           ALUR END TO END
+        ===================================================== */
 
-        .odoo-image-wrapper,
-        .pengawas-image-wrapper,
-        .sabtu-flowchart-wrapper {
-            width: 100%;
-            padding: 12px;
-
-            background: #fff;
-            border: 1px solid #dce5f0;
-            border-radius: 18px;
-
-            box-shadow:
-                0 12px 35px rgba(20, 40, 80, .10);
-
-            overflow: hidden;
+        .end-to-end-image-wrapper {
+            padding: 10px;
         }
 
-        .odoo-image,
-        .pengawas-image,
-        .sabtu-flowchart {
-            display: block;
+        .end-to-end-image {
             width: 100%;
             height: auto;
-            object-fit: contain;
-            border-radius: 10px;
         }
 
 
@@ -626,7 +684,7 @@
             background: #fff;
 
             box-shadow:
-                0 15px 45px rgba(20, 40, 80, .10);
+                0 15px 45px rgba(20,40,80,.10);
 
             padding: 12px;
         }
@@ -641,7 +699,7 @@
 
 
         /* =====================================================
-           ADMIN SLIDER
+           SLIDER
         ===================================================== */
 
         .admin-slider,
@@ -651,12 +709,12 @@
             width: 100%;
 
             background: #fff;
-            border: 1px solid #dce5f0;
-            border-radius: 18px;
+            border: 1px solid #e4eaf2;
+            border-radius: 22px;
             padding: 14px;
 
             box-shadow:
-                0 12px 35px rgba(20, 40, 80, .10);
+                0 14px 35px rgba(7,26,51,.08);
 
             overflow: hidden;
         }
@@ -668,8 +726,13 @@
             width: 100%;
             overflow: hidden;
 
-            border-radius: 12px;
-            background: #f4f7fb;
+            border-radius: 17px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef3f8,
+                    #fff
+                );
         }
 
         .admin-slide,
@@ -696,6 +759,7 @@
         }
 
         @keyframes sliderFade {
+
             from {
                 opacity: .25;
                 transform: scale(.99);
@@ -705,6 +769,7 @@
                 opacity: 1;
                 transform: scale(1);
             }
+
         }
 
         .admin-slide img,
@@ -732,41 +797,6 @@
 
 
         /* =====================================================
-           MISSING IMAGE
-        ===================================================== */
-
-        .admin-missing {
-            min-height: 420px;
-            width: 100%;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            gap: 10px;
-
-            color: #657086;
-            text-align: center;
-            padding: 30px;
-        }
-
-        .admin-missing i {
-            font-size: 42px;
-            color: #2166e5;
-        }
-
-        .admin-missing strong {
-            color: #173d86;
-            font-size: 17px;
-        }
-
-        .admin-missing span {
-            font-size: 13px;
-        }
-
-
-        /* =====================================================
            SLIDER BUTTON
         ===================================================== */
 
@@ -782,10 +812,16 @@
             width: 44px;
             height: 44px;
 
-            border: 0;
+            border: 3px solid #fff;
             border-radius: 50%;
 
-            background: rgba(18, 63, 136, .92);
+            background:
+                linear-gradient(
+                    135deg,
+                    #1769aa,
+                    #0d4d88
+                );
+
             color: #fff;
 
             cursor: pointer;
@@ -796,7 +832,7 @@
             font-size: 17px;
 
             box-shadow:
-                0 8px 20px rgba(18, 63, 136, .22);
+                0 10px 25px rgba(23,105,170,.25);
 
             transition: .25s;
         }
@@ -804,8 +840,16 @@
         .admin-arrow:hover,
         .material-arrow:hover,
         .sop-arrow:hover {
-            background: #2166e5;
-            transform: translateY(-50%) scale(1.05);
+            background:
+                linear-gradient(
+                    135deg,
+                    #f58220,
+                    #e96d0d
+                );
+
+            transform:
+                translateY(-50%)
+                scale(1.08);
         }
 
         .admin-arrow:disabled,
@@ -846,7 +890,7 @@
         .admin-counter,
         .material-counter,
         .sop-counter {
-            color: #173d86;
+            color: #071a33;
             font-size: 13px;
             font-weight: 800;
             white-space: nowrap;
@@ -883,7 +927,7 @@
         .sop-dot.active {
             width: 25px;
             border-radius: 999px;
-            background: #2166e5;
+            background: #f58220;
         }
 
         .admin-caption,
@@ -901,8 +945,32 @@
         ===================================================== */
 
         .footer {
-            background: #0c1c37;
+            background:
+                linear-gradient(
+                    135deg,
+                    #061528,
+                    #0b315b
+                );
+
             color: #dbe4f2;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: "GBU";
+
+            position: absolute;
+            right: 4%;
+            bottom: -50px;
+
+            font-size: 180px;
+            font-weight: 900;
+
+            color: rgba(255,255,255,.025);
+
+            pointer-events: none;
         }
 
         .footer-content {
@@ -964,7 +1032,7 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, .08);
+            border-top: 1px solid rgba(255,255,255,.08);
             padding: 17px 0;
         }
 
@@ -978,7 +1046,7 @@
            TABLET
         ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width:900px) {
 
             .hero-content {
                 grid-template-columns: 1fr;
@@ -994,13 +1062,15 @@
             }
 
             .day-selector {
-                display: flex;
+                position: relative;
+                top: auto;
             }
 
             .footer-content,
             .footer-info {
                 flex-direction: column;
             }
+
         }
 
 
@@ -1008,7 +1078,7 @@
            HP
         ===================================================== */
 
-        @media (max-width: 600px) {
+        @media (max-width:600px) {
 
             .container {
                 width: 92%;
@@ -1025,10 +1095,11 @@
 
             .hero {
                 padding: 45px 0;
+                border-radius: 0 0 24px 24px;
             }
 
             .hero-text h1 {
-                font-size: 42px;
+                font-size: 40px;
             }
 
             .hero-card-top span {
@@ -1058,40 +1129,33 @@
             }
 
             .day-button {
-                padding: 15px;
+                padding: 13px;
             }
 
             .uniform-detail {
                 padding: 12px;
-                border-radius: 15px;
-            }
-
-            .uniform-day {
-                padding: 15px;
-            }
-
-            .uniform-day h2 {
-                font-size: 20px;
+                border-radius: 18px;
             }
 
             .document-title {
-                font-size: 16px;
+                font-size: 21px;
             }
 
-            .seragam-image-wrapper {
-                padding: 4px;
-                border-radius: 12px;
-            }
-
-            .seragam-image {
-                border-radius: 8px;
-            }
-
+            .seragam-image-wrapper,
             .odoo-image-wrapper,
             .pengawas-image-wrapper,
+            .end-to-end-image-wrapper,
             .sabtu-flowchart-wrapper {
                 padding: 5px;
                 border-radius: 12px;
+            }
+
+            .seragam-image,
+            .odoo-image,
+            .pengawas-image,
+            .end-to-end-image,
+            .sabtu-flowchart {
+                border-radius: 8px;
             }
 
             .fwa-flow-card {
@@ -1152,10 +1216,11 @@
             .admin-slide img {
                 max-height: 560px;
             }
+
         }
 
 
-        @media (max-width: 380px) {
+        @media (max-width:380px) {
 
             .fwa-flow-card,
             .material-slider {
@@ -1165,33 +1230,7 @@
         }
 
     </style>
-<style>
-/* ===== MODERN GBU REDESIGN ===== */
-:root{--navy:#071a33;--navy2:#0d2d55;--blue:#1769aa;--blue2:#2d8cff;--orange:#f58220;--orange2:#ff9b45;--bg:#f3f6fa;--text:#17233d;--muted:#718096;--card:#fff;--line:#e4eaf2;}
-*{box-sizing:border-box} body{background:radial-gradient(circle at 10% 0%,rgba(45,140,255,.08),transparent 28%),var(--bg);color:var(--text)}
-.header{background:rgba(255,255,255,.88)!important;border-bottom:1px solid rgba(7,26,51,.08)!important;box-shadow:0 8px 30px rgba(7,26,51,.06)!important}
-.header-inner{min-height:76px!important}.brand{font-weight:900!important;letter-spacing:.8px!important}.brand span{color:var(--orange)!important}
-.hero{position:relative!important;overflow:hidden!important;background:linear-gradient(135deg,#041225 0%,#0a2850 52%,#135c99 100%)!important;border-radius:0 0 34px 34px!important;box-shadow:0 22px 60px rgba(7,26,51,.22)!important}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,#000,transparent);pointer-events:none}
-.hero:after{content:"";position:absolute;width:360px;height:360px;right:-120px;top:-160px;border:70px solid rgba(245,130,32,.12);border-radius:50%;box-shadow:0 0 100px rgba(45,140,255,.2);pointer-events:none}
-.hero-content{position:relative;z-index:2}.hero-text h1{font-size:clamp(38px,5vw,68px)!important;line-height:1.02!important;letter-spacing:-2px!important;text-shadow:0 10px 30px rgba(0,0,0,.22)}
-.hero-text p{max-width:650px!important;color:rgba(255,255,255,.76)!important;font-size:17px!important}.hero-card{background:rgba(255,255,255,.1)!important;border:1px solid rgba(255,255,255,.18)!important;backdrop-filter:blur(18px)!important;box-shadow:0 25px 60px rgba(0,0,0,.2)!important}
-main{position:relative}.section-title{font-weight:900!important;letter-spacing:-.7px}.section-subtitle{color:var(--muted)!important}
-.uniform-layout{gap:24px!important;align-items:start!important}.day-selector{background:rgba(255,255,255,.78)!important;border:1px solid var(--line)!important;border-radius:22px!important;padding:12px!important;box-shadow:0 14px 40px rgba(7,26,51,.07)!important;position:sticky!important;top:94px!important}
-.day-button{position:relative!important;border:1px solid transparent!important;border-radius:15px!important;margin:4px 0!important;padding:15px 15px 15px 18px!important;background:transparent!important;color:#44536b!important;font-weight:800!important;text-align:left!important;transition:.25s ease!important;overflow:hidden}
-.day-button:before{content:"";position:absolute;left:0;top:9px;bottom:9px;width:4px;border-radius:0 5px 5px 0;background:transparent;transition:.25s}
-.day-button:hover{background:#f2f7fd!important;color:var(--blue)!important;transform:translateX(3px)}
-.day-button.active{background:linear-gradient(135deg,#eaf4ff,#fff)!important;color:#0754a6!important;border-color:#cfe4fa!important;box-shadow:0 8px 22px rgba(23,105,170,.12)!important}
-.day-button.active:before{background:linear-gradient(var(--blue2),var(--orange))}
-.uniform-detail{background:rgba(255,255,255,.86)!important;border:1px solid var(--line)!important;border-radius:24px!important;padding:28px!important;box-shadow:0 18px 50px rgba(7,26,51,.08)!important;min-height:420px}
-.uniform-info{animation:fadeUp .35s ease}.document-title{display:flex;align-items:center;gap:12px;font-size:25px!important;font-weight:900!important;color:var(--navy)!important}.document-title:before{content:"";width:9px;height:34px;border-radius:8px;background:linear-gradient(var(--blue2),var(--orange));display:inline-block}
-img{transition:transform .35s ease,box-shadow .35s ease}.uniform-detail img:hover{transform:scale(1.018);box-shadow:0 20px 45px rgba(7,26,51,.18)!important}
-.slider-container{border:1px solid var(--line)!important;border-radius:22px!important;box-shadow:0 14px 35px rgba(7,26,51,.08)!important;background:#fff!important}.slider-viewport{border-radius:17px!important;background:linear-gradient(135deg,#eef3f8,#fff)!important}.slider-button{background:linear-gradient(135deg,var(--blue),#0d4d88)!important;box-shadow:0 10px 25px rgba(23,105,170,.25)!important;border:3px solid #fff!important}.slider-button:hover{background:linear-gradient(135deg,var(--orange),#e96d0d)!important;transform:scale(1.08)!important}.slider-counter{font-weight:800!important;color:var(--navy)!important}.slider-dot.active{background:var(--orange)!important;transform:scale(1.25)}
-footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:relative;overflow:hidden}footer:before{content:"GBU";position:absolute;right:4%;bottom:-50px;font-size:180px;font-weight:900;color:rgba(255,255,255,.025);pointer-events:none}
-@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:900px){.uniform-layout{grid-template-columns:1fr!important}.day-selector{position:relative!important;top:auto!important}.hero{border-radius:0 0 24px 24px!important}.uniform-detail{padding:20px!important}}
-@media(max-width:600px){.hero-text h1{font-size:40px!important}.hero-content{gap:24px!important}.day-button{padding:13px!important}.uniform-detail{border-radius:18px!important}.document-title{font-size:21px!important}}
-</style>
+
 </head>
 
 
@@ -1209,19 +1248,34 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
             <div class="brand">
 
                 <div class="brand-logo">
-                    <img src="LOGO GBU.png" alt="Logo GBU">
+
+                    <img
+                        src="LOGO GBU.png"
+                        alt="Logo GBU">
+
                 </div>
 
                 <div>
+
                     <h2>GENESIS</h2>
-                    <span>BERKAT USAHA</span>
+
+                    <span>
+                        BERKAT USAHA
+                    </span>
+
                 </div>
 
             </div>
 
-            <a href="#seragam-section" class="nav-button">
+
+            <a
+                href="#seragam-section"
+                class="nav-button">
+
                 Lihat Ketentuan
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
@@ -1262,9 +1316,13 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                 <div class="hero-card-title">
 
-                    <small>JADWAL KERJA</small>
+                    <small>
+                        JADWAL KERJA
+                    </small>
 
-                    <h3>Senin — Jumat</h3>
+                    <h3>
+                        Senin — Jumat
+                    </h3>
 
                     <div class="work-time">
 
@@ -1282,9 +1340,13 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                 <div class="hero-card-bottom">
 
-                    <small>JADWAL KERJA</small>
+                    <small>
+                        JADWAL KERJA
+                    </small>
 
-                    <h3>Sabtu</h3>
+                    <h3>
+                        Sabtu
+                    </h3>
 
                     <div class="work-time">
 
@@ -1307,7 +1369,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
          SERAGAM DAN INFORMASI
     ===================================================== -->
 
-    <section class="uniform-section" id="seragam-section">
+    <section
+        class="uniform-section"
+        id="seragam-section">
 
         <div class="container">
 
@@ -1332,8 +1396,12 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                      MENU KIRI
                 ================================================= -->
 
-                <div class="day-selector" id="daySelector">
+                <div
+                    class="day-selector"
+                    id="daySelector">
 
+
+                    <!-- SERAGAM -->
 
                     <button
                         type="button"
@@ -1341,12 +1409,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="seragam">
 
                         <strong>
+
                             <i class="fa-solid fa-shirt"></i>
+
                             SERAGAM
+
                         </strong>
 
                     </button>
 
+
+                    <!-- BUKU PANDUAN ODOO -->
 
                     <button
                         type="button"
@@ -1354,12 +1427,38 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="panduan-odoo">
 
                         <strong>
+
                             <i class="fa-solid fa-book-open"></i>
+
                             BUKU PANDUAN ODOO
+
                         </strong>
 
                     </button>
 
+
+                    <!-- =================================================
+                         ALUR END TO END
+                         BARU - DI BAWAH BUKU PANDUAN ODOO
+                    ================================================== -->
+
+                    <button
+                        type="button"
+                        class="day-button"
+                        data-target="alur-end-to-end">
+
+                        <strong>
+
+                            <i class="fa-solid fa-diagram-project"></i>
+
+                            ALUR END TO END
+
+                        </strong>
+
+                    </button>
+
+
+                    <!-- PENGAWAS LAPANGAN -->
 
                     <button
                         type="button"
@@ -1367,12 +1466,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="pengawas-lapangan">
 
                         <strong>
+
                             <i class="fa-solid fa-helmet-safety"></i>
+
                             PENGAWAS LAPANGAN
+
                         </strong>
 
                     </button>
 
+
+                    <!-- FOTO ADMINISTRASI -->
 
                     <button
                         type="button"
@@ -1380,12 +1484,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="foto-administrasi">
 
                         <strong>
+
                             <i class="fa-solid fa-camera"></i>
+
                             FOTO ADMINISTRASI
+
                         </strong>
 
                     </button>
 
+
+                    <!-- MATERIAL FTTH -->
 
                     <button
                         type="button"
@@ -1393,12 +1502,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="material-ftth">
 
                         <strong>
+
                             <i class="fa-solid fa-boxes-stacked"></i>
+
                             NAMA-NAMA MATERIAL FTTH
+
                         </strong>
 
                     </button>
 
+
+                    <!-- DOKUMEN PROJECT -->
 
                     <button
                         type="button"
@@ -1406,12 +1520,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="sop-dokumen-project">
 
                         <strong>
+
                             <i class="fa-solid fa-file-lines"></i>
+
                             DOKUMEN PROJECT
+
                         </strong>
 
                     </button>
 
+
+                    <!-- PERMIT -->
 
                     <button
                         type="button"
@@ -1419,12 +1538,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="permit-ftth">
 
                         <strong>
+
                             <i class="fa-solid fa-file-circle-check"></i>
+
                             PERMIT (FTTH)
+
                         </strong>
 
                     </button>
 
+
+                    <!-- SURVEY -->
 
                     <button
                         type="button"
@@ -1432,12 +1556,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="sabtu">
 
                         <strong>
+
                             <i class="fa-solid fa-route"></i>
+
                             SURVEY DESIGN AND PLANNING
+
                         </strong>
 
                     </button>
 
+
+                    <!-- FWA -->
 
                     <button
                         type="button"
@@ -1445,14 +1574,17 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         data-target="permit-proses">
 
                         <strong>
+
                             <i class="fa-solid fa-diagram-project"></i>
+
                             FWA (MYREPUBLIK)
+
                         </strong>
 
                     </button>
 
 
-                    <!-- TOMBOL UNTUK MEMBUKA MENU LAGI -->
+                    <!-- TOMBOL MENU LAINNYA -->
 
                     <button
                         type="button"
@@ -1461,7 +1593,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                         <i class="fa-solid fa-chevron-down"></i>
 
-                        <span>MENU LAINNYA</span>
+                        <span>
+                            MENU LAINNYA
+                        </span>
 
                     </button>
 
@@ -1475,7 +1609,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                 <div class="uniform-detail">
 
 
-                    <!-- SERAGAM -->
+                    <!-- =================================================
+                         SERAGAM
+                    ================================================= -->
 
                     <div
                         class="uniform-info active"
@@ -1491,10 +1627,7 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                         </div>
 
-                        <!--
-                            GAMBAR SERAGAM SESUAI DESAIN YANG DIKIRIM.
-                            Simpan gambar sebagai: seragam.jpeg
-                        -->
+
                         <div class="seragam-image-wrapper">
 
                             <img
@@ -1507,7 +1640,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- BUKU ODOO -->
+                    <!-- =================================================
+                         BUKU ODOO
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1523,6 +1658,7 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                         </div>
 
+
                         <div class="odoo-image-wrapper">
 
                             <img
@@ -1535,7 +1671,41 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- PENGAWAS -->
+                    <!-- =================================================
+                         ALUR END TO END
+                         BARU
+                    ================================================= -->
+
+                    <div
+                        class="uniform-info"
+                        id="alur-end-to-end">
+
+                        <div class="document-title">
+
+                            <i class="fa-solid fa-diagram-project"></i>
+
+                            <span>
+                                Alur End to End
+                            </span>
+
+                        </div>
+
+
+                        <div class="end-to-end-image-wrapper">
+
+                            <img
+                                src="WhatsApp Image 2026-09-30 at 13.52.02.jpeg"
+                                alt="Alur Kerja Administrasi Permit Waspang SND"
+                                class="end-to-end-image">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PENGAWAS LAPANGAN
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1551,6 +1721,7 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                         </div>
 
+
                         <div class="pengawas-image-wrapper">
 
                             <img
@@ -1563,7 +1734,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- FOTO ADMINISTRASI -->
+                    <!-- =================================================
+                         FOTO ADMINISTRASI
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1587,7 +1760,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                                 <div class="admin-slide active">
 
-                                    <img src="1.jpeg"
+                                    <img
+                                        src="1.jpeg"
                                         alt="Foto Administrasi 1">
 
                                 </div>
@@ -1595,7 +1769,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                                 <div class="admin-slide">
 
-                                    <img src="2.jpeg"
+                                    <img
+                                        src="2.jpeg"
                                         alt="Foto Administrasi 2">
 
                                 </div>
@@ -1603,7 +1778,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                                 <div class="admin-slide">
 
-                                    <img src="3.jpeg"
+                                    <img
+                                        src="3.jpeg"
                                         alt="Foto Administrasi 3">
 
                                 </div>
@@ -1611,7 +1787,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                                 <div class="admin-slide">
 
-                                    <img src="4.jpeg"
+                                    <img
+                                        src="4.jpeg"
                                         alt="Foto Administrasi 4">
 
                                 </div>
@@ -1619,7 +1796,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                                 <div class="admin-slide">
 
-                                    <img src="5.jpeg"
+                                    <img
+                                        src="5.jpeg"
                                         alt="Foto Administrasi 5">
 
                                 </div>
@@ -1627,7 +1805,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
                                 <div class="admin-slide">
 
-                                    <img src="6.jpeg"
+                                    <img
+                                        src="6.jpeg"
                                         alt="Foto Administrasi 6">
 
                                 </div>
@@ -1660,29 +1839,43 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                                 <div
                                     class="admin-counter"
                                     id="adminCounter">
+
                                     1 / 6
+
                                 </div>
 
 
                                 <div class="admin-dots">
 
-                                    <button class="admin-dot active"
-                                        data-slide="0"></button>
+                                    <button
+                                        class="admin-dot active"
+                                        data-slide="0">
+                                    </button>
 
-                                    <button class="admin-dot"
-                                        data-slide="1"></button>
+                                    <button
+                                        class="admin-dot"
+                                        data-slide="1">
+                                    </button>
 
-                                    <button class="admin-dot"
-                                        data-slide="2"></button>
+                                    <button
+                                        class="admin-dot"
+                                        data-slide="2">
+                                    </button>
 
-                                    <button class="admin-dot"
-                                        data-slide="3"></button>
+                                    <button
+                                        class="admin-dot"
+                                        data-slide="3">
+                                    </button>
 
-                                    <button class="admin-dot"
-                                        data-slide="4"></button>
+                                    <button
+                                        class="admin-dot"
+                                        data-slide="4">
+                                    </button>
 
-                                    <button class="admin-dot"
-                                        data-slide="5"></button>
+                                    <button
+                                        class="admin-dot"
+                                        data-slide="5">
+                                    </button>
 
                                 </div>
 
@@ -1698,7 +1891,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- MATERIAL FTTH -->
+                    <!-- =================================================
+                         MATERIAL FTTH
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1783,7 +1978,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                                 <div
                                     class="material-counter"
                                     id="materialCounter">
+
                                     1 / 4
+
                                 </div>
 
 
@@ -1823,7 +2020,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- DOKUMEN PROJECT -->
+                    <!-- =================================================
+                         DOKUMEN PROJECT
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1890,7 +2089,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                                 <div
                                     class="sop-counter"
                                     id="sopCounter">
+
                                     1 / 2
+
                                 </div>
 
 
@@ -1920,7 +2121,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- PERMIT -->
+                    <!-- =================================================
+                         PERMIT
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1937,7 +2140,8 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                         </div>
 
 
-                        <div class="odoo-image-wrapper permit-image-wrapper">
+                        <div
+                            class="odoo-image-wrapper permit-image-wrapper">
 
                             <img
                                 src="FTTH.jpeg"
@@ -1949,7 +2153,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- SURVEY -->
+                    <!-- =================================================
+                         SURVEY
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -1978,7 +2184,9 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
                     </div>
 
 
-                    <!-- FWA -->
+                    <!-- =================================================
+                         FWA
+                    ================================================= -->
 
                     <div
                         class="uniform-info"
@@ -2099,812 +2307,864 @@ footer{background:linear-gradient(135deg,#061528,#0b315b)!important;position:rel
 
     <script>
 
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
 
-            /* =====================================================
-               MENU KIRI - ACCORDION / NGUMPET
-            ===================================================== */
+                /* =====================================================
+                   MENU KIRI
+                ===================================================== */
 
-            const buttons =
-                document.querySelectorAll(".day-button");
+                const buttons =
+                    document.querySelectorAll(".day-button");
 
-            const contents =
-                document.querySelectorAll(".uniform-info");
+                const contents =
+                    document.querySelectorAll(".uniform-info");
 
-            const daySelector =
-                document.getElementById("daySelector");
+                const daySelector =
+                    document.getElementById("daySelector");
 
-            const menuToggle =
-                document.getElementById("menuToggle");
-
-
-            buttons.forEach(function (button) {
-
-                button.addEventListener("click", function () {
-
-                    const targetId =
-                        this.getAttribute("data-target");
+                const menuToggle =
+                    document.getElementById("menuToggle");
 
 
-                    /*
-                    Hapus active dari semua tombol
-                    */
+                buttons.forEach(function (button) {
 
-                    buttons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
+                    button.addEventListener(
+                        "click",
+                        function () {
 
-
-                    /*
-                    Sembunyikan semua isi
-                    */
-
-                    contents.forEach(function (content) {
-                        content.classList.remove("active");
-                    });
+                            const targetId =
+                                this.getAttribute("data-target");
 
 
-                    /*
-                    Aktifkan tombol yang dipilih
-                    */
+                            buttons.forEach(function (btn) {
 
-                    this.classList.add("active");
+                                btn.classList.remove("active");
 
-
-                    /*
-                    Tampilkan isi yang dipilih
-                    */
-
-                    const target =
-                        document.getElementById(targetId);
+                            });
 
 
-                    if (target) {
-                        target.classList.add("active");
+                            contents.forEach(function (content) {
+
+                                content.classList.remove("active");
+
+                            });
+
+
+                            this.classList.add("active");
+
+
+                            const target =
+                                document.getElementById(targetId);
+
+
+                            if (target) {
+
+                                target.classList.add("active");
+
+                            }
+
+
+                            daySelector.classList.add(
+                                "menu-collapsed"
+                            );
+
+                        }
+                    );
+
+                });
+
+
+                if (menuToggle) {
+
+                    menuToggle.addEventListener(
+                        "click",
+                        function () {
+
+                            daySelector.classList.toggle(
+                                "menu-collapsed"
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                /* =====================================================
+                   SLIDER ADMINISTRASI
+                ===================================================== */
+
+                const adminSlides =
+                    document.querySelectorAll(".admin-slide");
+
+                const adminDots =
+                    document.querySelectorAll(".admin-dot");
+
+                const adminCounter =
+                    document.getElementById("adminCounter");
+
+                const adminPrev =
+                    document.getElementById("adminPrev");
+
+                const adminNext =
+                    document.getElementById("adminNext");
+
+                let adminCurrent = 0;
+
+
+                function showAdminSlide(index) {
+
+                    if (!adminSlides.length) return;
+
+
+                    adminCurrent =
+                        Math.max(
+                            0,
+                            Math.min(
+                                index,
+                                adminSlides.length - 1
+                            )
+                        );
+
+
+                    adminSlides.forEach(
+                        function (slide, i) {
+
+                            slide.classList.toggle(
+                                "active",
+                                i === adminCurrent
+                            );
+
+                        }
+                    );
+
+
+                    adminDots.forEach(
+                        function (dot, i) {
+
+                            dot.classList.toggle(
+                                "active",
+                                i === adminCurrent
+                            );
+
+                        }
+                    );
+
+
+                    if (adminCounter) {
+
+                        adminCounter.textContent =
+                            (adminCurrent + 1)
+                            + " / "
+                            + adminSlides.length;
+
                     }
 
 
-                    /*
-                    =============================================
-                    INI YANG MEMBUAT MENU LAIN NGUMPET
-                    =============================================
-                    */
+                    if (adminPrev) {
 
-                    daySelector.classList.add("menu-collapsed");
+                        adminPrev.disabled =
+                            adminCurrent === 0;
 
-                });
-
-            });
+                    }
 
 
-            /*
-            =============================================
-            TOMBOL MENU LAINNYA
-            =============================================
-            */
+                    if (adminNext) {
 
-            if (menuToggle) {
+                        adminNext.disabled =
+                            adminCurrent ===
+                            adminSlides.length - 1;
 
-                menuToggle.addEventListener("click", function () {
-
-                    daySelector.classList.toggle(
-                        "menu-collapsed"
-                    );
-
-                });
-
-            }
-
-
-            /* =====================================================
-               SLIDER FOTO ADMINISTRASI
-            ===================================================== */
-
-            const adminSlides =
-                document.querySelectorAll(".admin-slide");
-
-            const adminDots =
-                document.querySelectorAll(".admin-dot");
-
-            const adminCounter =
-                document.getElementById("adminCounter");
-
-            const adminPrev =
-                document.getElementById("adminPrev");
-
-            const adminNext =
-                document.getElementById("adminNext");
-
-            let adminCurrent = 0;
-
-
-            function showAdminSlide(index) {
-
-                if (!adminSlides.length) return;
-
-
-                adminCurrent =
-                    Math.max(
-                        0,
-                        Math.min(
-                            index,
-                            adminSlides.length - 1
-                        )
-                    );
-
-
-                adminSlides.forEach(function (slide, i) {
-
-                    slide.classList.toggle(
-                        "active",
-                        i === adminCurrent
-                    );
-
-                });
-
-
-                adminDots.forEach(function (dot, i) {
-
-                    dot.classList.toggle(
-                        "active",
-                        i === adminCurrent
-                    );
-
-                });
-
-
-                if (adminCounter) {
-
-                    adminCounter.textContent =
-                        (adminCurrent + 1)
-                        + " / "
-                        + adminSlides.length;
+                    }
 
                 }
 
 
                 if (adminPrev) {
 
-                    adminPrev.disabled =
-                        adminCurrent === 0;
+                    adminPrev.addEventListener(
+                        "click",
+                        function () {
+
+                            showAdminSlide(
+                                adminCurrent - 1
+                            );
+
+                        }
+                    );
 
                 }
 
 
                 if (adminNext) {
 
-                    adminNext.disabled =
-                        adminCurrent ===
-                        adminSlides.length - 1;
+                    adminNext.addEventListener(
+                        "click",
+                        function () {
+
+                            showAdminSlide(
+                                adminCurrent + 1
+                            );
+
+                        }
+                    );
 
                 }
 
-            }
+
+                adminDots.forEach(function (dot) {
+
+                    dot.addEventListener(
+                        "click",
+                        function () {
+
+                            showAdminSlide(
+                                Number(
+                                    this.getAttribute(
+                                        "data-slide"
+                                    )
+                                )
+                            );
+
+                        }
+                    );
+
+                });
 
 
-            if (adminPrev) {
+                /* =====================================================
+                   MATERIAL FTTH
+                ===================================================== */
 
-                adminPrev.addEventListener(
-                    "click",
-                    function () {
+                const materialSlides =
+                    document.querySelectorAll(
+                        ".material-slide"
+                    );
 
-                        showAdminSlide(
-                            adminCurrent - 1
-                        );
+                const materialDots =
+                    document.querySelectorAll(
+                        ".material-dot"
+                    );
 
-                    }
-                );
+                const materialCounter =
+                    document.getElementById(
+                        "materialCounter"
+                    );
 
-            }
+                const materialPrev =
+                    document.getElementById(
+                        "materialPrev"
+                    );
 
+                const materialNext =
+                    document.getElementById(
+                        "materialNext"
+                    );
 
-            if (adminNext) {
-
-                adminNext.addEventListener(
-                    "click",
-                    function () {
-
-                        showAdminSlide(
-                            adminCurrent + 1
-                        );
-
-                    }
-                );
-
-            }
+                let materialCurrent = 0;
 
 
-            adminDots.forEach(function (dot) {
+                function showMaterialSlide(index) {
 
-                dot.addEventListener(
-                    "click",
-                    function () {
+                    if (!materialSlides.length) return;
 
-                        showAdminSlide(
-                            Number(
-                                this.getAttribute("data-slide")
+
+                    materialCurrent =
+                        Math.max(
+                            0,
+                            Math.min(
+                                index,
+                                materialSlides.length - 1
                             )
                         );
 
+
+                    materialSlides.forEach(
+                        function (slide, i) {
+
+                            slide.classList.toggle(
+                                "active",
+                                i === materialCurrent
+                            );
+
+                        }
+                    );
+
+
+                    materialDots.forEach(
+                        function (dot, i) {
+
+                            dot.classList.toggle(
+                                "active",
+                                i === materialCurrent
+                            );
+
+                        }
+                    );
+
+
+                    if (materialCounter) {
+
+                        materialCounter.textContent =
+                            (materialCurrent + 1)
+                            + " / "
+                            + materialSlides.length;
+
                     }
-                );
-
-            });
 
 
-            /* =====================================================
-               MATERIAL FTTH
-            ===================================================== */
+                    if (materialPrev) {
 
-            const materialSlides =
-                document.querySelectorAll(".material-slide");
+                        materialPrev.disabled =
+                            materialCurrent === 0;
 
-            const materialDots =
-                document.querySelectorAll(".material-dot");
-
-            const materialCounter =
-                document.getElementById("materialCounter");
-
-            const materialPrev =
-                document.getElementById("materialPrev");
-
-            const materialNext =
-                document.getElementById("materialNext");
-
-            let materialCurrent = 0;
+                    }
 
 
-            function showMaterialSlide(index) {
+                    if (materialNext) {
 
-                if (!materialSlides.length) return;
+                        materialNext.disabled =
+                            materialCurrent ===
+                            materialSlides.length - 1;
 
-
-                materialCurrent =
-                    Math.max(
-                        0,
-                        Math.min(
-                            index,
-                            materialSlides.length - 1
-                        )
-                    );
-
-
-                materialSlides.forEach(function (slide, i) {
-
-                    slide.classList.toggle(
-                        "active",
-                        i === materialCurrent
-                    );
-
-                });
-
-
-                materialDots.forEach(function (dot, i) {
-
-                    dot.classList.toggle(
-                        "active",
-                        i === materialCurrent
-                    );
-
-                });
-
-
-                if (materialCounter) {
-
-                    materialCounter.textContent =
-                        (materialCurrent + 1)
-                        + " / "
-                        + materialSlides.length;
+                    }
 
                 }
 
 
                 if (materialPrev) {
 
-                    materialPrev.disabled =
-                        materialCurrent === 0;
+                    materialPrev.addEventListener(
+                        "click",
+                        function () {
+
+                            showMaterialSlide(
+                                materialCurrent - 1
+                            );
+
+                        }
+                    );
 
                 }
 
 
                 if (materialNext) {
 
-                    materialNext.disabled =
-                        materialCurrent ===
-                        materialSlides.length - 1;
-
-                }
-
-            }
-
-
-            if (materialPrev) {
-
-                materialPrev.addEventListener(
-                    "click",
-                    function () {
-
-                        showMaterialSlide(
-                            materialCurrent - 1
-                        );
-
-                    }
-                );
-
-            }
-
-
-            if (materialNext) {
-
-                materialNext.addEventListener(
-                    "click",
-                    function () {
-
-                        showMaterialSlide(
-                            materialCurrent + 1
-                        );
-
-                    }
-                );
-
-            }
-
-
-            materialDots.forEach(function (dot) {
-
-                dot.addEventListener(
-                    "click",
-                    function () {
-
-                        showMaterialSlide(
-                            Number(
-                                this.getAttribute("data-slide")
-                            )
-                        );
-
-                    }
-                );
-
-            });
-
-
-            /* =====================================================
-               SWIPE MATERIAL
-            ===================================================== */
-
-            const materialViewport =
-                document.querySelector(
-                    ".material-slider-viewport"
-                );
-
-            let materialTouchStartX = 0;
-
-
-            if (materialViewport) {
-
-                materialViewport.addEventListener(
-                    "touchstart",
-                    function (event) {
-
-                        materialTouchStartX =
-                            event.changedTouches[0].screenX;
-
-                    },
-                    { passive: true }
-                );
-
-
-                materialViewport.addEventListener(
-                    "touchend",
-                    function (event) {
-
-                        const touchEndX =
-                            event.changedTouches[0].screenX;
-
-                        const distance =
-                            touchEndX -
-                            materialTouchStartX;
-
-
-                        if (Math.abs(distance) < 50) {
-                            return;
-                        }
-
-
-                        if (distance < 0) {
+                    materialNext.addEventListener(
+                        "click",
+                        function () {
 
                             showMaterialSlide(
                                 materialCurrent + 1
                             );
 
-                        } else {
+                        }
+                    );
+
+                }
+
+
+                materialDots.forEach(function (dot) {
+
+                    dot.addEventListener(
+                        "click",
+                        function () {
 
                             showMaterialSlide(
-                                materialCurrent - 1
+                                Number(
+                                    this.getAttribute(
+                                        "data-slide"
+                                    )
+                                )
                             );
 
                         }
-
-                    },
-                    { passive: true }
-                );
-
-            }
-
-
-            /* =====================================================
-               SOP
-            ===================================================== */
-
-            const sopSlides =
-                document.querySelectorAll(".sop-slide");
-
-            const sopDots =
-                document.querySelectorAll(".sop-dot");
-
-            const sopCounter =
-                document.getElementById("sopCounter");
-
-            const sopPrev =
-                document.getElementById("sopPrev");
-
-            const sopNext =
-                document.getElementById("sopNext");
-
-            let sopCurrent = 0;
-
-
-            function showSopSlide(index) {
-
-                if (!sopSlides.length) return;
-
-
-                sopCurrent =
-                    Math.max(
-                        0,
-                        Math.min(
-                            index,
-                            sopSlides.length - 1
-                        )
-                    );
-
-
-                sopSlides.forEach(function (slide, i) {
-
-                    slide.classList.toggle(
-                        "active",
-                        i === sopCurrent
                     );
 
                 });
 
 
-                sopDots.forEach(function (dot, i) {
+                /* =====================================================
+                   SWIPE MATERIAL
+                ===================================================== */
 
-                    dot.classList.toggle(
-                        "active",
-                        i === sopCurrent
+                const materialViewport =
+                    document.querySelector(
+                        ".material-slider-viewport"
                     );
 
-                });
+                let materialTouchStartX = 0;
 
 
-                if (sopCounter) {
+                if (materialViewport) {
 
-                    sopCounter.textContent =
-                        (sopCurrent + 1)
-                        + " / "
-                        + sopSlides.length;
+                    materialViewport.addEventListener(
+                        "touchstart",
+                        function (event) {
+
+                            materialTouchStartX =
+                                event.changedTouches[0]
+                                    .screenX;
+
+                        },
+                        { passive: true }
+                    );
+
+
+                    materialViewport.addEventListener(
+                        "touchend",
+                        function (event) {
+
+                            const touchEndX =
+                                event.changedTouches[0]
+                                    .screenX;
+
+                            const distance =
+                                touchEndX -
+                                materialTouchStartX;
+
+
+                            if (Math.abs(distance) < 50) {
+                                return;
+                            }
+
+
+                            if (distance < 0) {
+
+                                showMaterialSlide(
+                                    materialCurrent + 1
+                                );
+
+                            } else {
+
+                                showMaterialSlide(
+                                    materialCurrent - 1
+                                );
+
+                            }
+
+                        },
+                        { passive: true }
+                    );
+
+                }
+
+
+                /* =====================================================
+                   SOP
+                ===================================================== */
+
+                const sopSlides =
+                    document.querySelectorAll(
+                        ".sop-slide"
+                    );
+
+                const sopDots =
+                    document.querySelectorAll(
+                        ".sop-dot"
+                    );
+
+                const sopCounter =
+                    document.getElementById(
+                        "sopCounter"
+                    );
+
+                const sopPrev =
+                    document.getElementById(
+                        "sopPrev"
+                    );
+
+                const sopNext =
+                    document.getElementById(
+                        "sopNext"
+                    );
+
+                let sopCurrent = 0;
+
+
+                function showSopSlide(index) {
+
+                    if (!sopSlides.length) return;
+
+
+                    sopCurrent =
+                        Math.max(
+                            0,
+                            Math.min(
+                                index,
+                                sopSlides.length - 1
+                            )
+                        );
+
+
+                    sopSlides.forEach(
+                        function (slide, i) {
+
+                            slide.classList.toggle(
+                                "active",
+                                i === sopCurrent
+                            );
+
+                        }
+                    );
+
+
+                    sopDots.forEach(
+                        function (dot, i) {
+
+                            dot.classList.toggle(
+                                "active",
+                                i === sopCurrent
+                            );
+
+                        }
+                    );
+
+
+                    if (sopCounter) {
+
+                        sopCounter.textContent =
+                            (sopCurrent + 1)
+                            + " / "
+                            + sopSlides.length;
+
+                    }
+
+
+                    if (sopPrev) {
+
+                        sopPrev.disabled =
+                            sopCurrent === 0;
+
+                    }
+
+
+                    if (sopNext) {
+
+                        sopNext.disabled =
+                            sopCurrent ===
+                            sopSlides.length - 1;
+
+                    }
 
                 }
 
 
                 if (sopPrev) {
 
-                    sopPrev.disabled =
-                        sopCurrent === 0;
+                    sopPrev.addEventListener(
+                        "click",
+                        function () {
+
+                            showSopSlide(
+                                sopCurrent - 1
+                            );
+
+                        }
+                    );
 
                 }
 
 
                 if (sopNext) {
 
-                    sopNext.disabled =
-                        sopCurrent ===
-                        sopSlides.length - 1;
+                    sopNext.addEventListener(
+                        "click",
+                        function () {
+
+                            showSopSlide(
+                                sopCurrent + 1
+                            );
+
+                        }
+                    );
 
                 }
 
-            }
+
+                sopDots.forEach(function (dot) {
+
+                    dot.addEventListener(
+                        "click",
+                        function () {
+
+                            showSopSlide(
+                                Number(
+                                    this.getAttribute(
+                                        "data-slide"
+                                    )
+                                )
+                            );
+
+                        }
+                    );
+
+                });
 
 
-            if (sopPrev) {
+                /* =====================================================
+                   SWIPE SOP
+                ===================================================== */
 
-                sopPrev.addEventListener(
-                    "click",
-                    function () {
+                const sopViewport =
+                    document.querySelector(
+                        ".sop-slider-viewport"
+                    );
 
-                        showSopSlide(
-                            sopCurrent - 1
-                        );
-
-                    }
-                );
-
-            }
+                let sopTouchStartX = 0;
 
 
-            if (sopNext) {
+                if (sopViewport) {
 
-                sopNext.addEventListener(
-                    "click",
-                    function () {
+                    sopViewport.addEventListener(
+                        "touchstart",
+                        function (event) {
 
-                        showSopSlide(
-                            sopCurrent + 1
-                        );
+                            sopTouchStartX =
+                                event.changedTouches[0]
+                                    .screenX;
 
-                    }
-                );
+                        },
+                        { passive: true }
+                    );
 
-            }
+
+                    sopViewport.addEventListener(
+                        "touchend",
+                        function (event) {
+
+                            const touchEndX =
+                                event.changedTouches[0]
+                                    .screenX;
+
+                            const distance =
+                                touchEndX -
+                                sopTouchStartX;
 
 
-            sopDots.forEach(function (dot) {
+                            if (Math.abs(distance) < 50) {
+                                return;
+                            }
 
-                dot.addEventListener(
-                    "click",
-                    function () {
 
-                        showSopSlide(
-                            Number(
-                                this.getAttribute("data-slide")
+                            if (distance < 0) {
+
+                                showSopSlide(
+                                    sopCurrent + 1
+                                );
+
+                            } else {
+
+                                showSopSlide(
+                                    sopCurrent - 1
+                                );
+
+                            }
+
+                        },
+                        { passive: true }
+                    );
+
+                }
+
+
+                /* =====================================================
+                   SWIPE ADMIN
+                ===================================================== */
+
+                const adminViewport =
+                    document.querySelector(
+                        ".admin-slider-viewport"
+                    );
+
+                let adminTouchStartX = 0;
+
+
+                if (adminViewport) {
+
+                    adminViewport.addEventListener(
+                        "touchstart",
+                        function (event) {
+
+                            adminTouchStartX =
+                                event.changedTouches[0]
+                                    .screenX;
+
+                        },
+                        { passive: true }
+                    );
+
+
+                    adminViewport.addEventListener(
+                        "touchend",
+                        function (event) {
+
+                            const touchEndX =
+                                event.changedTouches[0]
+                                    .screenX;
+
+                            const distance =
+                                touchEndX -
+                                adminTouchStartX;
+
+
+                            if (Math.abs(distance) < 50) {
+                                return;
+                            }
+
+
+                            if (distance < 0) {
+
+                                showAdminSlide(
+                                    adminCurrent + 1
+                                );
+
+                            } else {
+
+                                showAdminSlide(
+                                    adminCurrent - 1
+                                );
+
+                            }
+
+                        },
+                        { passive: true }
+                    );
+
+                }
+
+
+                /* =====================================================
+                   KEYBOARD
+                ===================================================== */
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+
+                        const adminSection =
+                            document.getElementById(
+                                "foto-administrasi"
+                            );
+
+
+                        if (
+                            adminSection &&
+                            adminSection.classList.contains(
+                                "active"
                             )
-                        );
+                        ) {
+
+                            if (event.key === "ArrowLeft") {
+
+                                showAdminSlide(
+                                    adminCurrent - 1
+                                );
+
+                            }
+
+                            if (event.key === "ArrowRight") {
+
+                                showAdminSlide(
+                                    adminCurrent + 1
+                                );
+
+                            }
+
+                        }
+
+
+                        const materialSection =
+                            document.getElementById(
+                                "material-ftth"
+                            );
+
+
+                        if (
+                            materialSection &&
+                            materialSection.classList.contains(
+                                "active"
+                            )
+                        ) {
+
+                            if (event.key === "ArrowLeft") {
+
+                                showMaterialSlide(
+                                    materialCurrent - 1
+                                );
+
+                            }
+
+                            if (event.key === "ArrowRight") {
+
+                                showMaterialSlide(
+                                    materialCurrent + 1
+                                );
+
+                            }
+
+                        }
+
+
+                        const sopSection =
+                            document.getElementById(
+                                "sop-dokumen-project"
+                            );
+
+
+                        if (
+                            sopSection &&
+                            sopSection.classList.contains(
+                                "active"
+                            )
+                        ) {
+
+                            if (event.key === "ArrowLeft") {
+
+                                showSopSlide(
+                                    sopCurrent - 1
+                                );
+
+                            }
+
+                            if (event.key === "ArrowRight") {
+
+                                showSopSlide(
+                                    sopCurrent + 1
+                                );
+
+                            }
+
+                        }
 
                     }
                 );
 
-            });
+
+                /* =====================================================
+                   MULAI SLIDER
+                ===================================================== */
+
+                showAdminSlide(0);
+                showMaterialSlide(0);
+                showSopSlide(0);
 
 
-            /* =====================================================
-               SWIPE SOP
-            ===================================================== */
+                /* =====================================================
+                   MENU AWAL DILIPAT
+                ===================================================== */
 
-            const sopViewport =
-                document.querySelector(
-                    ".sop-slider-viewport"
-                );
-
-            let sopTouchStartX = 0;
-
-
-            if (sopViewport) {
-
-                sopViewport.addEventListener(
-                    "touchstart",
-                    function (event) {
-
-                        sopTouchStartX =
-                            event.changedTouches[0].screenX;
-
-                    },
-                    { passive: true }
-                );
-
-
-                sopViewport.addEventListener(
-                    "touchend",
-                    function (event) {
-
-                        const touchEndX =
-                            event.changedTouches[0].screenX;
-
-                        const distance =
-                            touchEndX -
-                            sopTouchStartX;
-
-
-                        if (Math.abs(distance) < 50) {
-                            return;
-                        }
-
-
-                        if (distance < 0) {
-
-                            showSopSlide(
-                                sopCurrent + 1
-                            );
-
-                        } else {
-
-                            showSopSlide(
-                                sopCurrent - 1
-                            );
-
-                        }
-
-                    },
-                    { passive: true }
+                daySelector.classList.add(
+                    "menu-collapsed"
                 );
 
             }
 
-
-            /* =====================================================
-               SWIPE ADMIN
-            ===================================================== */
-
-            const adminViewport =
-                document.querySelector(
-                    ".admin-slider-viewport"
-                );
-
-            let adminTouchStartX = 0;
-
-
-            if (adminViewport) {
-
-                adminViewport.addEventListener(
-                    "touchstart",
-                    function (event) {
-
-                        adminTouchStartX =
-                            event.changedTouches[0].screenX;
-
-                    },
-                    { passive: true }
-                );
-
-
-                adminViewport.addEventListener(
-                    "touchend",
-                    function (event) {
-
-                        const touchEndX =
-                            event.changedTouches[0].screenX;
-
-                        const distance =
-                            touchEndX -
-                            adminTouchStartX;
-
-
-                        if (Math.abs(distance) < 50) {
-                            return;
-                        }
-
-
-                        if (distance < 0) {
-
-                            showAdminSlide(
-                                adminCurrent + 1
-                            );
-
-                        } else {
-
-                            showAdminSlide(
-                                adminCurrent - 1
-                            );
-
-                        }
-
-                    },
-                    { passive: true }
-                );
-
-            }
-
-
-            /* =====================================================
-               KEYBOARD
-            ===================================================== */
-
-            document.addEventListener(
-                "keydown",
-                function (event) {
-
-
-                    const adminSection =
-                        document.getElementById(
-                            "foto-administrasi"
-                        );
-
-
-                    if (
-                        adminSection &&
-                        adminSection.classList.contains("active")
-                    ) {
-
-                        if (event.key === "ArrowLeft") {
-                            showAdminSlide(
-                                adminCurrent - 1
-                            );
-                        }
-
-                        if (event.key === "ArrowRight") {
-                            showAdminSlide(
-                                adminCurrent + 1
-                            );
-                        }
-
-                    }
-
-
-                    const materialSection =
-                        document.getElementById(
-                            "material-ftth"
-                        );
-
-
-                    if (
-                        materialSection &&
-                        materialSection.classList.contains("active")
-                    ) {
-
-                        if (event.key === "ArrowLeft") {
-                            showMaterialSlide(
-                                materialCurrent - 1
-                            );
-                        }
-
-                        if (event.key === "ArrowRight") {
-                            showMaterialSlide(
-                                materialCurrent + 1
-                            );
-                        }
-
-                    }
-
-
-                    const sopSection =
-                        document.getElementById(
-                            "sop-dokumen-project"
-                        );
-
-
-                    if (
-                        sopSection &&
-                        sopSection.classList.contains("active")
-                    ) {
-
-                        if (event.key === "ArrowLeft") {
-                            showSopSlide(
-                                sopCurrent - 1
-                            );
-                        }
-
-                        if (event.key === "ArrowRight") {
-                            showSopSlide(
-                                sopCurrent + 1
-                            );
-                        }
-
-                    }
-
-                }
-            );
-
-
-            /* =====================================================
-               MULAI
-            ===================================================== */
-
-            showAdminSlide(0);
-            showMaterialSlide(0);
-            showSopSlide(0);
-
-
-            /*
-            ========================================================
-            MENU AWAL LANGSUNG DILIPAT
-            ========================================================
-            */
-
-            daySelector.classList.add("menu-collapsed");
-
-        });
+        );
 
     </script>
 
