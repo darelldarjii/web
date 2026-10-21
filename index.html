@@ -456,15 +456,36 @@
         }
 
         .gbu-v2-quick-icon {
-            flex: 0 0 34px;
-            width: 34px;
-            height: 34px;
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
             display: grid;
             place-items: center;
-            border-radius: 10px;
+            border-radius: 11px;
             color: var(--blue);
             background: #edf7ff;
-            font-size: 13px;
+            font-size: 16px;
+        }
+
+        /* Pastikan ikon/logo berada tepat di tengah kotak */
+        .gbu-v2-quick-card > .gbu-v2-quick-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 40px;
+            width: 40px;
+            height: 40px;
+            margin-top: 0;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .gbu-v2-quick-card > .gbu-v2-quick-icon i {
+            display: block;
+            margin: 0;
+            font-size: 16px;
+            line-height: 1;
+            text-align: center;
         }
 
         .gbu-v2-quick-card strong {
